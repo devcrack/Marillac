@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.nombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -353,6 +353,7 @@
             this.botonActividades.TabIndex = 19;
             this.botonActividades.Text = "Actividades";
             this.botonActividades.UseVisualStyleBackColor = true;
+            this.botonActividades.Click += new System.EventHandler(this.botonActividades_Click);
             // 
             // botonPagos
             // 
@@ -398,8 +399,8 @@
             // idBeneficiarioDataGridViewTextBoxColumn
             // 
             this.idBeneficiarioDataGridViewTextBoxColumn.DataPropertyName = "idBeneficiario";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idBeneficiarioDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idBeneficiarioDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.idBeneficiarioDataGridViewTextBoxColumn.HeaderText = "ID";
             this.idBeneficiarioDataGridViewTextBoxColumn.Name = "idBeneficiarioDataGridViewTextBoxColumn";
             this.idBeneficiarioDataGridViewTextBoxColumn.ReadOnly = true;

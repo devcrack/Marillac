@@ -57,14 +57,9 @@
             this.edad = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.hijoTableAdapter = new WindowsFormsApplication1.MarillacDataSetTableAdapters.HijoTableAdapter();
-            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
-            this.idBenToolStripLabel = new System.Windows.Forms.ToolStripLabel();
-            this.idBenToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
-            this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hijoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marillacDataSet)).BeginInit();
-            this.fillByToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // label9
@@ -340,48 +335,12 @@
             // 
             this.hijoTableAdapter.ClearBeforeFill = true;
             // 
-            // fillByToolStrip
-            // 
-            this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.idBenToolStripLabel,
-            this.idBenToolStripTextBox,
-            this.fillByToolStripButton});
-            this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.fillByToolStrip.Name = "fillByToolStrip";
-            this.fillByToolStrip.Size = new System.Drawing.Size(997, 25);
-            this.fillByToolStrip.TabIndex = 28;
-            this.fillByToolStrip.Text = "fillByToolStrip";
-            this.fillByToolStrip.Visible = false;
-            // 
-            // idBenToolStripLabel
-            // 
-            this.idBenToolStripLabel.Name = "idBenToolStripLabel";
-            this.idBenToolStripLabel.Size = new System.Drawing.Size(40, 22);
-            this.idBenToolStripLabel.Text = "idBen:";
-            this.idBenToolStripLabel.Visible = false;
-            // 
-            // idBenToolStripTextBox
-            // 
-            this.idBenToolStripTextBox.Name = "idBenToolStripTextBox";
-            this.idBenToolStripTextBox.Size = new System.Drawing.Size(100, 25);
-            this.idBenToolStripTextBox.Visible = false;
-            // 
-            // fillByToolStripButton
-            // 
-            this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fillByToolStripButton.Name = "fillByToolStripButton";
-            this.fillByToolStripButton.Size = new System.Drawing.Size(39, 22);
-            this.fillByToolStripButton.Text = "FillBy";
-            this.fillByToolStripButton.Visible = false;
-            this.fillByToolStripButton.Click += new System.EventHandler(this.fillByToolStripButton_Click);
-            // 
             // hijosDeBeneficiario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button1;
             this.ClientSize = new System.Drawing.Size(997, 384);
-            this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.edad);
             this.Controls.Add(this.label4);
@@ -410,8 +369,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hijoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.marillacDataSet)).EndInit();
-            this.fillByToolStrip.ResumeLayout(false);
-            this.fillByToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -447,9 +404,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaNacimientoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ToolStrip fillByToolStrip;
-        private System.Windows.Forms.ToolStripLabel idBenToolStripLabel;
-        private System.Windows.Forms.ToolStripTextBox idBenToolStripTextBox;
-        private System.Windows.Forms.ToolStripButton fillByToolStripButton;
     }
 }

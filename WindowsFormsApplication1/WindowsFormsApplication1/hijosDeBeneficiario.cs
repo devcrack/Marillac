@@ -48,20 +48,6 @@ namespace WindowsFormsApplication1
         {
             // TODO: esta línea de código carga datos en la tabla 'marillacDataSet.Hijo' Puede moverla o quitarla según sea necesario.
             this.hijoTableAdapter.FillBy(this.marillacDataSet.Hijo, idBen);
-            fillByToolStripButton_Click(sender, e);
-
-        }
-
-        private void fillByToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.hijoTableAdapter.FillBy(this.marillacDataSet.Hijo,idBen);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
