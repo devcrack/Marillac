@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="beneficiarioActividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="beneficiarioActividades.Designer.cs">
+      <DependentUpon>beneficiarioActividades.cs</DependentUpon>
+    </Compile>
     <Compile Include="beneficiarioPsicologo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,6 +59,12 @@
       <DependentUpon>beneficiarioPsicologo.cs</DependentUpon>
     </Compile>
     <Compile Include="C_Connection.cs" />
+    <Compile Include="hijosDeBeneficiario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hijosDeBeneficiario.Designer.cs">
+      <DependentUpon>hijosDeBeneficiario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,8 +108,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="beneficiarioActividades.resx">
+      <DependentUpon>beneficiarioActividades.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="beneficiarioPsicologo.resx">
       <DependentUpon>beneficiarioPsicologo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hijosDeBeneficiario.resx">
+      <DependentUpon>hijosDeBeneficiario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

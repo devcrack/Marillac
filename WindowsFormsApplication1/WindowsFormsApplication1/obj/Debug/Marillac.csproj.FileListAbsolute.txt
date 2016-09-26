@@ -13,18 +13,20 @@ C:\Users\Mauricio Valdes\Documents\UASLP\Actual\Administración de Base de Datos
 C:\Users\Mauricio Valdes\Documents\UASLP\Actual\Administración de Base de Datos\Proyecto\MARILLAC\DBA\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.F_Beneficiario.resources
 C:\Users\Mauricio Valdes\Documents\UASLP\Actual\Administración de Base de Datos\Proyecto\MARILLAC\DBA\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.F_Profesor.resources
 C:\Users\Mauricio Valdes\Documents\UASLP\Actual\Administración de Base de Datos\Proyecto\MARILLAC\DBA\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.beneficiarioPsicologo.resources
-C:\Users\devcrack\Desktop\Proyectos\DBA\Repo Valdes\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
-C:\Users\devcrack\Desktop\Proyectos\DBA\Repo Valdes\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
-C:\Users\devcrack\Desktop\Proyectos\DBA\Repo Valdes\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
-C:\Users\devcrack\Desktop\Proyectos\DBA\Repo Valdes\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-C:\Users\devcrack\Desktop\Proyectos\DBA\Repo Valdes\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-C:\Users\devcrack\Desktop\Proyectos\DBA\Repo Valdes\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\Marillac.csprojResolveAssemblyReference.cache
-C:\Users\devcrack\Desktop\Proyectos\DBA\Repo Valdes\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.beneficiarioPsicologo.resources
-C:\Users\devcrack\Desktop\Proyectos\DBA\Repo Valdes\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Menu.resources
-C:\Users\devcrack\Desktop\Proyectos\DBA\Repo Valdes\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Formulario_Hijo.resources
-C:\Users\devcrack\Desktop\Proyectos\DBA\Repo Valdes\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form_Actividades.resources
-C:\Users\devcrack\Desktop\Proyectos\DBA\Repo Valdes\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form_Psicologo.resources
-C:\Users\devcrack\Desktop\Proyectos\DBA\Repo Valdes\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.F_Beneficiario.resources
-C:\Users\devcrack\Desktop\Proyectos\DBA\Repo Valdes\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.F_Profesor.resources
-C:\Users\devcrack\Desktop\Proyectos\DBA\Repo Valdes\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
-C:\Users\devcrack\Desktop\Proyectos\DBA\Repo Valdes\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\Marillac.csproj.GenerateResource.Cache
+C:\Users\Mauricio Valdes\Documents\UASLP\Actual\Administración de Base de Datos\Proyecto\MARILLAC\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Mauricio Valdes\Documents\UASLP\Actual\Administración de Base de Datos\Proyecto\MARILLAC\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Mauricio Valdes\Documents\UASLP\Actual\Administración de Base de Datos\Proyecto\MARILLAC\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Mauricio Valdes\Documents\UASLP\Actual\Administración de Base de Datos\Proyecto\MARILLAC\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\Marillac.csprojResolveAssemblyReference.cache
+C:\Users\Mauricio Valdes\Documents\UASLP\Actual\Administración de Base de Datos\Proyecto\MARILLAC\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.beneficiarioPsicologo.resources
+C:\Users\Mauricio Valdes\Documents\UASLP\Actual\Administración de Base de Datos\Proyecto\MARILLAC\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Menu.resources
+C:\Users\Mauricio Valdes\Documents\UASLP\Actual\Administración de Base de Datos\Proyecto\MARILLAC\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Formulario_Hijo.resources
+C:\Users\Mauricio Valdes\Documents\UASLP\Actual\Administración de Base de Datos\Proyecto\MARILLAC\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form_Actividades.resources
+C:\Users\Mauricio Valdes\Documents\UASLP\Actual\Administración de Base de Datos\Proyecto\MARILLAC\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form_Psicologo.resources
+C:\Users\Mauricio Valdes\Documents\UASLP\Actual\Administración de Base de Datos\Proyecto\MARILLAC\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.F_Beneficiario.resources
+C:\Users\Mauricio Valdes\Documents\UASLP\Actual\Administración de Base de Datos\Proyecto\MARILLAC\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.F_Profesor.resources
+C:\Users\Mauricio Valdes\Documents\UASLP\Actual\Administración de Base de Datos\Proyecto\MARILLAC\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Mauricio Valdes\Documents\UASLP\Actual\Administración de Base de Datos\Proyecto\MARILLAC\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\Marillac.csproj.GenerateResource.Cache
+C:\Users\Mauricio Valdes\Documents\UASLP\Actual\Administración de Base de Datos\Proyecto\MARILLAC\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Mauricio Valdes\Documents\UASLP\Actual\Administración de Base de Datos\Proyecto\MARILLAC\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Mauricio Valdes\Documents\UASLP\Actual\Administración de Base de Datos\Proyecto\MARILLAC\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.hijosDeBeneficiario.resources
+C:\Users\Mauricio Valdes\Documents\UASLP\Actual\Administración de Base de Datos\Proyecto\MARILLAC\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.beneficiarioActividades.resources
