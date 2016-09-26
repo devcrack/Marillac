@@ -17,7 +17,7 @@ namespace WindowsFormsApplication1
 
         public SqlConnection conexion;
         Form main_Form;
-
+        private string datosConexion;
 
         private void F_Profesor_Load(object sender, EventArgs e)
         {
@@ -39,14 +39,14 @@ namespace WindowsFormsApplication1
 
         public void conexion_db()
         {
-            string datosConexion = @"Data Source = WEBER-PC\SQLEXPRESS;"
-            + "Initial Catalog = Marillac ; Integrated Security = true;";
+           
                 conexion = new SqlConnection(datosConexion);
         }
 
 
-        public F_Profesor(Menu m_form)
+        public F_Profesor(Menu m_form,string cadenaconexion)
         {
+            datosConexion = cadenaconexion;
             InitializeComponent();
             this.main_Form = m_form;
         }
