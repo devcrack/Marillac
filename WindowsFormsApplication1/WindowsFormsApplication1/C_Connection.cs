@@ -96,7 +96,7 @@ namespace WindowsFormsApplication1
         {
             this.connection = new SqlConnection(c_string);
             this.adapter = new SqlDataAdapter();
-            this.dmL = new string[]{ "INSERT INTO ","VALUES", "UPDATE ","SET", " WHERE" };
+            this.dmL = new string[]{ "INSERT INTO ","VALUES", "UPDATE "," SET ", " WHERE " };
 
 
             this.tables = new string[,]
@@ -109,16 +109,17 @@ namespace WindowsFormsApplication1
             this.tables_s.Add
                 (" Persona.Psicologo ", new string[] 
                   {
-                      "nombre, ",
-                      "paterno, ",
-                      "materno, ",
-                      "direccion, ",
-                      "colonia, ",
-                      "telefono, ",
-                      "diasLaborales, ",//6
-                      "sexo, ",
-                      "limitePacientes, ",
-"fechaNacimiento"//9
+                      "nombre",
+                      "paterno",
+                      "materno",
+                      "direccion",
+                      "colonia",
+                      "telefono",
+                      "diasLaborales ",//6
+                      "sexo",
+                      "limitePacientes",
+                      "fechaNacimiento",
+                      "idPsicologo"//10
                    }
                 );
         }
