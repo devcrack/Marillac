@@ -34,7 +34,7 @@ namespace WindowsFormsApplication1
         public Menu()
         {
             InitializeComponent();
-            cadenaConexion = @"Data Source=WEBER-PC\SQLEXPRESS;Initial Catalog=Marillac;Integrated Security=True";
+            cadenaConexion = @"Data Source=MAUVALDES\SQLEXPRESS;Initial Catalog=Marillac;Integrated Security=True";
         }
 
         private void btt_Beneficiario_Click(object sender, EventArgs e)
