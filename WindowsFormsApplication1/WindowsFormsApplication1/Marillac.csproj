@@ -53,6 +53,12 @@
       <DependentUpon>beneficiarioPsicologo.cs</DependentUpon>
     </Compile>
     <Compile Include="C_Connection.cs" />
+    <Compile Include="hijosDeBeneficiario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hijosDeBeneficiario.Designer.cs">
+      <DependentUpon>hijosDeBeneficiario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="beneficiarioPsicologo.resx">
       <DependentUpon>beneficiarioPsicologo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hijosDeBeneficiario.resx">
+      <DependentUpon>hijosDeBeneficiario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

@@ -15,6 +15,7 @@ namespace WindowsFormsApplication1
     {
         Form main_Form;
         Form beneficiarioPsicologo;
+        Form hijosDeBeneficiario;
 
         private SqlConnection con;
         private SqlDataAdapter adapter;
@@ -219,6 +220,25 @@ namespace WindowsFormsApplication1
                 this.beneficiarioPsicologo = new beneficiarioPsicologo(this, connectionString, idPsi);
                 this.beneficiarioPsicologo.ShowDialog();
             }
+        }
+
+        private void botonLimpiar_Click(object sender, EventArgs e)
+        {
+            dataGridView1.ClearSelection();
+            limpiarTextBox();
+        }
+
+        private void botonHijos_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count != 0)
+            {
+                Int64 idBen;
+                try { idBen = Convert.ToInt64(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value.ToString());}
+                catch { idBen = -1; }
+                this.hijosDeBeneficiario = new hijosDeBeneficiario(this,connectionString,idBen);
+                this.hijosDeBeneficiario.ShowDialog();
+            }
+
         }
     }
 }
