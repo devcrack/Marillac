@@ -31,6 +31,7 @@ namespace WindowsFormsApplication1
             adapter = new SqlDataAdapter();
 
             dateTimePicker1.CustomFormat = "dd-MMMM-yyyy";
+            dataGridView1.ClearSelection();
         }
 
         private void form_is_Closing(object sender, FormClosingEventArgs e)
@@ -42,6 +43,7 @@ namespace WindowsFormsApplication1
         {
             // TODO: esta línea de código carga datos en la tabla 'marillacDataSet.Beneficiario' Puede moverla o quitarla según sea necesario.
             this.beneficiarioTableAdapter.Fill(this.marillacDataSet.Beneficiario);
+            dataGridView1.ClearSelection();
             limpiarTextBox();
         }
 
@@ -65,8 +67,8 @@ namespace WindowsFormsApplication1
                     con.Close();
 
                     this.beneficiarioTableAdapter.Fill(this.marillacDataSet.Beneficiario);
+                    dataGridView1.ClearSelection();
                     limpiarTextBox();
-
                 }
                 catch (Exception ex)
                 {
@@ -113,6 +115,7 @@ namespace WindowsFormsApplication1
                         con.Close();
 
                         this.beneficiarioTableAdapter.Fill(this.marillacDataSet.Beneficiario);
+                        dataGridView1.ClearSelection();
                         limpiarTextBox();
                     }
                     catch (Exception ex)
@@ -192,8 +195,8 @@ namespace WindowsFormsApplication1
                         con.Close();
 
                         this.beneficiarioTableAdapter.Fill(this.marillacDataSet.Beneficiario);
+                        dataGridView1.ClearSelection();
                         limpiarTextBox();
-
                     }
                     catch (Exception ex)
                     {
