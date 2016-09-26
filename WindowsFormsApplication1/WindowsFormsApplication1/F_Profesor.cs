@@ -209,8 +209,9 @@ namespace WindowsFormsApplication1
             dataGridView2.DataSource =  Consulta(cad).Tables[0];
         }
 
+        private void dias_TextChanged(object sender, EventArgs e)
+        {
 
-
-
+        }
     }
 }
