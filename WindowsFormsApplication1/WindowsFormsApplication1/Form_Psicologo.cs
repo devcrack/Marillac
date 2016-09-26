@@ -142,55 +142,90 @@ namespace WindowsFormsApplication1
                     +
                     (this.sql.Tables_s[name_Table])[0]
                     + " = " +
-                    "'" + this.txt_Box_Nom.Text + "'"
-                    + " = " +
+                    "'" + this.txt_Box_Nom.Text + "'," 
+                    +
                     (this.sql.Tables_s[name_Table])[1]
                     + " = " +
-                    "'" + this.txt_Apellido_Pat.Text + "'"
-                    + " = " +
+                    "'" + this.txt_Apellido_Pat.Text + "',"
+                    + 
                     (this.sql.Tables_s[name_Table])[2]
                     + " = " +
-                    "'" + this.txt_Box_Apelli_Mat.Text + "'"
-                    + " = " +
+                    "'" + this.txt_Box_Apelli_Mat.Text + "',"
+                    + 
                     (this.sql.Tables_s[name_Table])[3]
                     + " = " +
-                    "'" + this.txt_Box_Dir.Text + "'"
-                    + " = " +
+                    "'" + this.txt_Box_Dir.Text + "',"
+                    + 
                     (this.sql.Tables_s[name_Table])[4]
                     + " = " +
-                    "'" + this.txt_Box_Col.Text + "'"
-                    + " = " +
+                    "'" + this.txt_Box_Col.Text + "',"
+                    + 
                     (this.sql.Tables_s[name_Table])[5]
                     + " = " +
-                    "'" + this.txt_Box_Tel.Text + "'"
-                    + " = " +
+                    "'" + this.txt_Box_Tel.Text + "',"
+                    + 
                     (this.sql.Tables_s[name_Table])[6]
                     + " = " +
-                    "'" + this.txt_Box_Working_Days.Text + "'"
-                    + " = " +
+                    "'" + this.txt_Box_Working_Days.Text + "',"
+                    + 
                     (this.sql.Tables_s[name_Table])[7]
                     + " = " +
-                    "'" + this.get_Sexo() + "'"
-                    + " = " +
+                    "'" + this.get_Sexo() + "',"
+                    + 
                     (this.sql.Tables_s[name_Table])[8]
                     + " = " +
-                    "'" + this.numericUpDown_Pac_Limit.Value + "'"
-                    + " = " +
+                    "'" + this.numericUpDown_Pac_Limit.Value + "',"
+                    + 
                     (this.sql.Tables_s[name_Table])[9]
                     + " = " +
-                    ", '" + this.dateTime_Birth_Date.Value.Year 
+                    "'" + this.dateTime_Birth_Date.Value.Year 
                     + "-" +
                     this.dateTime_Birth_Date.Value.Month
                      + "-" +
                      this.dateTime_Birth_Date.Value.Day
-                     + "'"
+                     + "'" + 
+                     this.sql.DML[4]
+                     +(this.sql.Tables_s[name_Table])[10]
+                     + "=" +
+                     idModificar
                      ;
-
-
-
-
-
+                if (this.sql.execute_Query(query) == true)
+                {
+                    this.psicologoTableAdapter.Fill(this.marillac_DataSet.Psicologo);
+                    this.dataGridView1.ClearSelection();
+                    this.Reset_Controls();
+                }
             }
         }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                this.txt_Box_Nom.Text = Convert.ToString(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[1].Value);
+                this.txt_Apellido_Pat.Text = Convert.ToString(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[2].Value);
+                this.txt_Box_Apelli_Mat.Text = Convert.ToString(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[3].Value);
+                this.txt_Box_Dir.Text = Convert.ToString(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[4].Value);
+                this.txt_Box_Col.Text = Convert.ToString(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[5].Value);
+                this.txt_Box_Tel.Text = Convert.ToString(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[6].Value);
+                this.txt_Box_Working_Days.Text = Convert.ToString(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[7].Value);
+                this.radio_Button_Change(Convert.ToChar(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[8].Value));
+                this.numericUpDown_Pac_Limit.Value = Convert.ToInt32(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[9].Value);
+                this.numericUpDown_Sig_Pac.Value = Convert.ToInt32(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[10].Value);
+                this.dateTime_Birth_Date.Value = DateTime.Parse(Convert.ToString(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[11].Value));
+            }
+            catch { }
+        }
+
+        private void radio_Button_Change(char c)
+        {
+            if (c == 'M')
+                this.radioButt_Male.Checked = true;
+            else 
+                this.radioButt_Female.Checked = true;
+        }
+
     }
+
 }
+

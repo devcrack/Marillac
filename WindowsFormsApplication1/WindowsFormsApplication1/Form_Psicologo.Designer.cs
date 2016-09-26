@@ -59,21 +59,23 @@
             this.radioButt_Male = new System.Windows.Forms.RadioButton();
             this.radioButt_Female = new System.Windows.Forms.RadioButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.psicologoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.marillac_DataSet = new WindowsFormsApplication1.MarillacDataSet();
+            this.psicologoTableAdapter = new WindowsFormsApplication1.MarillacDataSetTableAdapters.PsicologoTableAdapter();
+            this.txt_Box_Working_Days = new System.Windows.Forms.TextBox();
             this.PK_psicologo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido_Pat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido_Mat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dir = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colonia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.work_days = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.limit_pac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sign_Pac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.birth_Day = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.edadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.psicologoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.marillac_DataSet = new WindowsFormsApplication1.MarillacDataSet();
-            this.psicologoTableAdapter = new WindowsFormsApplication1.MarillacDataSetTableAdapters.PsicologoTableAdapter();
-            this.txt_Box_Working_Days = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pac_Limit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Sig_Pac)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -362,8 +364,10 @@
             this.apellido_Pat,
             this.Apellido_Mat,
             this.dir,
+            this.colonia,
             this.tel,
             this.work_days,
+            this.sexo,
             this.limit_pac,
             this.sign_Pac,
             this.birth_Day,
@@ -376,6 +380,29 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(635, 394);
             this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            // 
+            // psicologoBindingSource
+            // 
+            this.psicologoBindingSource.DataMember = "Psicologo";
+            this.psicologoBindingSource.DataSource = this.marillac_DataSet;
+            // 
+            // marillac_DataSet
+            // 
+            this.marillac_DataSet.DataSetName = "Marillac_DataSet";
+            this.marillac_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // psicologoTableAdapter
+            // 
+            this.psicologoTableAdapter.ClearBeforeFill = true;
+            // 
+            // txt_Box_Working_Days
+            // 
+            this.txt_Box_Working_Days.Location = new System.Drawing.Point(196, 314);
+            this.txt_Box_Working_Days.Name = "txt_Box_Working_Days";
+            this.txt_Box_Working_Days.Size = new System.Drawing.Size(281, 20);
+            this.txt_Box_Working_Days.TabIndex = 6;
+            this.txt_Box_Working_Days.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // PK_psicologo
             // 
@@ -419,6 +446,13 @@
             this.dir.ReadOnly = true;
             this.dir.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
+            // colonia
+            // 
+            this.colonia.DataPropertyName = "colonia";
+            this.colonia.HeaderText = "Colonia";
+            this.colonia.Name = "colonia";
+            this.colonia.ReadOnly = true;
+            // 
             // tel
             // 
             this.tel.DataPropertyName = "telefono";
@@ -434,6 +468,13 @@
             this.work_days.Name = "work_days";
             this.work_days.ReadOnly = true;
             this.work_days.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // sexo
+            // 
+            this.sexo.DataPropertyName = "sexo";
+            this.sexo.HeaderText = "Sexo";
+            this.sexo.Name = "sexo";
+            this.sexo.ReadOnly = true;
             // 
             // limit_pac
             // 
@@ -465,28 +506,6 @@
             this.edadDataGridViewTextBoxColumn.HeaderText = "Edad";
             this.edadDataGridViewTextBoxColumn.Name = "edadDataGridViewTextBoxColumn";
             this.edadDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // psicologoBindingSource
-            // 
-            this.psicologoBindingSource.DataMember = "Psicologo";
-            this.psicologoBindingSource.DataSource = this.marillac_DataSet;
-            // 
-            // marillac_DataSet
-            // 
-            this.marillac_DataSet.DataSetName = "Marillac_DataSet";
-            this.marillac_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // psicologoTableAdapter
-            // 
-            this.psicologoTableAdapter.ClearBeforeFill = true;
-            // 
-            // txt_Box_Working_Days
-            // 
-            this.txt_Box_Working_Days.Location = new System.Drawing.Point(196, 314);
-            this.txt_Box_Working_Days.Name = "txt_Box_Working_Days";
-            this.txt_Box_Working_Days.Size = new System.Drawing.Size(281, 20);
-            this.txt_Box_Working_Days.TabIndex = 6;
-            this.txt_Box_Working_Days.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Form_Psicologo
             // 
@@ -570,17 +589,19 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource psicologoBindingSource;
         private MarillacDataSetTableAdapters.PsicologoTableAdapter psicologoTableAdapter;
+        private System.Windows.Forms.TextBox txt_Box_Working_Days;
         private System.Windows.Forms.DataGridViewTextBoxColumn PK_psicologo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellido_Pat;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellido_Mat;
         private System.Windows.Forms.DataGridViewTextBoxColumn dir;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colonia;
         private System.Windows.Forms.DataGridViewTextBoxColumn tel;
         private System.Windows.Forms.DataGridViewTextBoxColumn work_days;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sexo;
         private System.Windows.Forms.DataGridViewTextBoxColumn limit_pac;
         private System.Windows.Forms.DataGridViewTextBoxColumn sign_Pac;
         private System.Windows.Forms.DataGridViewTextBoxColumn birth_Day;
         private System.Windows.Forms.DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox txt_Box_Working_Days;
     }
 }
