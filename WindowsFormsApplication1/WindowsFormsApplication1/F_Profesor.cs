@@ -39,8 +39,8 @@ namespace WindowsFormsApplication1
 
         public void conexion_db()
         {
-            string datosConexion = @"Data Source = WEBER-PC\SQLEXPRESS;"
-            + "Initial Catalog = Marillac ; Integrated Security = true;";
+            string datosConexion = @"Data Source=DEVCRACK-PC\SQLEXPRESS;Initial Catalog=Marillac;Integrated Security=True";
+
                 conexion = new SqlConnection(datosConexion);
         }
 
