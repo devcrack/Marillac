@@ -92,9 +92,10 @@
             // 
             // botonAgregar
             // 
-            this.botonAgregar.Location = new System.Drawing.Point(191, 581);
+            this.botonAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonAgregar.Location = new System.Drawing.Point(115, 581);
             this.botonAgregar.Name = "botonAgregar";
-            this.botonAgregar.Size = new System.Drawing.Size(89, 42);
+            this.botonAgregar.Size = new System.Drawing.Size(165, 42);
             this.botonAgregar.TabIndex = 45;
             this.botonAgregar.Text = "Agregar";
             this.botonAgregar.UseVisualStyleBackColor = true;
@@ -176,7 +177,7 @@
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(266, 36);
-            this.dateTimePicker1.TabIndex = 39;
+            this.dateTimePicker1.TabIndex = 38;
             this.dateTimePicker1.Value = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
             // 
             // sexo
@@ -340,8 +341,9 @@
             this.dias.Margin = new System.Windows.Forms.Padding(2);
             this.dias.Name = "dias";
             this.dias.Size = new System.Drawing.Size(266, 36);
-            this.dias.TabIndex = 40;
+            this.dias.TabIndex = 39;
             this.dias.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
+            this.dias.TextChanged += new System.EventHandler(this.dias_TextChanged);
             // 
             // button1
             // 

@@ -16,7 +16,10 @@ namespace WindowsFormsApplication1
      * VALDES
        connectionString="Data Source=MAUVALDES\SQLEXPRESS;Initial Catalog=Marillac;Integrated Security=True"
      *Yeyo
-      connectionString="Data Source=DEVCRACK-PC\SQLEXPRESS;Initial Catalog=Marillac;Integrated Security=True"
+      connectionString="Data Source=DEVCRACK-PC\SQLEXPRESS;Initial Catalog=Marillac;Integrated Security=True
+     *Eber 
+        connectionString=@"Data Source=WEBER-PC\SQLEXPRESS;;Initial Catalog=Marillac;Integrated Security=True
+         
         */
 
     public partial class Menu : Form
@@ -31,7 +34,7 @@ namespace WindowsFormsApplication1
         public Menu()
         {
             InitializeComponent();
-            cadenaConexion = @"Data Source=MAUVALDES\SQLEXPRESS;Initial Catalog=Marillac;Integrated Security=True";
+            cadenaConexion = @"Data Source=WEBER-PC\SQLEXPRESS;Initial Catalog=Marillac;Integrated Security=True";
         }
 
         private void btt_Beneficiario_Click(object sender, EventArgs e)
@@ -50,7 +53,7 @@ namespace WindowsFormsApplication1
 
         private void btt_Profesores_Click(object sender, EventArgs e)
         {
-            this.form_Profesor = new F_Profesor(this);
+            this.form_Profesor = new F_Profesor(this,cadenaConexion);
             this.Hide();
             this.form_Profesor.Show();
         }

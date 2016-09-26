@@ -39,6 +39,7 @@ namespace WindowsFormsApplication1
 
         public void conexion_db()
         {
+           
                 conexion = new SqlConnection(datosConexion);
         }
 
@@ -166,9 +167,9 @@ namespace WindowsFormsApplication1
         public void inserta()
         {
             string cad;
-            cad = "INSERT INTO Persona.Profesor(nombre,paterno,materno,direccion,colonia,telefono,diasLaborales,sexo,fechaNacimiento)"
+            cad = "INSERT INTO Persona.Profesor(nombre,paterno,materno,direccion,colonia,telefono,diasLaborales,sexo,fechaNacimiento,edad)"
             +"VALUES('"  +  nombre.Text  + "','" + paterno.Text + "','" + materno.Text + "','" + direccion.Text + "','" + colonia.Text +
-            "','" +telefono.Text + "','" + dias.Text + "','" + sexo.Text + "','" + dateTimePicker1.Text + "',)";
+            "','" +telefono.Text + "','" + dias.Text + "','" + sexo.Text + "','" + dateTimePicker1.Text + "','" +edad.Text + "')";
             conDatos(cad);
         }
 
@@ -208,8 +209,9 @@ namespace WindowsFormsApplication1
             dataGridView2.DataSource =  Consulta(cad).Tables[0];
         }
 
+        private void dias_TextChanged(object sender, EventArgs e)
+        {
 
-
-
+        }
     }
 }
