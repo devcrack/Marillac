@@ -28,3 +28,4 @@ C:\Users\Mauricio Valdes\Documents\UASLP\Actual\Administración de Base de Datos
 C:\Users\Mauricio Valdes\Documents\UASLP\Actual\Administración de Base de Datos\Proyecto\MARILLAC\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\Marillac.csproj.GenerateResource.Cache
 C:\Users\Mauricio Valdes\Documents\UASLP\Actual\Administración de Base de Datos\Proyecto\MARILLAC\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
 C:\Users\Mauricio Valdes\Documents\UASLP\Actual\Administración de Base de Datos\Proyecto\MARILLAC\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Mauricio Valdes\Documents\UASLP\Actual\Administración de Base de Datos\Proyecto\MARILLAC\Marillac\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.hijosDeBeneficiario.resources
