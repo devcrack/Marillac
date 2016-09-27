@@ -7,7 +7,7 @@
 <DiagramLayout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ex:showrelationlabel="False" ViewPortX="0" ViewPortY="0" xmlns:ex="urn:schemas-microsoft-com:xml-msdatasource-layout-extended" xmlns="urn:schemas-microsoft-com:xml-msdatasource-layout">
   <Shapes>
     <Shape ID="DesignTable:Actividad" ZOrder="21" X="70" Y="70" Height="248" Width="199" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="197" />
-    <Shape ID="DesignTable:Beneficiario" ZOrder="20" X="657" Y="426" Height="286" Width="213" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="235" />
+    <Shape ID="DesignTable:Beneficiario" ZOrder="20" X="657" Y="426" Height="305" Width="213" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="235" />
     <Shape ID="DesignTable:CuotaBeneficiario" ZOrder="19" X="339" Y="426" Height="172" Width="248" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
     <Shape ID="DesignTable:CuotaHijo" ZOrder="18" X="339" Y="801" Height="172" Width="203" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
     <Shape ID="DesignTable:Hijo" ZOrder="17" X="612" Y="801" Height="267" Width="168" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="197" />
@@ -101,7 +101,7 @@
       <RoutePoints>
         <Point>
           <X>718</X>
-          <Y>712</Y>
+          <Y>731</Y>
         </Point>
         <Point>
           <X>718</X>
@@ -145,7 +145,7 @@
       <RoutePoints>
         <Point>
           <X>674</X>
-          <Y>712</Y>
+          <Y>731</Y>
         </Point>
         <Point>
           <X>674</X>

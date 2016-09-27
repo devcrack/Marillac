@@ -27,7 +27,7 @@ namespace WindowsFormsApplication1
             idAct = 0;
 
             con = new SqlConnection();
-            connectionString = @"Data Source=CESARJOSUE_PC\SQLSERVER_V2;Initial Catalog=Marillac;Integrated Security=True";
+            connectionString = @"Data Source=MAUVALDES\SQLEXPRESS;Initial Catalog=Marillac;Integrated Security=True";
             //connectionString = @"Data Source=DEVCRACK-PC\SQLEXPRESS;Initial Catalog=Marillac;Integrated Security=True";
             con.ConnectionString = connectionString;
             adapter = new SqlDataAdapter();
@@ -36,7 +36,7 @@ namespace WindowsFormsApplication1
         private void Form_Actividades_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.main_Form.Show();
-        }
+        } 
 
         private void Form_Actividades_Load(object sender, EventArgs e)
         {
@@ -46,13 +46,13 @@ namespace WindowsFormsApplication1
             limpiarTextBox();
         }
 
-        //BOTÓN PARA SALIR
+        //BOT�N PARA SALIR
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        //FUNCIÓN PARA AGREGAR REGISTRO A LA BASE DE DATOS
+        //FUNCI�N PARA AGREGAR REGISTRO A LA BASE DE DATOS
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -74,7 +74,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        //FUNCIÓN PARA LIMPIAR LOS CAMPOS DE CAPTURA DE DATOS
+        //FUNCI�N PARA LIMPIAR LOS CAMPOS DE CAPTURA DE DATOS
         private void limpiarTextBox()
         {
             nombreActividad.Clear();
@@ -86,7 +86,7 @@ namespace WindowsFormsApplication1
             idProfesor.Clear();
         }
 
-        //FUNCIÓN PARA ELIMINAR REGISTRO DE LA BASE DE DATOS
+        //FUNCI�N PARA ELIMINAR REGISTRO DE LA BASE DE DATOS
         private void button3_Click(object sender, EventArgs e)
         {
             Int64 idEliminar;
@@ -114,7 +114,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        //FUNCIÓN PARA MODIFICAR EL REGISTRO SELECCIONADO DEL DATAGRID
+        //FUNCI�N PARA MODIFICAR EL REGISTRO SELECCIONADO DEL DATAGRID
         private void button2_Click(object sender, EventArgs e)
         {
             Int64 idModificar;
@@ -143,7 +143,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        //FUNCIÓN QUE LLENA LOS TEXT BOX CUANDO SE SELECCIONA UN CAMPO DEL DATA GRID
+        //FUNCI�N QUE LLENA LOS TEXT BOX CUANDO SE SELECCIONA UN CAMPO DEL DATA GRID
         private void dataGridView1_SelectionChanged_1(object sender, EventArgs e)
         {
             try
@@ -168,19 +168,6 @@ namespace WindowsFormsApplication1
             try
             {
                 this.beneficiarioTableAdapter.FillBy(this.marillacDataSet.Beneficiario, ((long)(System.Convert.ChangeType(claveActividadToolStripTextBox.Text, typeof(long)))));
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void fillByToolStripButton1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.beneficiarioTableAdapter.FillBy(this.marillacDataSet.Beneficiario, ((long)(System.Convert.ChangeType(claveActividadToolStripTextBox1.Text, typeof(long)))));
             }
             catch (System.Exception ex)
             {

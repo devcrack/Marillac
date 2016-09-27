@@ -74,17 +74,12 @@
             this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.actividadTableAdapter = new WindowsFormsApplication1.MarillacDataSetTableAdapters.ActividadTableAdapter();
             this.beneficiarioTableAdapter = new WindowsFormsApplication1.MarillacDataSetTableAdapters.BeneficiarioTableAdapter();
-            this.fillByToolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.claveActividadToolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.claveActividadToolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.fillByToolStripButton1 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.actividadBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marillacDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.beneficiarioBindingSource)).BeginInit();
             this.fillByToolStrip.SuspendLayout();
-            this.fillByToolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label9
@@ -118,7 +113,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(166, 23);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Días que se imparte:";
+            this.label2.Text = "D�as que se imparte:";
             // 
             // label3
             // 
@@ -484,43 +479,11 @@
             // 
             this.beneficiarioTableAdapter.ClearBeforeFill = true;
             // 
-            // fillByToolStrip1
-            // 
-            this.fillByToolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.claveActividadToolStripLabel1,
-            this.claveActividadToolStripTextBox1,
-            this.fillByToolStripButton1});
-            this.fillByToolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.fillByToolStrip1.Name = "fillByToolStrip1";
-            this.fillByToolStrip1.Size = new System.Drawing.Size(1230, 25);
-            this.fillByToolStrip1.TabIndex = 43;
-            this.fillByToolStrip1.Text = "fillByToolStrip1";
-            // 
-            // claveActividadToolStripLabel1
-            // 
-            this.claveActividadToolStripLabel1.Name = "claveActividadToolStripLabel1";
-            this.claveActividadToolStripLabel1.Size = new System.Drawing.Size(87, 15);
-            this.claveActividadToolStripLabel1.Text = "claveActividad:";
-            // 
-            // claveActividadToolStripTextBox1
-            // 
-            this.claveActividadToolStripTextBox1.Name = "claveActividadToolStripTextBox1";
-            this.claveActividadToolStripTextBox1.Size = new System.Drawing.Size(100, 23);
-            // 
-            // fillByToolStripButton1
-            // 
-            this.fillByToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fillByToolStripButton1.Name = "fillByToolStripButton1";
-            this.fillByToolStripButton1.Size = new System.Drawing.Size(39, 19);
-            this.fillByToolStripButton1.Text = "FillBy";
-            this.fillByToolStripButton1.Click += new System.EventHandler(this.fillByToolStripButton1_Click);
-            // 
             // Form_Actividades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1230, 567);
-            this.Controls.Add(this.fillByToolStrip1);
             this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label7);
@@ -558,8 +521,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.beneficiarioBindingSource)).EndInit();
             this.fillByToolStrip.ResumeLayout(false);
             this.fillByToolStrip.PerformLayout();
-            this.fillByToolStrip1.ResumeLayout(false);
-            this.fillByToolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -611,9 +572,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn maternoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ToolStrip fillByToolStrip1;
-        private System.Windows.Forms.ToolStripLabel claveActividadToolStripLabel1;
-        private System.Windows.Forms.ToolStripTextBox claveActividadToolStripTextBox1;
-        private System.Windows.Forms.ToolStripButton fillByToolStripButton1;
     }
 }
