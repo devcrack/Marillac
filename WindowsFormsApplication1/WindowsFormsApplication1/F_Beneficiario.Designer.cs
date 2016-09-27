@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.nombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,6 +48,17 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.psicologo = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.botonModificar = new System.Windows.Forms.Button();
+            this.botonAgregar = new System.Windows.Forms.Button();
+            this.botonEliminar = new System.Windows.Forms.Button();
+            this.botonSalir = new System.Windows.Forms.Button();
+            this.botonActividades = new System.Windows.Forms.Button();
+            this.botonPagos = new System.Windows.Forms.Button();
+            this.botonPsicologo = new System.Windows.Forms.Button();
+            this.botonHijos = new System.Windows.Forms.Button();
+            this.botonLimpiar = new System.Windows.Forms.Button();
             this.idBeneficiarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,17 +72,6 @@
             this.edadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.beneficiarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.marillacDataSet = new WindowsFormsApplication1.MarillacDataSet();
-            this.psicologo = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.botonModificar = new System.Windows.Forms.Button();
-            this.botonAgregar = new System.Windows.Forms.Button();
-            this.botonEliminar = new System.Windows.Forms.Button();
-            this.botonSalir = new System.Windows.Forms.Button();
-            this.botonActividades = new System.Windows.Forms.Button();
-            this.botonPagos = new System.Windows.Forms.Button();
-            this.botonPsicologo = new System.Windows.Forms.Button();
-            this.botonHijos = new System.Windows.Forms.Button();
-            this.botonLimpiar = new System.Windows.Forms.Button();
             this.beneficiarioTableAdapter = new WindowsFormsApplication1.MarillacDataSetTableAdapters.BeneficiarioTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.beneficiarioBindingSource)).BeginInit();
@@ -282,11 +282,125 @@
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
+            // psicologo
+            // 
+            this.psicologo.Font = new System.Drawing.Font("Calibri", 14F);
+            this.psicologo.Location = new System.Drawing.Point(191, 214);
+            this.psicologo.Margin = new System.Windows.Forms.Padding(2);
+            this.psicologo.Name = "psicologo";
+            this.psicologo.ReadOnly = true;
+            this.psicologo.Size = new System.Drawing.Size(266, 30);
+            this.psicologo.TabIndex = 11;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Calibri", 14F);
+            this.label10.Location = new System.Drawing.Point(14, 214);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(99, 23);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "Psicólogo/a";
+            // 
+            // botonModificar
+            // 
+            this.botonModificar.Location = new System.Drawing.Point(104, 463);
+            this.botonModificar.Name = "botonModificar";
+            this.botonModificar.Size = new System.Drawing.Size(89, 42);
+            this.botonModificar.TabIndex = 15;
+            this.botonModificar.Text = "Modificar";
+            this.botonModificar.UseVisualStyleBackColor = true;
+            this.botonModificar.Click += new System.EventHandler(this.botonModificar_Click);
+            // 
+            // botonAgregar
+            // 
+            this.botonAgregar.Location = new System.Drawing.Point(9, 463);
+            this.botonAgregar.Name = "botonAgregar";
+            this.botonAgregar.Size = new System.Drawing.Size(89, 42);
+            this.botonAgregar.TabIndex = 16;
+            this.botonAgregar.Text = "Agregar";
+            this.botonAgregar.UseVisualStyleBackColor = true;
+            this.botonAgregar.Click += new System.EventHandler(this.botonAgregar_Click);
+            // 
+            // botonEliminar
+            // 
+            this.botonEliminar.Location = new System.Drawing.Point(199, 463);
+            this.botonEliminar.Name = "botonEliminar";
+            this.botonEliminar.Size = new System.Drawing.Size(89, 42);
+            this.botonEliminar.TabIndex = 17;
+            this.botonEliminar.Text = "Eliminar";
+            this.botonEliminar.UseVisualStyleBackColor = true;
+            this.botonEliminar.Click += new System.EventHandler(this.botonEliminar_Click);
+            // 
+            // botonSalir
+            // 
+            this.botonSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.botonSalir.Location = new System.Drawing.Point(387, 464);
+            this.botonSalir.Name = "botonSalir";
+            this.botonSalir.Size = new System.Drawing.Size(79, 92);
+            this.botonSalir.TabIndex = 18;
+            this.botonSalir.Text = "Salir";
+            this.botonSalir.UseVisualStyleBackColor = true;
+            this.botonSalir.Click += new System.EventHandler(this.botonSalir_Click);
+            // 
+            // botonActividades
+            // 
+            this.botonActividades.Font = new System.Drawing.Font("Calibri", 11F);
+            this.botonActividades.Location = new System.Drawing.Point(9, 511);
+            this.botonActividades.Name = "botonActividades";
+            this.botonActividades.Size = new System.Drawing.Size(89, 42);
+            this.botonActividades.TabIndex = 19;
+            this.botonActividades.Text = "Actividades";
+            this.botonActividades.UseVisualStyleBackColor = true;
+            this.botonActividades.Click += new System.EventHandler(this.botonActividades_Click);
+            // 
+            // botonPagos
+            // 
+            this.botonPagos.Location = new System.Drawing.Point(104, 511);
+            this.botonPagos.Name = "botonPagos";
+            this.botonPagos.Size = new System.Drawing.Size(89, 42);
+            this.botonPagos.TabIndex = 21;
+            this.botonPagos.Text = "Pagos";
+            this.botonPagos.UseVisualStyleBackColor = true;
+            // 
+            // botonPsicologo
+            // 
+            this.botonPsicologo.Location = new System.Drawing.Point(199, 512);
+            this.botonPsicologo.Name = "botonPsicologo";
+            this.botonPsicologo.Size = new System.Drawing.Size(89, 42);
+            this.botonPsicologo.TabIndex = 22;
+            this.botonPsicologo.Text = "Psicólogo";
+            this.botonPsicologo.UseVisualStyleBackColor = true;
+            this.botonPsicologo.Click += new System.EventHandler(this.botonPsicologo_Click);
+            // 
+            // botonHijos
+            // 
+            this.botonHijos.Font = new System.Drawing.Font("Calibri", 11F);
+            this.botonHijos.Location = new System.Drawing.Point(294, 512);
+            this.botonHijos.Name = "botonHijos";
+            this.botonHijos.Size = new System.Drawing.Size(87, 44);
+            this.botonHijos.TabIndex = 23;
+            this.botonHijos.Text = "Hijos";
+            this.botonHijos.UseVisualStyleBackColor = true;
+            this.botonHijos.Click += new System.EventHandler(this.botonHijos_Click);
+            // 
+            // botonLimpiar
+            // 
+            this.botonLimpiar.Font = new System.Drawing.Font("Calibri", 11F);
+            this.botonLimpiar.Location = new System.Drawing.Point(294, 463);
+            this.botonLimpiar.Name = "botonLimpiar";
+            this.botonLimpiar.Size = new System.Drawing.Size(87, 43);
+            this.botonLimpiar.TabIndex = 24;
+            this.botonLimpiar.Text = "Limpiar";
+            this.botonLimpiar.UseVisualStyleBackColor = true;
+            this.botonLimpiar.Click += new System.EventHandler(this.botonLimpiar_Click);
+            // 
             // idBeneficiarioDataGridViewTextBoxColumn
             // 
             this.idBeneficiarioDataGridViewTextBoxColumn.DataPropertyName = "idBeneficiario";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idBeneficiarioDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idBeneficiarioDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
             this.idBeneficiarioDataGridViewTextBoxColumn.HeaderText = "ID";
             this.idBeneficiarioDataGridViewTextBoxColumn.Name = "idBeneficiarioDataGridViewTextBoxColumn";
             this.idBeneficiarioDataGridViewTextBoxColumn.ReadOnly = true;
@@ -379,121 +493,6 @@
             // 
             this.marillacDataSet.DataSetName = "MarillacDataSet";
             this.marillacDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // psicologo
-            // 
-            this.psicologo.Font = new System.Drawing.Font("Calibri", 14F);
-            this.psicologo.Location = new System.Drawing.Point(191, 214);
-            this.psicologo.Margin = new System.Windows.Forms.Padding(2);
-            this.psicologo.Name = "psicologo";
-            this.psicologo.ReadOnly = true;
-            this.psicologo.Size = new System.Drawing.Size(266, 30);
-            this.psicologo.TabIndex = 11;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Calibri", 14F);
-            this.label10.Location = new System.Drawing.Point(14, 214);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(99, 23);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "Psicólogo/a";
-            // 
-            // botonModificar
-            // 
-            this.botonModificar.Location = new System.Drawing.Point(104, 463);
-            this.botonModificar.Name = "botonModificar";
-            this.botonModificar.Size = new System.Drawing.Size(89, 42);
-            this.botonModificar.TabIndex = 15;
-            this.botonModificar.Text = "Modificar";
-            this.botonModificar.UseVisualStyleBackColor = true;
-            this.botonModificar.Click += new System.EventHandler(this.botonModificar_Click);
-            // 
-            // botonAgregar
-            // 
-            this.botonAgregar.Location = new System.Drawing.Point(9, 463);
-            this.botonAgregar.Name = "botonAgregar";
-            this.botonAgregar.Size = new System.Drawing.Size(89, 42);
-            this.botonAgregar.TabIndex = 16;
-            this.botonAgregar.Text = "Agregar";
-            this.botonAgregar.UseVisualStyleBackColor = true;
-            this.botonAgregar.Click += new System.EventHandler(this.botonAgregar_Click);
-            // 
-            // botonEliminar
-            // 
-            this.botonEliminar.Location = new System.Drawing.Point(199, 463);
-            this.botonEliminar.Name = "botonEliminar";
-            this.botonEliminar.Size = new System.Drawing.Size(89, 42);
-            this.botonEliminar.TabIndex = 17;
-            this.botonEliminar.Text = "Eliminar";
-            this.botonEliminar.UseVisualStyleBackColor = true;
-            this.botonEliminar.Click += new System.EventHandler(this.botonEliminar_Click);
-            // 
-            // botonSalir
-            // 
-            this.botonSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.botonSalir.Location = new System.Drawing.Point(387, 464);
-            this.botonSalir.Name = "botonSalir";
-            this.botonSalir.Size = new System.Drawing.Size(79, 92);
-            this.botonSalir.TabIndex = 18;
-            this.botonSalir.Text = "Salir";
-            this.botonSalir.UseVisualStyleBackColor = true;
-            this.botonSalir.Click += new System.EventHandler(this.botonSalir_Click);
-            // 
-            // botonActividades
-            // 
-            this.botonActividades.Font = new System.Drawing.Font("Calibri", 11F);
-            this.botonActividades.Location = new System.Drawing.Point(9, 511);
-            this.botonActividades.Name = "botonActividades";
-            this.botonActividades.Size = new System.Drawing.Size(89, 42);
-            this.botonActividades.TabIndex = 19;
-            this.botonActividades.Text = "Actividades";
-            this.botonActividades.UseVisualStyleBackColor = true;
-            this.botonActividades.Click += new System.EventHandler(this.botonActividades_Click);
-            // 
-            // botonPagos
-            // 
-            this.botonPagos.Location = new System.Drawing.Point(104, 511);
-            this.botonPagos.Name = "botonPagos";
-            this.botonPagos.Size = new System.Drawing.Size(89, 42);
-            this.botonPagos.TabIndex = 21;
-            this.botonPagos.Text = "Pagos";
-            this.botonPagos.UseVisualStyleBackColor = true;
-            this.botonPagos.Click += new System.EventHandler(this.botonPagos_Click);
-            // 
-            // botonPsicologo
-            // 
-            this.botonPsicologo.Location = new System.Drawing.Point(199, 512);
-            this.botonPsicologo.Name = "botonPsicologo";
-            this.botonPsicologo.Size = new System.Drawing.Size(89, 42);
-            this.botonPsicologo.TabIndex = 22;
-            this.botonPsicologo.Text = "Psicólogo";
-            this.botonPsicologo.UseVisualStyleBackColor = true;
-            this.botonPsicologo.Click += new System.EventHandler(this.botonPsicologo_Click);
-            // 
-            // botonHijos
-            // 
-            this.botonHijos.Font = new System.Drawing.Font("Calibri", 11F);
-            this.botonHijos.Location = new System.Drawing.Point(294, 512);
-            this.botonHijos.Name = "botonHijos";
-            this.botonHijos.Size = new System.Drawing.Size(87, 44);
-            this.botonHijos.TabIndex = 23;
-            this.botonHijos.Text = "Hijos";
-            this.botonHijos.UseVisualStyleBackColor = true;
-            this.botonHijos.Click += new System.EventHandler(this.botonHijos_Click);
-            // 
-            // botonLimpiar
-            // 
-            this.botonLimpiar.Font = new System.Drawing.Font("Calibri", 11F);
-            this.botonLimpiar.Location = new System.Drawing.Point(294, 463);
-            this.botonLimpiar.Name = "botonLimpiar";
-            this.botonLimpiar.Size = new System.Drawing.Size(87, 43);
-            this.botonLimpiar.TabIndex = 24;
-            this.botonLimpiar.Text = "Limpiar";
-            this.botonLimpiar.UseVisualStyleBackColor = true;
-            this.botonLimpiar.Click += new System.EventHandler(this.botonLimpiar_Click);
             // 
             // beneficiarioTableAdapter
             // 
