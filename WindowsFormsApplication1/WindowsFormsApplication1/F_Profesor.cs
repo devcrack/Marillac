@@ -14,7 +14,7 @@ namespace WindowsFormsApplication1
 {
     public partial class F_Profesor : Form
     {
-
+        //
         public SqlConnection conexion;
         Form main_Form;
         private string datosConexion;
