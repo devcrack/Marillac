@@ -15,6 +15,7 @@ namespace WindowsFormsApplication1
     {
         Menu main_Form;
 
+        private Int64 idAct;
         private SqlConnection con;
         private SqlDataAdapter adapter;
         private string connectionString;
@@ -23,6 +24,7 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
             this.main_Form = m_Form;
+            idAct = 0;
 
             con = new SqlConnection();
             connectionString = @"Data Source=CESARJOSUE_PC\SQLSERVER_V2;Initial Catalog=Marillac;Integrated Security=True";
@@ -38,14 +40,10 @@ namespace WindowsFormsApplication1
 
         private void Form_Actividades_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'marillacDataSet.InscripcionHijo' table. You can move, or remove it, as needed.
-            this.inscripcionHijoTableAdapter.Fill(this.marillacDataSet.InscripcionHijo);
-
-            // TODO: This line of code loads data into the 'marillacDataSet.InscripcionBeneficiario' table. You can move, or remove it, as needed.
-            this.inscripcionBeneficiarioTableAdapter.Fill(this.marillacDataSet.InscripcionBeneficiario);
-
-            // TODO: This line of code loads data into the 'marillacDataSet.Actividad' table. You can move, or remove it, as needed.
             this.actividadTableAdapter.Fill(this.marillacDataSet.Actividad);
+            this.beneficiarioTableAdapter.FillBy(this.marillacDataSet.Beneficiario, idAct);
+            dataGridView1.ClearSelection();
+            limpiarTextBox();
         }
 
         //BOTÓN PARA SALIR
@@ -145,16 +143,6 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void idProfesor_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         //FUNCIÓN QUE LLENA LOS TEXT BOX CUANDO SE SELECCIONA UN CAMPO DEL DATA GRID
         private void dataGridView1_SelectionChanged_1(object sender, EventArgs e)
         {
@@ -167,11 +155,25 @@ namespace WindowsFormsApplication1
                 cupo.Text = Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[6].Value);
                 costo.Text = Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[7].Value);
                 idProfesor.Text = Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[1].Value);
+                idAct = Convert.ToInt64(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value.ToString());
+                this.beneficiarioTableAdapter.FillBy(this.marillacDataSet.Beneficiario, idAct);
             }
             catch
             {
             }
         }
 
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.beneficiarioTableAdapter.FillBy(this.marillacDataSet.Beneficiario, ((long)(System.Convert.ChangeType(claveActividadToolStripTextBox.Text, typeof(long)))));
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }
