@@ -27,7 +27,7 @@ namespace WindowsFormsApplication1
             idAct = 0;
 
             con = new SqlConnection();
-            connectionString = @"Data Source=CESARJOSUE_PC\SQLSERVER_V2;Initial Catalog=Marillac;Integrated Security=True";
+            connectionString = @"Data Source=MAUVALDES\SQLEXPRESS;Initial Catalog=Marillac;Integrated Security=True";
             //connectionString = @"Data Source=DEVCRACK-PC\SQLEXPRESS;Initial Catalog=Marillac;Integrated Security=True";
             con.ConnectionString = connectionString;
             adapter = new SqlDataAdapter();
@@ -119,7 +119,7 @@ namespace WindowsFormsApplication1
         {
             Int64 idModificar;
 
-            if (dataGridView1.SelectedRows.Count != 0)
+            if (dataGridView1.SelectedRows.Count!=0)
             {
                 idModificar = Convert.ToInt64(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value.ToString());
 
