@@ -71,6 +71,7 @@ namespace WindowsFormsApplication1
             this.form_Actividades = new Form_Actividades(this);
             this.Hide();
             this.form_Actividades.Show();
+            // OR
         }
 
         private void Menu_Paint(object sender, PaintEventArgs e)
