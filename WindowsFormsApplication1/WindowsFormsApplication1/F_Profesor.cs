@@ -26,9 +26,12 @@ namespace WindowsFormsApplication1
             conexion_db();
             dataGridView1.MultiSelect = false;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-           
+            dataGridView2.MultiSelect = false;
+            dataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
             act_datos();
             dataGridView1.ClearSelection();
+            dataGridView2.ClearSelection();
         }
 
         public void act_datos()
@@ -126,6 +129,7 @@ namespace WindowsFormsApplication1
                 if( nombre.Text != "")
                     conActividades();
             }
+            dataGridView2.ClearSelection();
         }
 
         public bool validacampos()
@@ -257,6 +261,20 @@ namespace WindowsFormsApplication1
 
 
             
+        }
+
+        private void dataGridView2_MouseClick(object sender, MouseEventArgs e)
+        {
+            actividaddata();
+        }
+
+        public void actividaddata()
+        {
+
+            label12.Text = "Nombre Actividad: " + dataGridView2.SelectedCells[2].Value.ToString();
+            label13.Text = "Hora Inicio: " + dataGridView2.SelectedCells[4].Value.ToString();
+            label14.Text = "Numero Inscritos: " + dataGridView2.SelectedCells[8].Value.ToString();
+
         }
     }
 }
