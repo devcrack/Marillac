@@ -14,25 +14,30 @@ namespace WindowsFormsApplication1
 {
     public partial class F_Profesor : Form
     {
-        //
+
         public SqlConnection conexion;
         Form main_Form;
         private string datosConexion;
 
         private void F_Profesor_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'marillacDataSet.Profesor' table. You can move, or remove it, as needed.
+            
             conexion_db();
             dataGridView1.MultiSelect = false;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView2.MultiSelect = false;
+            dataGridView2.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
             act_datos();
-            dataGridView1.SelectedRows[0].Selected = false;
+            dataGridView1.ClearSelection();
+            dataGridView2.ClearSelection();
         }
 
         public void act_datos()
         {
             dataGridView1.DataSource = Consulta("SELECT * FROM Persona.Profesor").Tables[0];
-            if (dataGridView1.RowCount > 0)
-                dataGridView1.SelectedRows[0].Selected = false;
+            dataGridView1.ClearSelection();
             limpiaDatos();
         }
 
@@ -105,7 +110,7 @@ namespace WindowsFormsApplication1
             {
                 MessageBox.Show(ex2.Message);
             }
-            act_datos();
+           // act_datos();
         }
 
 
@@ -124,21 +129,36 @@ namespace WindowsFormsApplication1
                 if( nombre.Text != "")
                     conActividades();
             }
+            dataGridView2.ClearSelection();
         }
 
+        public bool validacampos()
+        {
+
+            for (int i = 0; i < 10; i++)
+                if (dataGridView1.SelectedCells[i].Value == null)
+                    return false;
+            return true;
+
+        }
 
         public void rell_datos()
         {
-            nombre.Text = dataGridView1.SelectedCells[1].Value.ToString();
-            paterno.Text = dataGridView1.SelectedCells[2].Value.ToString();
-            materno.Text = dataGridView1.SelectedCells[3].Value.ToString();
-            direccion.Text = dataGridView1.SelectedCells[4].Value.ToString();
-            colonia.Text = dataGridView1.SelectedCells[5].Value.ToString();
-            telefono.Text = dataGridView1.SelectedCells[6].Value.ToString();
-            dias.Text = dataGridView1.SelectedCells[7].Value.ToString();
-            sexo.Text = dataGridView1.SelectedCells[8].Value.ToString();
-            dateTimePicker1.Text = dataGridView1.SelectedCells[9].Value.ToString();
-            edad.Text = dataGridView1.SelectedCells[10].Value.ToString();
+            
+
+            if(validacampos())
+            { 
+                nombre.Text = dataGridView1.SelectedCells[1].Value.ToString();
+                paterno.Text = dataGridView1.SelectedCells[2].Value.ToString();
+                materno.Text = dataGridView1.SelectedCells[3].Value.ToString();
+                direccion.Text = dataGridView1.SelectedCells[4].Value.ToString();
+                colonia.Text = dataGridView1.SelectedCells[5].Value.ToString();
+                telefono.Text = dataGridView1.SelectedCells[6].Value.ToString();
+                dias.Text = dataGridView1.SelectedCells[7].Value.ToString();
+                sexo.Text = dataGridView1.SelectedCells[8].Value.ToString();
+                dateTimePicker1.Text = dataGridView1.SelectedCells[9].Value.ToString();
+            }
+
         }
 
 
@@ -153,24 +173,36 @@ namespace WindowsFormsApplication1
             dias.Clear();
             sexo.Clear();
             dateTimePicker1.Text = "";
-            edad.Clear();
+            
         }
 
+        public bool validatxt()
+        {
+
+            if (nombre.Text != "" && paterno.Text != "" && materno.Text != ""
+            && direccion.Text != "" && colonia.Text != "" && telefono.Text != ""
+            && dias.Text != "" && sexo.Text != "" && dateTimePicker1.Text != "")
+                return true;
+            return false;
+        }
 
         public void elimina()
         {
-            if(dataGridView1.SelectedRows.Count>0)
+            if(dataGridView1.SelectedRows.Count>0 && dataGridView1.SelectedCells[0].Value != null)
                 conDatos("DELETE FROM Persona.Profesor WHERE IdProfesor =" + dataGridView1.SelectedCells[0].Value.ToString());
+
+            act_datos();
         }
 
 
         public void inserta()
         {
             string cad;
-            cad = "INSERT INTO Persona.Profesor(nombre,paterno,materno,direccion,colonia,telefono,diasLaborales,sexo,fechaNacimiento,edad)"
+            cad = "INSERT INTO Persona.Profesor(nombre,paterno,materno,direccion,colonia,telefono,diasLaborales,sexo,fechaNacimiento)"
             +"VALUES('"  +  nombre.Text  + "','" + paterno.Text + "','" + materno.Text + "','" + direccion.Text + "','" + colonia.Text +
-            "','" +telefono.Text + "','" + dias.Text + "','" + sexo.Text + "','" + dateTimePicker1.Text + "','" +edad.Text + "')";
+            "','" +telefono.Text + "','" + dias.Text + "','" + sexo.Text + "','" + dateTimePicker1.Text + "')";
             conDatos(cad);
+            act_datos();
         }
 
 
@@ -178,14 +210,18 @@ namespace WindowsFormsApplication1
         {
             string cad;
 
-            if (dataGridView1.SelectedRows.Count > 0)
-            { 
+            if (dataGridView1.SelectedRows.Count > 0 && validatxt() != false)
+            {
                 cad = "UPDATE Persona.Profesor SET nombre='" + nombre.Text + "',paterno='" + paterno.Text + "',materno='" + materno.Text
                 + "',direccion='" + direccion.Text + "',colonia='" + colonia.Text + "',telefono='" + telefono.Text
                 + "',diasLaborales='" + dias.Text + "',sexo='" + sexo.Text + "',fechaNacimiento='" + dateTimePicker1.Text
-                + "',edad='" + edad.Text + "' WHERE IdProfesor =" + dataGridView1.SelectedCells[0].Value.ToString();
+                + "' WHERE IdProfesor =" + dataGridView1.SelectedCells[0].Value.ToString();
                 conDatos(cad);
+                act_datos();
             }
+            else
+                MessageBox.Show("Campo vacio no permitido");
+          
         }
 
 
@@ -204,13 +240,40 @@ namespace WindowsFormsApplication1
         public void conActividades()
         {
             string cad,idprofesor;
-            idprofesor = dataGridView1.SelectedCells[0].Value.ToString();
-            cad = "Select * From Administracion.Actividad Where idProfesor = " + dataGridView1.SelectedCells[0].Value.ToString();
-            dataGridView2.DataSource =  Consulta(cad).Tables[0];
+
+            if (dataGridView1.SelectedCells[0].Value != null)
+            {
+                idprofesor = dataGridView1.SelectedCells[0].Value.ToString();
+                cad = "Select * From Administracion.Actividad Where idProfesor = " + dataGridView1.SelectedCells[0].Value.ToString();
+                dataGridView2.DataSource = Consulta(cad).Tables[0];
+            }
         }
 
         private void dias_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void botonSalir_Click(object sender, EventArgs e)
+        {
+            this.main_Form.Show();
+            this.Close();
+
+
+            
+        }
+
+        private void dataGridView2_MouseClick(object sender, MouseEventArgs e)
+        {
+            actividaddata();
+        }
+
+        public void actividaddata()
+        {
+
+            label12.Text = "Nombre Actividad: " + dataGridView2.SelectedCells[2].Value.ToString();
+            label13.Text = "Hora Inicio: " + dataGridView2.SelectedCells[4].Value.ToString();
+            label14.Text = "Numero Inscritos: " + dataGridView2.SelectedCells[8].Value.ToString();
 
         }
     }
