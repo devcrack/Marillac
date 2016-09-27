@@ -106,7 +106,7 @@ namespace WindowsFormsApplication1
                 }
             }
         }
-
+        
         private void psicologoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
