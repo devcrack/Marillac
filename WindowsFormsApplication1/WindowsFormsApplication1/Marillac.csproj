@@ -58,6 +58,12 @@
     <Compile Include="beneficiarioPsicologo.Designer.cs">
       <DependentUpon>beneficiarioPsicologo.cs</DependentUpon>
     </Compile>
+    <Compile Include="cuotaBeneficiario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cuotaBeneficiario.Designer.cs">
+      <DependentUpon>cuotaBeneficiario.cs</DependentUpon>
+    </Compile>
     <Compile Include="C_Connection.cs" />
     <Compile Include="F_Pacientes.cs">
       <SubType>Form</SubType>
@@ -119,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="beneficiarioPsicologo.resx">
       <DependentUpon>beneficiarioPsicologo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cuotaBeneficiario.resx">
+      <DependentUpon>cuotaBeneficiario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_Pacientes.resx">
       <DependentUpon>F_Pacientes.cs</DependentUpon>
