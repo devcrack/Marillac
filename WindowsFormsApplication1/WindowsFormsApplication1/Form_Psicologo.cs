@@ -17,6 +17,7 @@ namespace WindowsFormsApplication1
         /// </summary>
         Menu main_Form;
         C_Connection sql;
+        F_Pacientes form_Pac;
 
         public Form_Psicologo(Menu m_Form, string connection_str)
         {
@@ -86,17 +87,23 @@ namespace WindowsFormsApplication1
         {
             foreach(Control c in this.Controls)
             {
-                if (c is TextBox)
-                    ((TextBox)c).Clear();
-                else if (c is RadioButton)
+                if (c is GroupBox)
                 {
-                    if (((RadioButton)c).Checked)
-                        ((RadioButton)c).Checked = false;
+                    foreach (Control c2 in ((GroupBox)c).Controls)
+                    {
+                        if (c2 is TextBox)
+                            ((TextBox)c2).Clear();
+                        else if (c2 is RadioButton)
+                        {
+                            if (((RadioButton)c2).Checked)
+                                ((RadioButton)c2).Checked = false;
+                        }
+                        else if (c2 is NumericUpDown)
+                            ((NumericUpDown)c2).Value = 0;
+                        else if (c2 is DateTimePicker)
+                            ((DateTimePicker)c2).ResetText();
+                    }
                 }
-                else if (c is NumericUpDown)
-                    ((NumericUpDown)c).Value = 0;
-                else if (c is DateTimePicker)
-                    ((DateTimePicker)c).ResetText();
             }
         }
 
@@ -211,7 +218,7 @@ namespace WindowsFormsApplication1
                 this.txt_Box_Working_Days.Text = Convert.ToString(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[7].Value);
                 this.radio_Button_Change(Convert.ToChar(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[8].Value));
                 this.numericUpDown_Pac_Limit.Value = Convert.ToInt32(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[9].Value);
-                this.numericUpDown_Sig_Pac.Value = Convert.ToInt32(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[10].Value);
+                this.txt_Box_NumPacientes.Text = Convert.ToString(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[10].Value);
                 this.dateTime_Birth_Date.Value = DateTime.Parse(Convert.ToString(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[11].Value));
             }
             catch { }
@@ -225,6 +232,38 @@ namespace WindowsFormsApplication1
                 this.radioButt_Female.Checked = true;
         }
 
+        private void limpiarCamposToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Reset_Controls();
+        }
+
+        private void darDeAltaPacienteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count != 0)
+            {
+                Int64 idModificar;
+
+                idModificar = Convert.ToInt64(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value.ToString());
+                this.form_Pac = new F_Pacientes(this.sql.Conect_String, 1, idModificar);
+                this.form_Pac.ShowDialog();
+            }
+            else
+                MessageBox.Show("Seleccione Primero a un Psicologo");
+        }
+
+        private void darDeBajaPacienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count != 0)
+            {
+                Int64 idModificar;
+
+                idModificar = Convert.ToInt64(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value.ToString());
+                this.form_Pac = new F_Pacientes(this.sql.Conect_String, 2,idModificar);
+                this.form_Pac.ShowDialog();
+            }
+            else
+                MessageBox.Show("Seleccione Primero a un Psicologo");
+        }
     }
 
 }

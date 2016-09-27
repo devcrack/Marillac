@@ -104,6 +104,7 @@
             this.MaximizeBox = false;
             this.Name = "Menu";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Marillac";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Menu_Paint);
             this.ResumeLayout(false);

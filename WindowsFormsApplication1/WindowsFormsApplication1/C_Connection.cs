@@ -7,10 +7,11 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApplication1
 {
-    class C_Connection
+    public class C_Connection
     {
         private SqlConnection connection;
         private SqlDataAdapter adapter;
+        private string conect_String; 
         private string[] dmL;
         private string[,] tables;
         Dictionary<string, string[]> tables_s;
@@ -88,15 +89,42 @@ namespace WindowsFormsApplication1
             }
         }
 
+        public string Conect_String
+        {
+            get
+            {
+                return conect_String;
+            }
+
+            set
+            {
+                conect_String = value;
+            }
+        }
+
         /// <summary>
         /// Clase para la conexion y ejecucion de Consultas en SQL
         /// </summary>
         /// <param name="c_string">Cadena de Conexion :p</param>
         public C_Connection(string c_string)
         {
+            this.conect_String = c_string;
             this.connection = new SqlConnection(c_string);
             this.adapter = new SqlDataAdapter();
-            this.dmL = new string[]{ "INSERT INTO ","VALUES", "UPDATE "," SET ", " WHERE " };
+            this.dmL = new string[]
+            {
+                " INSERT INTO ",//0
+                " VALUES",
+                " UPDATE ",
+                " SET ",//3
+                " WHERE ",
+                " SELECT ",
+                " FROM ", //6
+                " IS NULL ",
+                " UNION ALL",
+                " CONCAT",
+                " IS NOT NULL "//10
+            };
 
 
             this.tables = new string[,]
@@ -121,6 +149,39 @@ namespace WindowsFormsApplication1
                       "fechaNacimiento",
                       "idPsicologo"//10
                    }
+                );
+
+            this.tables_s.Add
+                (" Persona.Beneficiario ", new string[]
+                   {
+                      " idBeneficiario ",//0
+                      "idPsicologo", 
+                      "nombre",
+                      "paterno",//3
+                      "materno",
+                      "direccion",
+                      "colonia", //6
+                      "telefono",
+                      "sexo",
+                      "fechaNacimiento",
+                      "edad"//10 
+                   }
+                );
+
+            this.tables_s.Add
+                (" Persona.Hijo", new string[]
+                   {
+                      " idHijo ",//0
+                      "idBeneficiario",
+                      "idPsicologo",
+                      "nombre",//3
+                      "paterno",
+                      "materno",
+                      "sexo",//6
+                      "fechaNacimiento",
+                      "edad"//8 
+                   }
+
                 );
         }
 
