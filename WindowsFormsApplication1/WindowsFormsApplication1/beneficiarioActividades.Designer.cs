@@ -28,42 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label9 = new System.Windows.Forms.Label();
-            this.idProfesor = new System.Windows.Forms.TextBox();
+            this.profesor = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.costo = new System.Windows.Forms.TextBox();
-            this.horaFinal = new System.Windows.Forms.TextBox();
-            this.horaInicio = new System.Windows.Forms.TextBox();
-            this.diasImpartida = new System.Windows.Forms.TextBox();
-            this.nombreActividad = new System.Windows.Forms.TextBox();
+            this.final = new System.Windows.Forms.TextBox();
+            this.inicio = new System.Windows.Forms.TextBox();
+            this.dias = new System.Windows.Forms.TextBox();
+            this.nombre = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.saldo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.actividadBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.marillacDataSet = new WindowsFormsApplication1.MarillacDataSet();
+            this.actividadTableAdapter = new WindowsFormsApplication1.MarillacDataSetTableAdapters.ActividadTableAdapter();
+            this.idActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idProfesorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diasImparteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaInicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaFinalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cupoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inscritosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.actividadBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marillacDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(250, 9);
+            this.label9.Location = new System.Drawing.Point(272, 9);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(278, 66);
             this.label9.TabIndex = 11;
             this.label9.Text = "Actividades";
             // 
-            // idProfesor
+            // profesor
             // 
-            this.idProfesor.Font = new System.Drawing.Font("Calibri", 14F);
-            this.idProfesor.Location = new System.Drawing.Point(114, 171);
-            this.idProfesor.Margin = new System.Windows.Forms.Padding(2);
-            this.idProfesor.Name = "idProfesor";
-            this.idProfesor.Size = new System.Drawing.Size(266, 30);
-            this.idProfesor.TabIndex = 48;
+            this.profesor.Font = new System.Drawing.Font("Calibri", 14F);
+            this.profesor.Location = new System.Drawing.Point(114, 171);
+            this.profesor.Margin = new System.Windows.Forms.Padding(2);
+            this.profesor.Name = "profesor";
+            this.profesor.ReadOnly = true;
+            this.profesor.Size = new System.Drawing.Size(266, 30);
+            this.profesor.TabIndex = 48;
             // 
             // label8
             // 
@@ -82,44 +101,49 @@
             this.costo.Location = new System.Drawing.Point(114, 239);
             this.costo.Margin = new System.Windows.Forms.Padding(2);
             this.costo.Name = "costo";
+            this.costo.ReadOnly = true;
             this.costo.Size = new System.Drawing.Size(87, 30);
             this.costo.TabIndex = 47;
             // 
-            // horaFinal
+            // final
             // 
-            this.horaFinal.Font = new System.Drawing.Font("Calibri", 14F);
-            this.horaFinal.Location = new System.Drawing.Point(283, 205);
-            this.horaFinal.Margin = new System.Windows.Forms.Padding(2);
-            this.horaFinal.Name = "horaFinal";
-            this.horaFinal.Size = new System.Drawing.Size(97, 30);
-            this.horaFinal.TabIndex = 46;
+            this.final.Font = new System.Drawing.Font("Calibri", 14F);
+            this.final.Location = new System.Drawing.Point(283, 205);
+            this.final.Margin = new System.Windows.Forms.Padding(2);
+            this.final.Name = "final";
+            this.final.ReadOnly = true;
+            this.final.Size = new System.Drawing.Size(97, 30);
+            this.final.TabIndex = 46;
             // 
-            // horaInicio
+            // inicio
             // 
-            this.horaInicio.Font = new System.Drawing.Font("Calibri", 14F);
-            this.horaInicio.Location = new System.Drawing.Point(161, 205);
-            this.horaInicio.Margin = new System.Windows.Forms.Padding(2);
-            this.horaInicio.Name = "horaInicio";
-            this.horaInicio.Size = new System.Drawing.Size(97, 30);
-            this.horaInicio.TabIndex = 45;
+            this.inicio.Font = new System.Drawing.Font("Calibri", 14F);
+            this.inicio.Location = new System.Drawing.Point(161, 205);
+            this.inicio.Margin = new System.Windows.Forms.Padding(2);
+            this.inicio.Name = "inicio";
+            this.inicio.ReadOnly = true;
+            this.inicio.Size = new System.Drawing.Size(97, 30);
+            this.inicio.TabIndex = 45;
             // 
-            // diasImpartida
+            // dias
             // 
-            this.diasImpartida.Font = new System.Drawing.Font("Calibri", 14F);
-            this.diasImpartida.Location = new System.Drawing.Point(114, 134);
-            this.diasImpartida.Margin = new System.Windows.Forms.Padding(2);
-            this.diasImpartida.Name = "diasImpartida";
-            this.diasImpartida.Size = new System.Drawing.Size(266, 30);
-            this.diasImpartida.TabIndex = 44;
+            this.dias.Font = new System.Drawing.Font("Calibri", 14F);
+            this.dias.Location = new System.Drawing.Point(114, 134);
+            this.dias.Margin = new System.Windows.Forms.Padding(2);
+            this.dias.Name = "dias";
+            this.dias.ReadOnly = true;
+            this.dias.Size = new System.Drawing.Size(266, 30);
+            this.dias.TabIndex = 44;
             // 
-            // nombreActividad
+            // nombre
             // 
-            this.nombreActividad.Font = new System.Drawing.Font("Calibri", 14F);
-            this.nombreActividad.Location = new System.Drawing.Point(114, 100);
-            this.nombreActividad.Margin = new System.Windows.Forms.Padding(2);
-            this.nombreActividad.Name = "nombreActividad";
-            this.nombreActividad.Size = new System.Drawing.Size(266, 30);
-            this.nombreActividad.TabIndex = 43;
+            this.nombre.Font = new System.Drawing.Font("Calibri", 14F);
+            this.nombre.Location = new System.Drawing.Point(114, 100);
+            this.nombre.Margin = new System.Windows.Forms.Padding(2);
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            this.nombre.Size = new System.Drawing.Size(266, 30);
+            this.nombre.TabIndex = 43;
             // 
             // label6
             // 
@@ -176,41 +200,165 @@
             this.label5.TabIndex = 50;
             this.label5.Text = "-";
             // 
-            // textBox1
+            // saldo
             // 
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 14F);
-            this.textBox1.Location = new System.Drawing.Point(293, 242);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(87, 30);
-            this.textBox1.TabIndex = 51;
+            this.saldo.Font = new System.Drawing.Font("Calibri", 14F);
+            this.saldo.Location = new System.Drawing.Point(114, 273);
+            this.saldo.Margin = new System.Windows.Forms.Padding(2);
+            this.saldo.Name = "saldo";
+            this.saldo.ReadOnly = true;
+            this.saldo.Size = new System.Drawing.Size(87, 30);
+            this.saldo.TabIndex = 51;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 14F);
-            this.label4.Location = new System.Drawing.Point(228, 249);
+            this.label4.Location = new System.Drawing.Point(11, 276);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 23);
             this.label4.TabIndex = 52;
             this.label4.Text = "Saldo: ";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idActividadDataGridViewTextBoxColumn,
+            this.idProfesorDataGridViewTextBoxColumn,
+            this.nombreActividadDataGridViewTextBoxColumn,
+            this.diasImparteDataGridViewTextBoxColumn,
+            this.horaInicioDataGridViewTextBoxColumn,
+            this.horaFinalDataGridViewTextBoxColumn,
+            this.cupoDataGridViewTextBoxColumn,
+            this.costoDataGridViewTextBoxColumn,
+            this.inscritosDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.actividadBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(410, 100);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(422, 203);
+            this.dataGridView1.TabIndex = 53;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
+            // 
+            // actividadBindingSource
+            // 
+            this.actividadBindingSource.DataMember = "Actividad";
+            this.actividadBindingSource.DataSource = this.marillacDataSet;
+            // 
+            // marillacDataSet
+            // 
+            this.marillacDataSet.DataSetName = "MarillacDataSet";
+            this.marillacDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // actividadTableAdapter
+            // 
+            this.actividadTableAdapter.ClearBeforeFill = true;
+            // 
+            // idActividadDataGridViewTextBoxColumn
+            // 
+            this.idActividadDataGridViewTextBoxColumn.DataPropertyName = "idActividad";
+            this.idActividadDataGridViewTextBoxColumn.HeaderText = "idActividad";
+            this.idActividadDataGridViewTextBoxColumn.Name = "idActividadDataGridViewTextBoxColumn";
+            this.idActividadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idActividadDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // idProfesorDataGridViewTextBoxColumn
+            // 
+            this.idProfesorDataGridViewTextBoxColumn.DataPropertyName = "idProfesor";
+            this.idProfesorDataGridViewTextBoxColumn.HeaderText = "idProfesor";
+            this.idProfesorDataGridViewTextBoxColumn.Name = "idProfesorDataGridViewTextBoxColumn";
+            this.idProfesorDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idProfesorDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nombreActividadDataGridViewTextBoxColumn
+            // 
+            this.nombreActividadDataGridViewTextBoxColumn.DataPropertyName = "nombreActividad";
+            this.nombreActividadDataGridViewTextBoxColumn.HeaderText = "Nombre ";
+            this.nombreActividadDataGridViewTextBoxColumn.Name = "nombreActividadDataGridViewTextBoxColumn";
+            this.nombreActividadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombreActividadDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // diasImparteDataGridViewTextBoxColumn
+            // 
+            this.diasImparteDataGridViewTextBoxColumn.DataPropertyName = "diasImparte";
+            this.diasImparteDataGridViewTextBoxColumn.HeaderText = "Días de clase ";
+            this.diasImparteDataGridViewTextBoxColumn.Name = "diasImparteDataGridViewTextBoxColumn";
+            this.diasImparteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.diasImparteDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // horaInicioDataGridViewTextBoxColumn
+            // 
+            this.horaInicioDataGridViewTextBoxColumn.DataPropertyName = "horaInicio";
+            this.horaInicioDataGridViewTextBoxColumn.HeaderText = "Hora inicio";
+            this.horaInicioDataGridViewTextBoxColumn.Name = "horaInicioDataGridViewTextBoxColumn";
+            this.horaInicioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // horaFinalDataGridViewTextBoxColumn
+            // 
+            this.horaFinalDataGridViewTextBoxColumn.DataPropertyName = "horaFinal";
+            this.horaFinalDataGridViewTextBoxColumn.HeaderText = "Hora final";
+            this.horaFinalDataGridViewTextBoxColumn.Name = "horaFinalDataGridViewTextBoxColumn";
+            this.horaFinalDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cupoDataGridViewTextBoxColumn
+            // 
+            this.cupoDataGridViewTextBoxColumn.DataPropertyName = "cupo";
+            this.cupoDataGridViewTextBoxColumn.HeaderText = "cupo";
+            this.cupoDataGridViewTextBoxColumn.Name = "cupoDataGridViewTextBoxColumn";
+            this.cupoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cupoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // costoDataGridViewTextBoxColumn
+            // 
+            this.costoDataGridViewTextBoxColumn.DataPropertyName = "costo";
+            this.costoDataGridViewTextBoxColumn.HeaderText = "Costo";
+            this.costoDataGridViewTextBoxColumn.Name = "costoDataGridViewTextBoxColumn";
+            this.costoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.costoDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // inscritosDataGridViewTextBoxColumn
+            // 
+            this.inscritosDataGridViewTextBoxColumn.DataPropertyName = "inscritos";
+            this.inscritosDataGridViewTextBoxColumn.HeaderText = "inscritos";
+            this.inscritosDataGridViewTextBoxColumn.Name = "inscritosDataGridViewTextBoxColumn";
+            this.inscritosDataGridViewTextBoxColumn.ReadOnly = true;
+            this.inscritosDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button1.Location = new System.Drawing.Point(283, 266);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(99, 33);
+            this.button1.TabIndex = 54;
+            this.button1.Text = "Salir";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // beneficiarioActividades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 464);
+            this.CancelButton = this.button1;
+            this.ClientSize = new System.Drawing.Size(852, 315);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.saldo);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.idProfesor);
+            this.Controls.Add(this.profesor);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.costo);
-            this.Controls.Add(this.horaFinal);
-            this.Controls.Add(this.horaInicio);
-            this.Controls.Add(this.diasImpartida);
-            this.Controls.Add(this.nombreActividad);
+            this.Controls.Add(this.final);
+            this.Controls.Add(this.inicio);
+            this.Controls.Add(this.dias);
+            this.Controls.Add(this.nombre);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -223,6 +371,10 @@
             this.Name = "beneficiarioActividades";
             this.ShowIcon = false;
             this.Text = "Actividades";
+            this.Load += new System.EventHandler(this.beneficiarioActividades_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.actividadBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marillacDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,19 +383,33 @@
         #endregion
 
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox idProfesor;
+        private System.Windows.Forms.TextBox profesor;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox costo;
-        private System.Windows.Forms.TextBox horaFinal;
-        private System.Windows.Forms.TextBox horaInicio;
-        private System.Windows.Forms.TextBox diasImpartida;
-        private System.Windows.Forms.TextBox nombreActividad;
+        private System.Windows.Forms.TextBox final;
+        private System.Windows.Forms.TextBox inicio;
+        private System.Windows.Forms.TextBox dias;
+        private System.Windows.Forms.TextBox nombre;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox saldo;
         private System.Windows.Forms.Label label4;
+        private MarillacDataSet marillacDataSet;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource actividadBindingSource;
+        private MarillacDataSetTableAdapters.ActividadTableAdapter actividadTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idActividadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idProfesorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreActividadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diasImparteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horaInicioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horaFinalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cupoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn costoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn inscritosDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button1;
     }
 }

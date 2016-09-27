@@ -17,6 +17,7 @@ namespace WindowsFormsApplication1
         Form beneficiarioPsicologo;
         Form hijosDeBeneficiario;
         Form actividadBeneficiario;
+        Form cuotaBeneficiario;
 
         private SqlConnection con;
         private SqlDataAdapter adapter;
@@ -239,7 +240,6 @@ namespace WindowsFormsApplication1
                 this.hijosDeBeneficiario = new hijosDeBeneficiario(this,connectionString,idBen);
                 this.hijosDeBeneficiario.ShowDialog();
             }
-
         }
 
         private void botonActividades_Click(object sender, EventArgs e)
@@ -251,6 +251,18 @@ namespace WindowsFormsApplication1
                 catch { idBen = -1; }
                 this.actividadBeneficiario = new beneficiarioActividades(this, connectionString, idBen);
                 this.actividadBeneficiario.ShowDialog();
+            }
+        }
+
+        private void botonPagos_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count != 0)
+            {
+                Int64 idBen;
+                try { idBen = Convert.ToInt64(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value.ToString()); }
+                catch { idBen = -1; }
+                this.cuotaBeneficiario = new cuotaBeneficiario(this, connectionString, idBen);
+                this.cuotaBeneficiario.ShowDialog();
             }
         }
     }

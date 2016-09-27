@@ -111,7 +111,7 @@
             this.label2.Location = new System.Drawing.Point(14, 153);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(166, 23);
+            this.label2.Size = new System.Drawing.Size(171, 23);
             this.label2.TabIndex = 12;
             this.label2.Text = "D�as que se imparte:";
             // 
@@ -161,6 +161,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
