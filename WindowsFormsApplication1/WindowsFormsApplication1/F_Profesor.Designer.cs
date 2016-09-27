@@ -59,32 +59,36 @@
             this.label11 = new System.Windows.Forms.Label();
             this.dias = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textedad = new System.Windows.Forms.Label();
-            this.edad = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
+            this.profesorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.profesorTableAdapter = new WindowsFormsApplication1.MarillacDataSetTableAdapters.ProfesorTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.beneficiarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marillacDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cuotaHijoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // botonSalir
             // 
             this.botonSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.botonSalir.Location = new System.Drawing.Point(476, 581);
+            this.botonSalir.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonSalir.Location = new System.Drawing.Point(506, 559);
             this.botonSalir.Name = "botonSalir";
-            this.botonSalir.Size = new System.Drawing.Size(86, 42);
+            this.botonSalir.Size = new System.Drawing.Size(123, 42);
             this.botonSalir.TabIndex = 47;
             this.botonSalir.Text = "Salir";
             this.botonSalir.UseVisualStyleBackColor = true;
+            this.botonSalir.Click += new System.EventHandler(this.botonSalir_Click);
             // 
             // botonEliminar
             // 
-            this.botonEliminar.Location = new System.Drawing.Point(381, 581);
+            this.botonEliminar.Font = new System.Drawing.Font("Calibri", 12F);
+            this.botonEliminar.Location = new System.Drawing.Point(376, 559);
             this.botonEliminar.Name = "botonEliminar";
-            this.botonEliminar.Size = new System.Drawing.Size(89, 42);
+            this.botonEliminar.Size = new System.Drawing.Size(124, 42);
             this.botonEliminar.TabIndex = 46;
             this.botonEliminar.Text = "Eliminar";
             this.botonEliminar.UseVisualStyleBackColor = true;
@@ -92,10 +96,10 @@
             // 
             // botonAgregar
             // 
-            this.botonAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonAgregar.Location = new System.Drawing.Point(115, 581);
+            this.botonAgregar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonAgregar.Location = new System.Drawing.Point(115, 559);
             this.botonAgregar.Name = "botonAgregar";
-            this.botonAgregar.Size = new System.Drawing.Size(165, 42);
+            this.botonAgregar.Size = new System.Drawing.Size(124, 42);
             this.botonAgregar.TabIndex = 45;
             this.botonAgregar.Text = "Agregar";
             this.botonAgregar.UseVisualStyleBackColor = true;
@@ -103,9 +107,10 @@
             // 
             // botonModificar
             // 
-            this.botonModificar.Location = new System.Drawing.Point(286, 581);
+            this.botonModificar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonModificar.Location = new System.Drawing.Point(247, 559);
             this.botonModificar.Name = "botonModificar";
-            this.botonModificar.Size = new System.Drawing.Size(89, 42);
+            this.botonModificar.Size = new System.Drawing.Size(123, 42);
             this.botonModificar.TabIndex = 44;
             this.botonModificar.Text = "Modificar";
             this.botonModificar.UseVisualStyleBackColor = true;
@@ -162,7 +167,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(653, 9);
+            this.label9.Location = new System.Drawing.Point(865, 18);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(320, 82);
@@ -355,27 +360,6 @@
             this.button1.Text = "Hijos";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // textedad
-            // 
-            this.textedad.AutoSize = true;
-            this.textedad.Font = new System.Drawing.Font("Calibri", 14F);
-            this.textedad.Location = new System.Drawing.Point(120, 497);
-            this.textedad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.textedad.Name = "textedad";
-            this.textedad.Size = new System.Drawing.Size(63, 29);
-            this.textedad.TabIndex = 28;
-            this.textedad.Text = "Edad";
-            // 
-            // edad
-            // 
-            this.edad.Font = new System.Drawing.Font("Calibri", 14F);
-            this.edad.Location = new System.Drawing.Point(361, 490);
-            this.edad.Margin = new System.Windows.Forms.Padding(2);
-            this.edad.Name = "edad";
-            this.edad.Size = new System.Drawing.Size(266, 36);
-            this.edad.TabIndex = 40;
-            this.edad.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
-            // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -389,12 +373,21 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 14F);
-            this.label10.Location = new System.Drawing.Point(649, 401);
+            this.label10.Location = new System.Drawing.Point(896, 400);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(249, 29);
             this.label10.TabIndex = 28;
             this.label10.Text = "Actividades del profesor";
+            // 
+            // profesorBindingSource
+            // 
+            this.profesorBindingSource.DataMember = "Profesor";
+            this.profesorBindingSource.DataSource = this.marillacDataSet;
+            // 
+            // profesorTableAdapter
+            // 
+            this.profesorTableAdapter.ClearBeforeFill = true;
             // 
             // F_Profesor
             // 
@@ -415,14 +408,12 @@
             this.Controls.Add(this.telefono);
             this.Controls.Add(this.colonia);
             this.Controls.Add(this.direccion);
-            this.Controls.Add(this.edad);
             this.Controls.Add(this.dias);
             this.Controls.Add(this.materno);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textedad);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label10);
@@ -441,6 +432,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cuotaHijoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -477,9 +469,9 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox dias;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label textedad;
-        private System.Windows.Forms.TextBox edad;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.BindingSource profesorBindingSource;
+        private MarillacDataSetTableAdapters.ProfesorTableAdapter profesorTableAdapter;
     }
 }
