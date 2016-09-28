@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.botonSalir = new System.Windows.Forms.Button();
             this.botonEliminar = new System.Windows.Forms.Button();
             this.botonAgregar = new System.Windows.Forms.Button();
@@ -80,9 +81,10 @@
             // 
             this.botonSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.botonSalir.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonSalir.Location = new System.Drawing.Point(506, 559);
+            this.botonSalir.Location = new System.Drawing.Point(380, 454);
+            this.botonSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.botonSalir.Name = "botonSalir";
-            this.botonSalir.Size = new System.Drawing.Size(123, 42);
+            this.botonSalir.Size = new System.Drawing.Size(92, 34);
             this.botonSalir.TabIndex = 47;
             this.botonSalir.Text = "Salir";
             this.botonSalir.UseVisualStyleBackColor = true;
@@ -91,9 +93,10 @@
             // botonEliminar
             // 
             this.botonEliminar.Font = new System.Drawing.Font("Calibri", 12F);
-            this.botonEliminar.Location = new System.Drawing.Point(376, 559);
+            this.botonEliminar.Location = new System.Drawing.Point(282, 454);
+            this.botonEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.botonEliminar.Name = "botonEliminar";
-            this.botonEliminar.Size = new System.Drawing.Size(124, 42);
+            this.botonEliminar.Size = new System.Drawing.Size(93, 34);
             this.botonEliminar.TabIndex = 46;
             this.botonEliminar.Text = "Eliminar";
             this.botonEliminar.UseVisualStyleBackColor = true;
@@ -102,9 +105,10 @@
             // botonAgregar
             // 
             this.botonAgregar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonAgregar.Location = new System.Drawing.Point(115, 559);
+            this.botonAgregar.Location = new System.Drawing.Point(86, 454);
+            this.botonAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.botonAgregar.Name = "botonAgregar";
-            this.botonAgregar.Size = new System.Drawing.Size(124, 42);
+            this.botonAgregar.Size = new System.Drawing.Size(93, 34);
             this.botonAgregar.TabIndex = 45;
             this.botonAgregar.Text = "Agregar";
             this.botonAgregar.UseVisualStyleBackColor = true;
@@ -113,9 +117,10 @@
             // botonModificar
             // 
             this.botonModificar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonModificar.Location = new System.Drawing.Point(247, 559);
+            this.botonModificar.Location = new System.Drawing.Point(185, 454);
+            this.botonModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.botonModificar.Name = "botonModificar";
-            this.botonModificar.Size = new System.Drawing.Size(123, 42);
+            this.botonModificar.Size = new System.Drawing.Size(92, 34);
             this.botonModificar.TabIndex = 44;
             this.botonModificar.Text = "Modificar";
             this.botonModificar.UseVisualStyleBackColor = true;
@@ -142,10 +147,10 @@
             // paterno
             // 
             this.paterno.Font = new System.Drawing.Font("Calibri", 14F);
-            this.paterno.Location = new System.Drawing.Point(363, 151);
+            this.paterno.Location = new System.Drawing.Point(272, 123);
             this.paterno.Margin = new System.Windows.Forms.Padding(2);
             this.paterno.Name = "paterno";
-            this.paterno.Size = new System.Drawing.Size(266, 36);
+            this.paterno.Size = new System.Drawing.Size(200, 30);
             this.paterno.TabIndex = 26;
             // 
             // cuotaHijoBindingSource
@@ -159,13 +164,13 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(654, 112);
+            this.dataGridView1.Location = new System.Drawing.Point(490, 91);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(728, 254);
+            this.dataGridView1.Size = new System.Drawing.Size(546, 206);
             this.dataGridView1.TabIndex = 41;
             this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
             // 
@@ -173,10 +178,10 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(865, 18);
+            this.label9.Location = new System.Drawing.Point(649, 15);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(320, 82);
+            this.label9.Size = new System.Drawing.Size(259, 66);
             this.label9.TabIndex = 40;
             this.label9.Text = "Profesores";
             // 
@@ -184,67 +189,67 @@
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Calibri", 14F);
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(363, 410);
+            this.dateTimePicker1.Location = new System.Drawing.Point(272, 333);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(266, 36);
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 30);
             this.dateTimePicker1.TabIndex = 38;
             this.dateTimePicker1.Value = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
             // 
             // sexo
             // 
             this.sexo.Font = new System.Drawing.Font("Calibri", 14F);
-            this.sexo.Location = new System.Drawing.Point(363, 370);
+            this.sexo.Location = new System.Drawing.Point(272, 301);
             this.sexo.Margin = new System.Windows.Forms.Padding(2);
             this.sexo.Name = "sexo";
-            this.sexo.Size = new System.Drawing.Size(266, 36);
+            this.sexo.Size = new System.Drawing.Size(200, 30);
             this.sexo.TabIndex = 37;
             // 
             // telefono
             // 
             this.telefono.Font = new System.Drawing.Font("Calibri", 14F);
-            this.telefono.Location = new System.Drawing.Point(363, 330);
+            this.telefono.Location = new System.Drawing.Point(272, 268);
             this.telefono.Margin = new System.Windows.Forms.Padding(2);
             this.telefono.Name = "telefono";
-            this.telefono.Size = new System.Drawing.Size(266, 36);
+            this.telefono.Size = new System.Drawing.Size(200, 30);
             this.telefono.TabIndex = 34;
             // 
             // colonia
             // 
             this.colonia.Font = new System.Drawing.Font("Calibri", 14F);
-            this.colonia.Location = new System.Drawing.Point(363, 290);
+            this.colonia.Location = new System.Drawing.Point(272, 236);
             this.colonia.Margin = new System.Windows.Forms.Padding(2);
             this.colonia.Name = "colonia";
-            this.colonia.Size = new System.Drawing.Size(266, 36);
+            this.colonia.Size = new System.Drawing.Size(200, 30);
             this.colonia.TabIndex = 33;
             // 
             // direccion
             // 
             this.direccion.Font = new System.Drawing.Font("Calibri", 14F);
-            this.direccion.Location = new System.Drawing.Point(363, 228);
+            this.direccion.Location = new System.Drawing.Point(272, 185);
             this.direccion.Margin = new System.Windows.Forms.Padding(2);
             this.direccion.Multiline = true;
             this.direccion.Name = "direccion";
-            this.direccion.Size = new System.Drawing.Size(266, 58);
+            this.direccion.Size = new System.Drawing.Size(200, 48);
             this.direccion.TabIndex = 30;
             // 
             // materno
             // 
             this.materno.Font = new System.Drawing.Font("Calibri", 14F);
-            this.materno.Location = new System.Drawing.Point(363, 188);
+            this.materno.Location = new System.Drawing.Point(272, 153);
             this.materno.Margin = new System.Windows.Forms.Padding(2);
             this.materno.Name = "materno";
-            this.materno.Size = new System.Drawing.Size(266, 36);
+            this.materno.Size = new System.Drawing.Size(200, 30);
             this.materno.TabIndex = 29;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 14F);
-            this.label8.Location = new System.Drawing.Point(122, 417);
+            this.label8.Location = new System.Drawing.Point(92, 339);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(229, 29);
+            this.label8.Size = new System.Drawing.Size(176, 23);
             this.label8.TabIndex = 38;
             this.label8.Text = "Fecha de nacimiento: ";
             // 
@@ -252,10 +257,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 14F);
-            this.label7.Location = new System.Drawing.Point(122, 377);
+            this.label7.Location = new System.Drawing.Point(92, 306);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(129, 29);
+            this.label7.Size = new System.Drawing.Size(102, 23);
             this.label7.TabIndex = 36;
             this.label7.Text = "Sexo (M/F): ";
             // 
@@ -263,10 +268,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 14F);
-            this.label6.Location = new System.Drawing.Point(122, 337);
+            this.label6.Location = new System.Drawing.Point(92, 274);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 29);
+            this.label6.Size = new System.Drawing.Size(84, 23);
             this.label6.TabIndex = 35;
             this.label6.Text = "Teléfono: ";
             // 
@@ -274,10 +279,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 14F);
-            this.label5.Location = new System.Drawing.Point(122, 297);
+            this.label5.Location = new System.Drawing.Point(92, 241);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 29);
+            this.label5.Size = new System.Drawing.Size(76, 23);
             this.label5.TabIndex = 32;
             this.label5.Text = "Colonia: ";
             // 
@@ -285,10 +290,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 14F);
-            this.label4.Location = new System.Drawing.Point(122, 242);
+            this.label4.Location = new System.Drawing.Point(92, 197);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 29);
+            this.label4.Size = new System.Drawing.Size(91, 23);
             this.label4.TabIndex = 31;
             this.label4.Text = "Dirección: ";
             // 
@@ -296,10 +301,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 14F);
-            this.label3.Location = new System.Drawing.Point(120, 195);
+            this.label3.Location = new System.Drawing.Point(90, 158);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(199, 29);
+            this.label3.Size = new System.Drawing.Size(152, 23);
             this.label3.TabIndex = 28;
             this.label3.Text = "Apellido Materno: ";
             // 
@@ -307,30 +312,30 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 14F);
-            this.label2.Location = new System.Drawing.Point(120, 154);
+            this.label2.Location = new System.Drawing.Point(90, 125);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(189, 29);
+            this.label2.Size = new System.Drawing.Size(146, 23);
             this.label2.TabIndex = 27;
             this.label2.Text = "Apellido Paterno: ";
             // 
             // nombre
             // 
             this.nombre.Font = new System.Drawing.Font("Calibri", 14F);
-            this.nombre.Location = new System.Drawing.Point(363, 112);
+            this.nombre.Location = new System.Drawing.Point(272, 91);
             this.nombre.Margin = new System.Windows.Forms.Padding(2);
             this.nombre.Name = "nombre";
-            this.nombre.Size = new System.Drawing.Size(266, 36);
+            this.nombre.Size = new System.Drawing.Size(200, 30);
             this.nombre.TabIndex = 25;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 14F);
-            this.label1.Location = new System.Drawing.Point(120, 112);
+            this.label1.Location = new System.Drawing.Point(90, 91);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 29);
+            this.label1.Size = new System.Drawing.Size(102, 23);
             this.label1.TabIndex = 24;
             this.label1.Text = "Nombre/es:";
             // 
@@ -338,20 +343,20 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri", 14F);
-            this.label11.Location = new System.Drawing.Point(122, 458);
+            this.label11.Location = new System.Drawing.Point(92, 372);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(155, 29);
+            this.label11.Size = new System.Drawing.Size(121, 23);
             this.label11.TabIndex = 28;
             this.label11.Text = "Dias Laborales";
             // 
             // dias
             // 
             this.dias.Font = new System.Drawing.Font("Calibri", 14F);
-            this.dias.Location = new System.Drawing.Point(363, 451);
+            this.dias.Location = new System.Drawing.Point(272, 366);
             this.dias.Margin = new System.Windows.Forms.Padding(2);
             this.dias.Name = "dias";
-            this.dias.Size = new System.Drawing.Size(266, 36);
+            this.dias.Size = new System.Drawing.Size(200, 30);
             this.dias.TabIndex = 39;
             this.dias.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
             this.dias.TextChanged += new System.EventHandler(this.dias_TextChanged);
@@ -360,10 +365,11 @@
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(654, 432);
+            this.dataGridView2.Location = new System.Drawing.Point(490, 351);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(728, 150);
+            this.dataGridView2.Size = new System.Drawing.Size(546, 122);
             this.dataGridView2.TabIndex = 52;
             this.dataGridView2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGridView2_MouseClick);
             // 
@@ -371,10 +377,10 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 14F);
-            this.label10.Location = new System.Drawing.Point(896, 400);
+            this.label10.Location = new System.Drawing.Point(672, 325);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(249, 29);
+            this.label10.Size = new System.Drawing.Size(197, 23);
             this.label10.TabIndex = 28;
             this.label10.Text = "Actividades del profesor";
             // 
@@ -393,21 +399,30 @@
             this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(1087, 607);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView3.Location = new System.Drawing.Point(676, 490);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 10;
             this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(295, 210);
+            this.dataGridView3.Size = new System.Drawing.Size(359, 171);
             this.dataGridView3.TabIndex = 53;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Calibri", 14F);
-            this.label12.Location = new System.Drawing.Point(779, 624);
+            this.label12.Location = new System.Drawing.Point(366, 524);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(197, 29);
+            this.label12.Size = new System.Drawing.Size(154, 23);
             this.label12.TabIndex = 28;
             this.label12.Text = "Nombre Actividad:";
             // 
@@ -415,10 +430,10 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Calibri", 14F);
-            this.label13.Location = new System.Drawing.Point(779, 678);
+            this.label13.Location = new System.Drawing.Point(366, 568);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(126, 29);
+            this.label13.Size = new System.Drawing.Size(99, 23);
             this.label13.TabIndex = 28;
             this.label13.Text = "Hora Inicio:";
             // 
@@ -426,10 +441,10 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Calibri", 14F);
-            this.label14.Location = new System.Drawing.Point(779, 729);
+            this.label14.Location = new System.Drawing.Point(366, 609);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(101, 29);
+            this.label14.Size = new System.Drawing.Size(82, 23);
             this.label14.TabIndex = 28;
             this.label14.Text = "Inscritos:";
             // 
@@ -437,17 +452,17 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Calibri", 14F);
-            this.label15.Location = new System.Drawing.Point(762, 692);
+            this.label15.Location = new System.Drawing.Point(390, 569);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(0, 29);
+            this.label15.Size = new System.Drawing.Size(0, 23);
             this.label15.TabIndex = 28;
             // 
             // F_Profesor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1424, 829);
+            this.ClientSize = new System.Drawing.Size(1046, 672);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.botonSalir);
@@ -479,7 +494,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.nombre);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "F_Profesor";
