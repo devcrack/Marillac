@@ -84,6 +84,7 @@ namespace WindowsFormsApplication1
                 try
                 {
                     con.Open();
+                    //
                     string query = "DELETE FROM Administracion.InscripcionHijo WHERE idActividad=" + idAct + "AND idHijo=" + idBen;
                     adapter.InsertCommand = new SqlCommand(query, con);
                     adapter.InsertCommand.ExecuteNonQuery();
