@@ -61,11 +61,10 @@ namespace WindowsFormsApplication1
 
         private void btt_Hijos_Click(object sender, EventArgs e)
         {
-            this.form_hijos = new Formulario_Hijo(this);
+            this.form_hijos = new Formulario_Hijo(this, cadenaConexion);
             this.Hide();
             this.form_hijos.Show();
         }
-
         private void btt_Actividad_Click(object sender, EventArgs e)
         {
             this.form_Actividades = new Form_Actividades(this);
