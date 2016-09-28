@@ -97,6 +97,7 @@
             this.btt_Cancelar.TabIndex = 2;
             this.btt_Cancelar.Text = "Cancelar";
             this.btt_Cancelar.UseVisualStyleBackColor = true;
+            this.btt_Cancelar.Click += new System.EventHandler(this.btt_Cancelar_Click);
             // 
             // btt_Decline
             // 
@@ -119,9 +120,15 @@
             this.Controls.Add(this.btt_Atender);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "F_Pacientes";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "F_Pacientes";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.F_Pacientes_FormClosing);
             this.Load += new System.EventHandler(this.F_Pacientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.marillacDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
