@@ -5802,7 +5802,7 @@ SELECT idActividad, idProfesor, nombreActividad, diasImparte, horaInicio, horaFi
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT idActividad, idProfesor, nombreActividad, diasImparte, horaInicio, horaFin" +
@@ -5812,9 +5812,16 @@ SELECT idActividad, idProfesor, nombreActividad, diasImparte, horaInicio, horaFi
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = @"SELECT        a.idActividad, a.idProfesor, a.nombreActividad, a.diasImparte, a.horaInicio, a.horaFinal, a.cupo, a.costo, a.inscritos
 FROM            Administracion.Actividad AS a INNER JOIN
-                         Administracion.InscripcionBeneficiario AS i ON a.idActividad = i.idActividad AND i.idBeneficiario = @idBen";
+                         Administracion.InscripcionBeneficiario AS i ON i.idActividad = a.idActividad AND i.idBeneficiario = @idBen";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idBen", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "idBeneficiario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = @"SELECT        a.idActividad, a.idProfesor, a.nombreActividad, a.diasImparte, a.horaInicio, a.horaFinal, a.cupo, a.costo, a.inscritos
+FROM            Administracion.Actividad AS a INNER JOIN
+                         Administracion.InscripcionBeneficiario AS i ON a.idActividad = i.idActividad AND i.idBeneficiario = @idBen";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idBen", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "idBeneficiario", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5845,8 +5852,22 @@ FROM            Administracion.Actividad AS a INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(MarillacDataSet.ActividadDataTable dataTable, long idBen) {
+        public virtual int comboBoxCuotaBen(MarillacDataSet.ActividadDataTable dataTable, long idBen) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((long)(idBen));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(MarillacDataSet.ActividadDataTable dataTable, long idBen) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             this.Adapter.SelectCommand.Parameters[0].Value = ((long)(idBen));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6861,12 +6882,18 @@ SELECT idCuota, idBeneficiario, idActividad, monto, fechaPago FROM Administracio
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT idCuota, idBeneficiario, idActividad, monto, fechaPago FROM Administracion" +
                 ".CuotaBeneficiario";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT idCuota, idBeneficiario, idActividad, monto, fechaPago FROM Administracion" +
+                ".CuotaBeneficiario\r\nWHERE idActividad=@idAct";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idAct", global::System.Data.SqlDbType.BigInt, 8, global::System.Data.ParameterDirection.Input, 0, 0, "idActividad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6891,6 +6918,20 @@ SELECT idCuota, idBeneficiario, idActividad, monto, fechaPago FROM Administracio
             MarillacDataSet.CuotaBeneficiarioDataTable dataTable = new MarillacDataSet.CuotaBeneficiarioDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(MarillacDataSet.CuotaBeneficiarioDataTable dataTable, long idAct) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((long)(idAct));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
