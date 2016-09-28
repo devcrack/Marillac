@@ -46,6 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AltaActividadBeneficiario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltaActividadBeneficiario.Designer.cs">
+      <DependentUpon>AltaActividadBeneficiario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AltaActividadHijo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltaActividadHijo.Designer.cs">
+      <DependentUpon>AltaActividadHijo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BajaActividadBeneficiario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BajaActividadBeneficiario.Designer.cs">
+      <DependentUpon>BajaActividadBeneficiario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BajaActividadHijo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BajaActividadHijo.Designer.cs">
+      <DependentUpon>BajaActividadHijo.cs</DependentUpon>
+    </Compile>
     <Compile Include="beneficiarioActividades.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,8 +142,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MarillacDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="muestraProfesor_Actividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="muestraProfesor_Actividades.Designer.cs">
+      <DependentUpon>muestraProfesor_Actividades.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AltaActividadBeneficiario.resx">
+      <DependentUpon>AltaActividadBeneficiario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AltaActividadHijo.resx">
+      <DependentUpon>AltaActividadHijo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BajaActividadBeneficiario.resx">
+      <DependentUpon>BajaActividadBeneficiario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BajaActividadHijo.resx">
+      <DependentUpon>BajaActividadHijo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="beneficiarioActividades.resx">
       <DependentUpon>beneficiarioActividades.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_Profesor.resx">
       <DependentUpon>F_Profesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="muestraProfesor_Actividades.resx">
+      <DependentUpon>muestraProfesor_Actividades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
