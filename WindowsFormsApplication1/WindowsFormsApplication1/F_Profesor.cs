@@ -295,10 +295,12 @@ namespace WindowsFormsApplication1
             label13.Text = "Hora Inicio: " + dataGridView2.SelectedCells[4].Value.ToString();
             label14.Text = "Inscritos: " + dataGridView2.SelectedCells[8].Value.ToString();
 
-            string cad = "SELECT   CONCAT(hijo.nombre, '  ', hijo.Paterno, '   ', hijo.materno,'  ','(hijo)') as Nombre  From Administracion.InscripcionHijo as inhijo inner join Persona.Hijo as hijo on inhijo.idHijo = inhijo.idHijo UNION ALL " +
-            "SELECT CONCAT (ben.nombre , '  ', ben.Paterno, '   ', ben.Materno,'  ','(beneficiario)') From Administracion.InscripcionBeneficiario as inben " +
-            "inner join Persona.Beneficiario as ben on inben.idBeneficiario = ben.idBeneficiario";
-            
+            string cad = "SELECT   CONCAT(hijo.nombre, '  ', hijo.Paterno, '   ', hijo.materno, '  ', '(hijo)') " +
+            "as Nombre  From Administracion.InscripcionHijo as inhijo inner join Persona.Hijo as hijo on inhijo.idHijo = hijo.idHijo " +
+            "where inhijo.idActividad = " + dataGridView2.SelectedCells[0].Value.ToString() + " UNION ALL " +
+            "SELECT CONCAT (ben.nombre , '  ', ben.Paterno, '   ', ben.Materno, '  ', '(beneficiario)') From Administracion.InscripcionBeneficiario as inben " +
+            "inner join Persona.Beneficiario as ben on inben.idBeneficiario = ben.idBeneficiario where inben.idActividad = "+ dataGridView2.SelectedCells[0].Value.ToString();
+
             dataGridView3.DataSource = Consulta(cad).Tables[0];
 
         }
