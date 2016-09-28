@@ -32,6 +32,7 @@ namespace WindowsFormsApplication1
             act_datos();
             dataGridView1.ClearSelection();
             dataGridView2.ClearSelection();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         public void act_datos()
@@ -129,7 +130,19 @@ namespace WindowsFormsApplication1
                 if( nombre.Text != "")
                     conActividades();
             }
+
+            ultimaparte();
+        }
+
+        public void ultimaparte()
+        {
+
             dataGridView2.ClearSelection();
+            dataGridView3.DataSource = null;
+            label12.Text = "Nombre Actividad: " ;
+            label13.Text = "Hora Inicio: " ;
+            label14.Text = "Inscritos: " ;
+
         }
 
         public bool validacampos()
@@ -173,6 +186,10 @@ namespace WindowsFormsApplication1
             dias.Clear();
             sexo.Clear();
             dateTimePicker1.Text = "";
+
+            dataGridView2.ClearSelection();
+            dataGridView3.DataSource = null;
+
             
         }
 
@@ -265,7 +282,10 @@ namespace WindowsFormsApplication1
 
         private void dataGridView2_MouseClick(object sender, MouseEventArgs e)
         {
-            actividaddata();
+
+            if(dataGridView2.SelectedCells.Count>0)
+                actividaddata();
+            
         }
 
         public void actividaddata()
@@ -273,7 +293,15 @@ namespace WindowsFormsApplication1
 
             label12.Text = "Nombre Actividad: " + dataGridView2.SelectedCells[2].Value.ToString();
             label13.Text = "Hora Inicio: " + dataGridView2.SelectedCells[4].Value.ToString();
-            label14.Text = "Numero Inscritos: " + dataGridView2.SelectedCells[8].Value.ToString();
+            label14.Text = "Inscritos: " + dataGridView2.SelectedCells[8].Value.ToString();
+
+            string cad = "SELECT   CONCAT(hijo.nombre, '  ', hijo.Paterno, '   ', hijo.materno, '  ', '(hijo)') " +
+            "as Nombre  From Administracion.InscripcionHijo as inhijo inner join Persona.Hijo as hijo on inhijo.idHijo = hijo.idHijo " +
+            "where inhijo.idActividad = " + dataGridView2.SelectedCells[0].Value.ToString() + " UNION ALL " +
+            "SELECT CONCAT (ben.nombre , '  ', ben.Paterno, '   ', ben.Materno, '  ', '(beneficiario)') From Administracion.InscripcionBeneficiario as inben " +
+            "inner join Persona.Beneficiario as ben on inben.idBeneficiario = ben.idBeneficiario where inben.idActividad = "+ dataGridView2.SelectedCells[0].Value.ToString();
+
+            dataGridView3.DataSource = Consulta(cad).Tables[0];
 
         }
     }

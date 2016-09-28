@@ -19,26 +19,29 @@ namespace WindowsFormsApplication1
         C_Connection sql;
         F_Pacientes form_Pac;
 
+
         public Form_Psicologo(Menu m_Form, string connection_str)
         {
             InitializeComponent();
             this.main_Form = m_Form;
             this.sql = new C_Connection(connection_str);
+            //this.Form
         }
+
 
         private void Form_Psicologo_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.main_Form.Show();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
 
-                
-        }
+
+
 
         private void btt_Alta_Psic_Click(object sender, EventArgs e)
         {
+            if (this.check_Values_Controls() == true)
+            {
                 string query = this.sql.DML[0]
                 +
                 this.sql.Tables[0, 0]
@@ -72,10 +75,11 @@ namespace WindowsFormsApplication1
                 this.dateTime_Birth_Date.Value.Day
                 + "')"
                 ;
-            if (this.sql.execute_Query(query) == true)
-            {
-                this.psicologoTableAdapter.Fill(this.marillac_DataSet.Psicologo);
-                this.Reset_Controls();
+                if (this.sql.execute_Query(query) == true)
+                {
+                    this.psicologoTableAdapter.Fill(this.marillac_DataSet.Psicologo);
+                    this.Reset_Controls();
+                }
             }
         }
         
@@ -205,6 +209,7 @@ namespace WindowsFormsApplication1
             }
         }
 
+
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             try
@@ -218,7 +223,6 @@ namespace WindowsFormsApplication1
                 this.txt_Box_Working_Days.Text = Convert.ToString(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[7].Value);
                 this.radio_Button_Change(Convert.ToChar(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[8].Value));
                 this.numericUpDown_Pac_Limit.Value = Convert.ToInt32(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[9].Value);
-                this.txt_Box_NumPacientes.Text = Convert.ToString(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[10].Value);
                 this.dateTime_Birth_Date.Value = DateTime.Parse(Convert.ToString(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[11].Value));
             }
             catch { }
@@ -232,39 +236,132 @@ namespace WindowsFormsApplication1
                 this.radioButt_Female.Checked = true;
         }
 
+        
         private void limpiarCamposToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Reset_Controls();
         }
 
+
         private void darDeAltaPacienteToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count != 0)
+            int is_limit = Convert.ToInt32(this.numericUpDown_Pac_Limit.Value);
+            if((Convert.ToInt32(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[10].Value.ToString()) + 1) < Convert.ToInt32(this.numericUpDown_Pac_Limit.Value))
             {
-                Int64 idModificar;
+                if (dataGridView1.SelectedRows.Count != 0)
+                {
+                    Int64 idModificar;
 
-                idModificar = Convert.ToInt64(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value.ToString());
-                this.form_Pac = new F_Pacientes(this.sql.Conect_String, 1, idModificar);
-                this.form_Pac.ShowDialog();
+                    idModificar = Convert.ToInt64(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value.ToString());
+                    this.form_Pac = new F_Pacientes(this.sql.Conect_String, 1, idModificar);
+                    if (this.form_Pac.ShowDialog() == DialogResult.OK)
+                    {
+                        this.psicologoTableAdapter.Fill(this.marillac_DataSet.Psicologo);
+                    }
+                }
+                else
+                    MessageBox.Show("Seleccione Primero a un Psicologo");
             }
             else
-                MessageBox.Show("Seleccione Primero a un Psicologo");
+                MessageBox.Show("Se ha excedido el Limite de Pacientes");
         }
 
+        
         private void darDeBajaPacienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[10].Value.ToString()) > 0)
+            {
+                if (dataGridView1.SelectedRows.Count != 0)
+                {
+                    Int64 idModificar;
+
+                    idModificar = Convert.ToInt64(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value.ToString());
+                    this.form_Pac = new F_Pacientes(this.sql.Conect_String, 2, idModificar);
+                    if (this.form_Pac.ShowDialog() == DialogResult.OK)
+                    {
+                        this.psicologoTableAdapter.Fill(this.marillac_DataSet.Psicologo);
+                    }
+                }
+                else
+                    MessageBox.Show("Seleccione Primero a un Psicologo");
+            }
+            else
+                MessageBox.Show("No hay pacientes que puedan ser dados de baja");
+        }
+
+        private bool check_Values_Controls()
+        {
+            foreach (Control c in this.Controls)
+            {
+                if (c is GroupBox)
+                {
+                    foreach (Control c2 in ((GroupBox)c).Controls)
+                    {
+                        if (c2 is TextBox)
+                            if (string.Compare(((TextBox)c2).Text, string.Empty) == 0)
+                            {
+                                MessageBox.Show("No debe de haber campos de texto Vacios");
+                                return false;
+                            }
+                            else if (c2 is NumericUpDown)
+                                if (((NumericUpDown)c2).Value == 0)
+                                {
+                                    MessageBox.Show("Se debe de tener algun limite de Pacientes");
+                                    return false;
+                                }
+                    }
+                }
+            }
+            if (!this.radioButt_Female.Checked)
+                if (!radioButt_Male.Checked)
+                {
+                    MessageBox.Show("El sexo debe de ser definido");
+                    return false;
+                }
+            return true;
+        }
+
+        private void btt_Bajas_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count != 0)
             {
-                Int64 idModificar;
-
-                idModificar = Convert.ToInt64(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value.ToString());
-                this.form_Pac = new F_Pacientes(this.sql.Conect_String, 2,idModificar);
-                this.form_Pac.ShowDialog();
+                string idModificar = dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value.ToString();
+                string name_Table = this.sql.Tables_s.Keys.ElementAt(0);   
+                //UPDATE Persona.Beneficiario SET idPsicologo = NULL where idPsicologo = este_ID
+                string tble_Beneficiario = this.sql.Tables_s.Keys.ElementAt(1);
+                string tble_Hijo = this.sql.Tables_s.Keys.ElementAt(2);
+                string query = this.sql.DML[2] +//UPDATE
+                               tble_Beneficiario + //Persona.Beneficiario
+                               this.sql.DML[3] + //SET
+                               (this.sql.Tables_s[tble_Beneficiario])[1] + " = " //idPsicologo =
+                               + " NULL"  + this.sql.DML[4] + (this.sql.Tables_s[tble_Beneficiario])[1] + " = " + idModificar;
+                this.sql.execute_Query(query);
+                query = this.sql.DML[2] +//UPDATE
+                               tble_Hijo + //Persona.Beneficiario
+                               this.sql.DML[3] + //SET
+                               (this.sql.Tables_s[tble_Hijo])[2] + " = " //idPsicologo =
+                               + " NULL" + this.sql.DML[4] + (this.sql.Tables_s[tble_Hijo])[2] + " = " + idModificar;;
+                this.sql.execute_Query(query);                
+                query = this.sql.DML[11] + //DELETE
+                               this.sql.DML[6] + //FROM 
+                               name_Table + // Persona.Psicologo
+                               this.sql.DML[4] + //WHERE
+                               (this.sql.Tables_s[name_Table])[10] + " = " +//idPsicologo =
+                               idModificar;
+                if(this.sql.execute_Query(query) == true)
+                {
+                    this.psicologoTableAdapter.Fill(this.marillac_DataSet.Psicologo);
+                    this.dataGridView1.ClearSelection();
+                    this.Reset_Controls();
+                }
             }
-            else
-                MessageBox.Show("Seleccione Primero a un Psicologo");
-        }
     }
+        // if (dataGridView1.SelectedRows.Count != 0)
+        //    {
+        //        Int64 idModificar;
+        //string name_Table = this.sql.Tables_s.Keys.ElementAt(0);
 
+        //idModificar = Convert.ToInt64(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value.ToString());
+    }    
 }
 

@@ -121,9 +121,10 @@ namespace WindowsFormsApplication1
                 " SELECT ",
                 " FROM ", //6
                 " IS NULL ",
-                " UNION ALL",
+                " UNION ALL",//8
                 " CONCAT",
-                " IS NOT NULL "//10
+                " IS NOT NULL ",//10
+                " DELETE "
             };
 
 
@@ -135,7 +136,7 @@ namespace WindowsFormsApplication1
             };
             this.tables_s = new Dictionary<string, string[]>();
             this.tables_s.Add
-                (" Persona.Psicologo ", new string[] 
+                (" Persona.Psicologo", new string[] 
                   {
                       "nombre",
                       "paterno",
@@ -152,7 +153,7 @@ namespace WindowsFormsApplication1
                 );
 
             this.tables_s.Add
-                (" Persona.Beneficiario ", new string[]
+                (" Persona.Beneficiario", new string[]
                    {
                       " idBeneficiario ",//0
                       "idPsicologo", 
