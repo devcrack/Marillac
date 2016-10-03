@@ -106,6 +106,8 @@ namespace WindowsFormsApplication1
                             ((NumericUpDown)c2).Value = 0;
                         else if (c2 is DateTimePicker)
                             ((DateTimePicker)c2).ResetText();
+                        else if (c2 is CheckBox)
+                            ((CheckBox)c2).Checked = false;
                     }
                 }
             }
@@ -212,6 +214,7 @@ namespace WindowsFormsApplication1
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
+            this.Reset_Controls();
             try
             {
                 this.txt_Box_Nom.Text = Convert.ToString(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[1].Value);
@@ -221,6 +224,7 @@ namespace WindowsFormsApplication1
                 this.txt_Box_Col.Text = Convert.ToString(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[5].Value);
                 this.txt_Box_Tel.Text = Convert.ToString(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[6].Value);
                 this.txt_Box_Working_Days.Text = Convert.ToString(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[7].Value);
+                this.fill_CheckBoxes();
                 this.radio_Button_Change(Convert.ToChar(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[8].Value));
                 this.numericUpDown_Pac_Limit.Value = Convert.ToInt32(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[9].Value);
                 this.dateTime_Birth_Date.Value = DateTime.Parse(Convert.ToString(this.dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[11].Value));
@@ -291,6 +295,8 @@ namespace WindowsFormsApplication1
 
         private bool check_Values_Controls()
         {
+            bool days = false;
+
             foreach (Control c in this.Controls)
             {
                 if (c is GroupBox)
@@ -304,20 +310,34 @@ namespace WindowsFormsApplication1
                                 return false;
                             }
                             else if (c2 is NumericUpDown)
+                            {
                                 if (((NumericUpDown)c2).Value == 0)
                                 {
                                     MessageBox.Show("Se debe de tener algun limite de Pacientes");
                                     return false;
                                 }
+                            }
+                            else if (c is CheckBox)
+                            {
+                                if (((CheckBox)c2).Checked)
+                                    days = true;
+                            }
                     }
                 }
             }
             if (!this.radioButt_Female.Checked)
+            {
                 if (!radioButt_Male.Checked)
                 {
                     MessageBox.Show("El sexo debe de ser definido");
                     return false;
                 }
+            }
+            if (!days)
+            {
+                MessageBox.Show("Debe determinar al menos un Dia laborable");
+                return false;
+            }
             return true;
         }
 
@@ -356,12 +376,126 @@ namespace WindowsFormsApplication1
                 }
             }
     }
-        // if (dataGridView1.SelectedRows.Count != 0)
-        //    {
-        //        Int64 idModificar;
-        //string name_Table = this.sql.Tables_s.Keys.ElementAt(0);
 
-        //idModificar = Convert.ToInt64(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value.ToString());
+        private void checkBox_Lunes_CheckedChanged(object sender, EventArgs e)
+        {
+            this.manage_Days(this.checkBox_Lunes.Checked, "Lunes");
+            this.sort_days();
+        }
+
+        private void checkBox_Martes_CheckedChanged(object sender, EventArgs e)
+        {
+            this.manage_Days(this.checkBox_Martes.Checked, "Martes");
+            this.sort_days();
+        }
+        
+        private void manage_Days(bool is_check, string str)
+        {
+            if (is_check)
+            {
+                if (this.txt_Box_Working_Days.Text.Contains(str) == false)
+                    this.txt_Box_Working_Days.Text += str;
+            }
+            else
+            {
+                if (this.txt_Box_Working_Days.Text.Contains(str) == true)
+                {
+                    string str_1 = this.txt_Box_Working_Days.Text;
+                    str_1 = str_1.Replace(str, string.Empty);
+                    this.txt_Box_Working_Days.Text = str_1;
+                }
+            }
+        }
+        private void checkBox_Miercoles_CheckedChanged(object sender, EventArgs e)
+        {
+            this.manage_Days(this.checkBox_Miercoles.Checked, "Miercoles");
+            this.sort_days();
+        }
+
+        private void checkBox_Jueves_CheckedChanged(object sender, EventArgs e)
+        {
+            this.manage_Days(this.checkBox_Jueves.Checked, "Jueves");
+            this.sort_days();
+        }
+
+        private void checkBox_Viernes_CheckedChanged(object sender, EventArgs e)
+        {
+            this.manage_Days(this.checkBox_Viernes.Checked, "Viernes");
+            this.sort_days();
+        }
+
+        private void checkBox_Sabado_CheckedChanged(object sender, EventArgs e)
+        {
+            this.manage_Days(this.checkBox_Sabado.Checked,"Sabado");
+            this.sort_days();
+        }
+
+        private void checkBox_Domingo_CheckedChanged(object sender, EventArgs e)
+        {
+            this.manage_Days(this.checkBox_Domingo.Checked, "Domingo");
+            this.sort_days();
+        }
+        
+        public void sort_days()
+        {
+            string main_String = this.txt_Box_Working_Days.Text;
+            string txt_Aux = string.Empty;
+            string[] days = { "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo" };
+            List<string> days_List = new List<string>();
+
+            foreach (string m_day in days)
+            {
+                if(main_String.Contains(m_day) == true)
+                {
+                    days_List.Add(m_day);
+                    main_String = main_String.Replace(m_day, string.Empty);                    
+                }
+            }
+            this.txt_Box_Working_Days.Text = string.Empty;
+            foreach(string str in days_List)
+            {
+                if (string.Compare(this.txt_Box_Working_Days.Text, string.Empty) == 0)
+                    this.txt_Box_Working_Days.Text += str;
+                else
+                    this.txt_Box_Working_Days.Text += "-" + str;
+            }
+        }
+        
+        private void fill_CheckBoxes()
+        {
+            string[] days = { "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo" };
+
+            for(int index = 0; index < days.Length; index++)
+            {
+                if(this.txt_Box_Working_Days.Text.Contains(days[index])== true)
+                {
+                    switch(index)
+                    {
+                        case 0:
+                            this.checkBox_Lunes.Checked = true;
+                            break;
+                        case 1:
+                            this.checkBox_Martes.Checked = true;
+                            break;
+                        case 2:
+                            this.checkBox_Miercoles.Checked = true;
+                            break;
+                        case 3:
+                            this.checkBox_Jueves.Checked = true;
+                            break;
+                        case 4:
+                            this.checkBox_Viernes.Checked = true;
+                            break;
+                        case 5:
+                            this.checkBox_Sabado.Checked = true;
+                            break;
+                        case 6:
+                            this.checkBox_Domingo.Checked = true;
+                            break;
+                    }
+                }
+            }
+        }
     }    
 }
 
