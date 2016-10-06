@@ -30,18 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.marillacDataSet = new WindowsFormsApplication1.MarillacDataSet();
-            this.profesorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.profesorTableAdapter = new WindowsFormsApplication1.MarillacDataSetTableAdapters.ProfesorTableAdapter();
             this.idProfesorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.profesorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.marillacDataSet = new WindowsFormsApplication1.MarillacDataSet();
+            this.profesorTableAdapter = new WindowsFormsApplication1.MarillacDataSetTableAdapters.ProfesorTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.marillacDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marillacDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -56,26 +56,13 @@
             this.paternoDataGridViewTextBoxColumn,
             this.maternoDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.profesorBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(62, 31);
+            this.dataGridView1.Location = new System.Drawing.Point(60, 31);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(443, 150);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
-            // 
-            // marillacDataSet
-            // 
-            this.marillacDataSet.DataSetName = "MarillacDataSet";
-            this.marillacDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // profesorBindingSource
-            // 
-            this.profesorBindingSource.DataMember = "Profesor";
-            this.profesorBindingSource.DataSource = this.marillacDataSet;
-            // 
-            // profesorTableAdapter
-            // 
-            this.profesorTableAdapter.ClearBeforeFill = true;
             // 
             // idProfesorDataGridViewTextBoxColumn
             // 
@@ -104,6 +91,20 @@
             this.maternoDataGridViewTextBoxColumn.HeaderText = "Apellido Materno";
             this.maternoDataGridViewTextBoxColumn.Name = "maternoDataGridViewTextBoxColumn";
             this.maternoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // profesorBindingSource
+            // 
+            this.profesorBindingSource.DataMember = "Profesor";
+            this.profesorBindingSource.DataSource = this.marillacDataSet;
+            // 
+            // marillacDataSet
+            // 
+            this.marillacDataSet.DataSetName = "MarillacDataSet";
+            this.marillacDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // profesorTableAdapter
+            // 
+            this.profesorTableAdapter.ClearBeforeFill = true;
             // 
             // button1
             // 
@@ -140,8 +141,8 @@
             this.Text = "Lista de Profesores";
             this.Load += new System.EventHandler(this.muestraProfesor_Actividades_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.marillacDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.profesorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marillacDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -14,6 +14,7 @@ namespace WindowsFormsApplication1
     {
 
         public Int64 valor;
+        public string nombre;
 
         public muestraProfesor_Actividades(Int64 id22)
         {
@@ -30,13 +31,25 @@ namespace WindowsFormsApplication1
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
             Int64 extra;
+            string str = "";
             extra = Convert.ToInt64(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value.ToString());
+            str += Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[1].Value.ToString());
+            str += " ";
+            str += Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[2].Value.ToString());
+            str += " ";
+            str += Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[3].Value.ToString());
             valor = extra;
+            nombre = str;
         }
 
         public Int64 regresa()
         {
             return valor;
+        }
+
+        public string regresa2()
+        {
+            return nombre;
         }
 
         private void button2_Click(object sender, EventArgs e)

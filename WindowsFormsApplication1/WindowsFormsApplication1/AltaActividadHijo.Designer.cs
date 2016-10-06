@@ -32,18 +32,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.marillacDataSet = new WindowsFormsApplication1.MarillacDataSet();
-            this.hijoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.hijoTableAdapter = new WindowsFormsApplication1.MarillacDataSetTableAdapters.HijoTableAdapter();
             this.idHijoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hijoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.marillacDataSet = new WindowsFormsApplication1.MarillacDataSet();
+            this.hijoTableAdapter = new WindowsFormsApplication1.MarillacDataSetTableAdapters.HijoTableAdapter();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.actividadBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.actividadTableAdapter = new WindowsFormsApplication1.MarillacDataSetTableAdapters.ActividadTableAdapter();
             this.idActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreActividadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diasImparteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,9 +50,11 @@
             this.cupoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.costoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inscritosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actividadBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.actividadTableAdapter = new WindowsFormsApplication1.MarillacDataSetTableAdapters.ActividadTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.marillacDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hijoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marillacDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.actividadBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +63,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(74, 46);
+            this.label2.Location = new System.Drawing.Point(139, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(450, 19);
             this.label2.TabIndex = 3;
@@ -73,7 +73,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(149, 23);
+            this.label1.Location = new System.Drawing.Point(231, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(267, 19);
             this.label1.TabIndex = 2;
@@ -94,23 +94,10 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 100);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(444, 150);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
-            // 
-            // marillacDataSet
-            // 
-            this.marillacDataSet.DataSetName = "MarillacDataSet";
-            this.marillacDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // hijoBindingSource
-            // 
-            this.hijoBindingSource.DataMember = "Hijo";
-            this.hijoBindingSource.DataSource = this.marillacDataSet;
-            // 
-            // hijoTableAdapter
-            // 
-            this.hijoTableAdapter.ClearBeforeFill = true;
             // 
             // idHijoDataGridViewTextBoxColumn
             // 
@@ -139,6 +126,20 @@
             this.maternoDataGridViewTextBoxColumn.HeaderText = "Apellido Materno";
             this.maternoDataGridViewTextBoxColumn.Name = "maternoDataGridViewTextBoxColumn";
             this.maternoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hijoBindingSource
+            // 
+            this.hijoBindingSource.DataMember = "Hijo";
+            this.hijoBindingSource.DataSource = this.marillacDataSet;
+            // 
+            // marillacDataSet
+            // 
+            this.marillacDataSet.DataSetName = "MarillacDataSet";
+            this.marillacDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // hijoTableAdapter
+            // 
+            this.hijoTableAdapter.ClearBeforeFill = true;
             // 
             // button2
             // 
@@ -181,18 +182,10 @@
             this.dataGridView2.Location = new System.Drawing.Point(12, 273);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(444, 150);
             this.dataGridView2.TabIndex = 8;
             this.dataGridView2.SelectionChanged += new System.EventHandler(this.dataGridView2_SelectionChanged);
-            // 
-            // actividadBindingSource
-            // 
-            this.actividadBindingSource.DataMember = "Actividad";
-            this.actividadBindingSource.DataSource = this.marillacDataSet;
-            // 
-            // actividadTableAdapter
-            // 
-            this.actividadTableAdapter.ClearBeforeFill = true;
             // 
             // idActividadDataGridViewTextBoxColumn
             // 
@@ -250,6 +243,15 @@
             this.inscritosDataGridViewTextBoxColumn.Name = "inscritosDataGridViewTextBoxColumn";
             this.inscritosDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // actividadBindingSource
+            // 
+            this.actividadBindingSource.DataMember = "Actividad";
+            this.actividadBindingSource.DataSource = this.marillacDataSet;
+            // 
+            // actividadTableAdapter
+            // 
+            this.actividadTableAdapter.ClearBeforeFill = true;
+            // 
             // AltaActividadHijo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -268,8 +270,8 @@
             this.Text = "Alta de Actividades de Hijos";
             this.Load += new System.EventHandler(this.AltaActividadHijo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.marillacDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hijoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marillacDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.actividadBindingSource)).EndInit();
             this.ResumeLayout(false);

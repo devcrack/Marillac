@@ -53,7 +53,6 @@ namespace WindowsFormsApplication1
                 adapter.InsertCommand.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("Hijo dado de alta con éxito");
-                this.Close();
             }
 
             catch

@@ -75,10 +75,11 @@ namespace WindowsFormsApplication1
 
             if (dataGridView1.SelectedRows.Count != 0)
             {
-                idAct = Convert.ToInt64(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value.ToString());
-                idBen = Convert.ToInt64(dataGridView2.Rows[dataGridView2.CurrentCell.RowIndex].Cells[0].Value.ToString());
                 try
                 {
+                    idAct = Convert.ToInt64(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value.ToString());
+                    idBen = Convert.ToInt64(dataGridView2.Rows[dataGridView2.CurrentCell.RowIndex].Cells[0].Value.ToString()) ;
+                
                     con.Open();
                     string query = "DELETE FROM Administracion.InscripcionBeneficiario WHERE idActividad=" + idAct + "AND idBeneficiario=" + idBen;
                     adapter.InsertCommand = new SqlCommand(query, con);
@@ -87,13 +88,12 @@ namespace WindowsFormsApplication1
 
                     this.actividadTableAdapter.Fill(this.marillacDataSet.Actividad);
                     MessageBox.Show("Beneficiario dado de baja");
-                    this.Close();
+                    //this.Close();
                 }
-
                 catch (Exception ex)
                 {
                     con.Close();
-                    MessageBox.Show("No se puede dar de Baja al Beneficiario");
+                    MessageBox.Show("Actividad sin inscritos");
                 }
             }
         }
