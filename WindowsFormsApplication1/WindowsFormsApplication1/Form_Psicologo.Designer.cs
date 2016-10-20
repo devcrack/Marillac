@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_Box_Nom = new System.Windows.Forms.TextBox();
@@ -81,13 +81,13 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.limpiarCamposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox_Lunes = new System.Windows.Forms.CheckBox();
-            this.checkBox_Martes = new System.Windows.Forms.CheckBox();
-            this.checkBox_Miercoles = new System.Windows.Forms.CheckBox();
             this.checkBox_Jueves = new System.Windows.Forms.CheckBox();
-            this.checkBox_Viernes = new System.Windows.Forms.CheckBox();
-            this.checkBox_Sabado = new System.Windows.Forms.CheckBox();
             this.checkBox_Domingo = new System.Windows.Forms.CheckBox();
+            this.checkBox_Miercoles = new System.Windows.Forms.CheckBox();
+            this.checkBox_Sabado = new System.Windows.Forms.CheckBox();
+            this.checkBox_Viernes = new System.Windows.Forms.CheckBox();
+            this.checkBox_Martes = new System.Windows.Forms.CheckBox();
+            this.checkBox_Lunes = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pac_Limit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.psicologoBindingSource)).BeginInit();
@@ -267,7 +267,7 @@
             this.btt_Alta_Psic.Name = "btt_Alta_Psic";
             this.btt_Alta_Psic.Size = new System.Drawing.Size(138, 35);
             this.btt_Alta_Psic.TabIndex = 18;
-            this.btt_Alta_Psic.Text = "Alta";
+            this.btt_Alta_Psic.Text = "Agregar";
             this.btt_Alta_Psic.UseVisualStyleBackColor = true;
             this.btt_Alta_Psic.Click += new System.EventHandler(this.btt_Alta_Psic_Click);
             // 
@@ -278,7 +278,7 @@
             this.btt_Bajas.Name = "btt_Bajas";
             this.btt_Bajas.Size = new System.Drawing.Size(138, 35);
             this.btt_Bajas.TabIndex = 19;
-            this.btt_Bajas.Text = "Baja";
+            this.btt_Bajas.Text = "Eliminar";
             this.btt_Bajas.UseVisualStyleBackColor = true;
             this.btt_Bajas.Click += new System.EventHandler(this.btt_Bajas_Click);
             // 
@@ -289,7 +289,7 @@
             this.btt_Modificaciones.Name = "btt_Modificaciones";
             this.btt_Modificaciones.Size = new System.Drawing.Size(138, 35);
             this.btt_Modificaciones.TabIndex = 20;
-            this.btt_Modificaciones.Text = "Modificación";
+            this.btt_Modificaciones.Text = "Modificar";
             this.btt_Modificaciones.UseVisualStyleBackColor = true;
             this.btt_Modificaciones.Click += new System.EventHandler(this.btt_Modificaciones_Click);
             // 
@@ -302,6 +302,7 @@
             this.button3.TabIndex = 21;
             this.button3.Text = "Salir";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label12
             // 
@@ -374,8 +375,8 @@
             // PK_psicologo
             // 
             this.PK_psicologo.DataPropertyName = "idPsicologo";
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PK_psicologo.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PK_psicologo.DefaultCellStyle = dataGridViewCellStyle3;
             this.PK_psicologo.HeaderText = "Clave Psicólogo";
             this.PK_psicologo.Name = "PK_psicologo";
             this.PK_psicologo.ReadOnly = true;
@@ -505,7 +506,7 @@
             this.toolStripSeparator1,
             this.limpiarCamposToolStripMenuItem});
             this.ctx_Menu_PsicOption.Name = "contextMenuStrip1";
-            this.ctx_Menu_PsicOption.Size = new System.Drawing.Size(194, 58);
+            this.ctx_Menu_PsicOption.Size = new System.Drawing.Size(181, 80);
             // 
             // darDeAltaPacienteToolStripMenuItem
             // 
@@ -548,8 +549,8 @@
             // 
             this.limpiarCamposToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.limpiarCamposToolStripMenuItem.Name = "limpiarCamposToolStripMenuItem";
-            this.limpiarCamposToolStripMenuItem.Size = new System.Drawing.Size(193, 24);
-            this.limpiarCamposToolStripMenuItem.Text = "Limpiar Campos :)";
+            this.limpiarCamposToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.limpiarCamposToolStripMenuItem.Text = "Limpiar Campos";
             this.limpiarCamposToolStripMenuItem.Click += new System.EventHandler(this.limpiarCamposToolStripMenuItem_Click);
             // 
             // groupBox1
@@ -594,42 +595,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de Psicólogo";
             // 
-            // checkBox_Lunes
-            // 
-            this.checkBox_Lunes.AutoSize = true;
-            this.checkBox_Lunes.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_Lunes.Location = new System.Drawing.Point(11, 184);
-            this.checkBox_Lunes.Name = "checkBox_Lunes";
-            this.checkBox_Lunes.Size = new System.Drawing.Size(74, 27);
-            this.checkBox_Lunes.TabIndex = 11;
-            this.checkBox_Lunes.Text = "Lunes";
-            this.checkBox_Lunes.UseVisualStyleBackColor = true;
-            this.checkBox_Lunes.CheckedChanged += new System.EventHandler(this.checkBox_Lunes_CheckedChanged);
-            // 
-            // checkBox_Martes
-            // 
-            this.checkBox_Martes.AutoSize = true;
-            this.checkBox_Martes.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_Martes.Location = new System.Drawing.Point(128, 184);
-            this.checkBox_Martes.Name = "checkBox_Martes";
-            this.checkBox_Martes.Size = new System.Drawing.Size(89, 27);
-            this.checkBox_Martes.TabIndex = 12;
-            this.checkBox_Martes.Text = "Martes:";
-            this.checkBox_Martes.UseVisualStyleBackColor = true;
-            this.checkBox_Martes.CheckedChanged += new System.EventHandler(this.checkBox_Martes_CheckedChanged);
-            // 
-            // checkBox_Miercoles
-            // 
-            this.checkBox_Miercoles.AutoSize = true;
-            this.checkBox_Miercoles.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_Miercoles.Location = new System.Drawing.Point(245, 184);
-            this.checkBox_Miercoles.Name = "checkBox_Miercoles";
-            this.checkBox_Miercoles.Size = new System.Drawing.Size(109, 27);
-            this.checkBox_Miercoles.TabIndex = 13;
-            this.checkBox_Miercoles.Text = "Miércoles:";
-            this.checkBox_Miercoles.UseVisualStyleBackColor = true;
-            this.checkBox_Miercoles.CheckedChanged += new System.EventHandler(this.checkBox_Miercoles_CheckedChanged);
-            // 
             // checkBox_Jueves
             // 
             this.checkBox_Jueves.AutoSize = true;
@@ -641,30 +606,6 @@
             this.checkBox_Jueves.Text = "Jueves:";
             this.checkBox_Jueves.UseVisualStyleBackColor = true;
             this.checkBox_Jueves.CheckedChanged += new System.EventHandler(this.checkBox_Jueves_CheckedChanged);
-            // 
-            // checkBox_Viernes
-            // 
-            this.checkBox_Viernes.AutoSize = true;
-            this.checkBox_Viernes.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_Viernes.Location = new System.Drawing.Point(11, 217);
-            this.checkBox_Viernes.Name = "checkBox_Viernes";
-            this.checkBox_Viernes.Size = new System.Drawing.Size(92, 27);
-            this.checkBox_Viernes.TabIndex = 15;
-            this.checkBox_Viernes.Text = "Viernes:";
-            this.checkBox_Viernes.UseVisualStyleBackColor = true;
-            this.checkBox_Viernes.CheckedChanged += new System.EventHandler(this.checkBox_Viernes_CheckedChanged);
-            // 
-            // checkBox_Sabado
-            // 
-            this.checkBox_Sabado.AutoSize = true;
-            this.checkBox_Sabado.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox_Sabado.Location = new System.Drawing.Point(128, 217);
-            this.checkBox_Sabado.Name = "checkBox_Sabado";
-            this.checkBox_Sabado.Size = new System.Drawing.Size(91, 27);
-            this.checkBox_Sabado.TabIndex = 16;
-            this.checkBox_Sabado.Text = "Sábado:";
-            this.checkBox_Sabado.UseVisualStyleBackColor = true;
-            this.checkBox_Sabado.CheckedChanged += new System.EventHandler(this.checkBox_Sabado_CheckedChanged);
             // 
             // checkBox_Domingo
             // 
@@ -678,10 +619,71 @@
             this.checkBox_Domingo.UseVisualStyleBackColor = true;
             this.checkBox_Domingo.CheckedChanged += new System.EventHandler(this.checkBox_Domingo_CheckedChanged);
             // 
+            // checkBox_Miercoles
+            // 
+            this.checkBox_Miercoles.AutoSize = true;
+            this.checkBox_Miercoles.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_Miercoles.Location = new System.Drawing.Point(245, 184);
+            this.checkBox_Miercoles.Name = "checkBox_Miercoles";
+            this.checkBox_Miercoles.Size = new System.Drawing.Size(109, 27);
+            this.checkBox_Miercoles.TabIndex = 13;
+            this.checkBox_Miercoles.Text = "Miércoles:";
+            this.checkBox_Miercoles.UseVisualStyleBackColor = true;
+            this.checkBox_Miercoles.CheckedChanged += new System.EventHandler(this.checkBox_Miercoles_CheckedChanged);
+            // 
+            // checkBox_Sabado
+            // 
+            this.checkBox_Sabado.AutoSize = true;
+            this.checkBox_Sabado.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_Sabado.Location = new System.Drawing.Point(128, 217);
+            this.checkBox_Sabado.Name = "checkBox_Sabado";
+            this.checkBox_Sabado.Size = new System.Drawing.Size(91, 27);
+            this.checkBox_Sabado.TabIndex = 16;
+            this.checkBox_Sabado.Text = "Sábado:";
+            this.checkBox_Sabado.UseVisualStyleBackColor = true;
+            this.checkBox_Sabado.CheckedChanged += new System.EventHandler(this.checkBox_Sabado_CheckedChanged);
+            // 
+            // checkBox_Viernes
+            // 
+            this.checkBox_Viernes.AutoSize = true;
+            this.checkBox_Viernes.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_Viernes.Location = new System.Drawing.Point(11, 217);
+            this.checkBox_Viernes.Name = "checkBox_Viernes";
+            this.checkBox_Viernes.Size = new System.Drawing.Size(92, 27);
+            this.checkBox_Viernes.TabIndex = 15;
+            this.checkBox_Viernes.Text = "Viernes:";
+            this.checkBox_Viernes.UseVisualStyleBackColor = true;
+            this.checkBox_Viernes.CheckedChanged += new System.EventHandler(this.checkBox_Viernes_CheckedChanged);
+            // 
+            // checkBox_Martes
+            // 
+            this.checkBox_Martes.AutoSize = true;
+            this.checkBox_Martes.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_Martes.Location = new System.Drawing.Point(128, 184);
+            this.checkBox_Martes.Name = "checkBox_Martes";
+            this.checkBox_Martes.Size = new System.Drawing.Size(89, 27);
+            this.checkBox_Martes.TabIndex = 12;
+            this.checkBox_Martes.Text = "Martes:";
+            this.checkBox_Martes.UseVisualStyleBackColor = true;
+            this.checkBox_Martes.CheckedChanged += new System.EventHandler(this.checkBox_Martes_CheckedChanged);
+            // 
+            // checkBox_Lunes
+            // 
+            this.checkBox_Lunes.AutoSize = true;
+            this.checkBox_Lunes.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_Lunes.Location = new System.Drawing.Point(11, 184);
+            this.checkBox_Lunes.Name = "checkBox_Lunes";
+            this.checkBox_Lunes.Size = new System.Drawing.Size(74, 27);
+            this.checkBox_Lunes.TabIndex = 11;
+            this.checkBox_Lunes.Text = "Lunes";
+            this.checkBox_Lunes.UseVisualStyleBackColor = true;
+            this.checkBox_Lunes.CheckedChanged += new System.EventHandler(this.checkBox_Lunes_CheckedChanged);
+            // 
             // Form_Psicologo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.button3;
             this.ClientSize = new System.Drawing.Size(1280, 697);
             this.ContextMenuStrip = this.ctx_Menu_PsicOption;
             this.Controls.Add(this.groupBox1);

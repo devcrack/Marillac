@@ -121,6 +121,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MarillacDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="MarillacDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MarillacDataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MarillacDataSet88.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -287,6 +292,17 @@
     </None>
     <None Include="MarillacDataSet4.xss">
       <DependentUpon>MarillacDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="MarillacDataSet5.xsc">
+      <DependentUpon>MarillacDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="MarillacDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MarillacDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MarillacDataSet5.xss">
+      <DependentUpon>MarillacDataSet5.xsd</DependentUpon>
     </None>
     <None Include="MarillacDataSet88.xsc">
       <DependentUpon>MarillacDataSet88.xsd</DependentUpon>

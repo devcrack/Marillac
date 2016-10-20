@@ -157,29 +157,31 @@ namespace WindowsFormsApplication1
 
         public void rell_datos()
         {
-            
+            try
+            {
+                if (validacampos())
+                {
+                    nombre.Text = dataGridView1.SelectedCells[1].Value.ToString();
+                    paterno.Text = dataGridView1.SelectedCells[2].Value.ToString();
+                    materno.Text = dataGridView1.SelectedCells[3].Value.ToString();
+                    direccion.Text = dataGridView1.SelectedCells[4].Value.ToString();
+                    colonia.Text = dataGridView1.SelectedCells[5].Value.ToString();
+                    telefono.Text = dataGridView1.SelectedCells[6].Value.ToString();
+                    dias.Text = dataGridView1.SelectedCells[7].Value.ToString();
+                    sexo.Text = dataGridView1.SelectedCells[8].Value.ToString();
+                    dateTimePicker1.Text = dataGridView1.SelectedCells[9].Value.ToString();
+                    checkBox1.Checked = (bool)dataGridView1.SelectedCells[11].Value;
+                    checkBox2.Checked = (bool)dataGridView1.SelectedCells[12].Value;
+                    checkBox3.Checked = (bool)dataGridView1.SelectedCells[13].Value;
+                    checkBox4.Checked = (bool)dataGridView1.SelectedCells[14].Value;
+                    checkBox5.Checked = (bool)dataGridView1.SelectedCells[15].Value;
+                    checkBox6.Checked = (bool)dataGridView1.SelectedCells[16].Value;
+                    checkBox7.Checked = (bool)dataGridView1.SelectedCells[17].Value;
+                    concatdias();
+                }
 
-            if(validacampos())
-            { 
-                nombre.Text = dataGridView1.SelectedCells[1].Value.ToString();
-                paterno.Text = dataGridView1.SelectedCells[2].Value.ToString();
-                materno.Text = dataGridView1.SelectedCells[3].Value.ToString();
-                direccion.Text = dataGridView1.SelectedCells[4].Value.ToString();
-                colonia.Text = dataGridView1.SelectedCells[5].Value.ToString();
-                telefono.Text = dataGridView1.SelectedCells[6].Value.ToString();
-                dias.Text = dataGridView1.SelectedCells[7].Value.ToString();
-                sexo.Text = dataGridView1.SelectedCells[8].Value.ToString();
-                dateTimePicker1.Text = dataGridView1.SelectedCells[9].Value.ToString();
-                checkBox1.Checked = (bool)dataGridView1.SelectedCells[11].Value;
-                checkBox2.Checked = (bool)dataGridView1.SelectedCells[12].Value;
-                checkBox3.Checked = (bool)dataGridView1.SelectedCells[13].Value;
-                checkBox4.Checked = (bool)dataGridView1.SelectedCells[14].Value;
-                checkBox5.Checked = (bool)dataGridView1.SelectedCells[15].Value;
-                checkBox6.Checked = (bool)dataGridView1.SelectedCells[16].Value;
-                checkBox7.Checked = (bool)dataGridView1.SelectedCells[17].Value;
-                concatdias();
             }
-
+            catch { }
         }
 
 

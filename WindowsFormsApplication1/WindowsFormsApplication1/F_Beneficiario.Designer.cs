@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.nombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,17 +47,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idBeneficiarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idPsicologoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coloniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sexoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaNacimientoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.edadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.beneficiarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.marillacDataSet = new WindowsFormsApplication1.MarillacDataSet();
             this.psicologo = new System.Windows.Forms.TextBox();
@@ -73,9 +61,25 @@
             this.botonHijos = new System.Windows.Forms.Button();
             this.botonLimpiar = new System.Windows.Forms.Button();
             this.beneficiarioTableAdapter = new WindowsFormsApplication1.MarillacDataSetTableAdapters.BeneficiarioTableAdapter();
+            this.marillacDataSet5 = new WindowsFormsApplication1.MarillacDataSet5();
+            this.vistabeneficiarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vista_beneficiarioTableAdapter = new WindowsFormsApplication1.MarillacDataSet5TableAdapters.vista_beneficiarioTableAdapter();
+            this.idBeneficiarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.psicologoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coloniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaNacimientoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.beneficiarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marillacDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marillacDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistabeneficiarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -264,14 +268,14 @@
             this.nombreDataGridViewTextBoxColumn,
             this.paternoDataGridViewTextBoxColumn,
             this.maternoDataGridViewTextBoxColumn,
-            this.idPsicologoDataGridViewTextBoxColumn,
+            this.psicologoDataGridViewTextBoxColumn,
             this.direccionDataGridViewTextBoxColumn,
             this.coloniaDataGridViewTextBoxColumn,
             this.telefonoDataGridViewTextBoxColumn,
             this.sexoDataGridViewTextBoxColumn,
             this.fechaNacimientoDataGridViewTextBoxColumn,
             this.edadDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.beneficiarioBindingSource;
+            this.dataGridView1.DataSource = this.vistabeneficiarioBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(482, 100);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.MultiSelect = false;
@@ -281,94 +285,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(728, 454);
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
-            // 
-            // idBeneficiarioDataGridViewTextBoxColumn
-            // 
-            this.idBeneficiarioDataGridViewTextBoxColumn.DataPropertyName = "idBeneficiario";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idBeneficiarioDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
-            this.idBeneficiarioDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idBeneficiarioDataGridViewTextBoxColumn.Name = "idBeneficiarioDataGridViewTextBoxColumn";
-            this.idBeneficiarioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idBeneficiarioDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre/es";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // paternoDataGridViewTextBoxColumn
-            // 
-            this.paternoDataGridViewTextBoxColumn.DataPropertyName = "paterno";
-            this.paternoDataGridViewTextBoxColumn.HeaderText = "Apellido Paterno";
-            this.paternoDataGridViewTextBoxColumn.Name = "paternoDataGridViewTextBoxColumn";
-            this.paternoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.paternoDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // maternoDataGridViewTextBoxColumn
-            // 
-            this.maternoDataGridViewTextBoxColumn.DataPropertyName = "materno";
-            this.maternoDataGridViewTextBoxColumn.HeaderText = "Apellido Materno";
-            this.maternoDataGridViewTextBoxColumn.Name = "maternoDataGridViewTextBoxColumn";
-            this.maternoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.maternoDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // idPsicologoDataGridViewTextBoxColumn
-            // 
-            this.idPsicologoDataGridViewTextBoxColumn.DataPropertyName = "idPsicologo";
-            this.idPsicologoDataGridViewTextBoxColumn.HeaderText = "Psicólogo";
-            this.idPsicologoDataGridViewTextBoxColumn.Name = "idPsicologoDataGridViewTextBoxColumn";
-            this.idPsicologoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idPsicologoDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // direccionDataGridViewTextBoxColumn
-            // 
-            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "direccion";
-            this.direccionDataGridViewTextBoxColumn.HeaderText = "Dirección";
-            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
-            this.direccionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.direccionDataGridViewTextBoxColumn.Width = 250;
-            // 
-            // coloniaDataGridViewTextBoxColumn
-            // 
-            this.coloniaDataGridViewTextBoxColumn.DataPropertyName = "colonia";
-            this.coloniaDataGridViewTextBoxColumn.HeaderText = "Colonia";
-            this.coloniaDataGridViewTextBoxColumn.Name = "coloniaDataGridViewTextBoxColumn";
-            this.coloniaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // telefonoDataGridViewTextBoxColumn
-            // 
-            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono";
-            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Teléfono";
-            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
-            this.telefonoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sexoDataGridViewTextBoxColumn
-            // 
-            this.sexoDataGridViewTextBoxColumn.DataPropertyName = "sexo";
-            this.sexoDataGridViewTextBoxColumn.HeaderText = "Sexo";
-            this.sexoDataGridViewTextBoxColumn.Name = "sexoDataGridViewTextBoxColumn";
-            this.sexoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sexoDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // fechaNacimientoDataGridViewTextBoxColumn
-            // 
-            this.fechaNacimientoDataGridViewTextBoxColumn.DataPropertyName = "fechaNacimiento";
-            this.fechaNacimientoDataGridViewTextBoxColumn.HeaderText = "Fecha de nacimiento";
-            this.fechaNacimientoDataGridViewTextBoxColumn.Name = "fechaNacimientoDataGridViewTextBoxColumn";
-            this.fechaNacimientoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fechaNacimientoDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // edadDataGridViewTextBoxColumn
-            // 
-            this.edadDataGridViewTextBoxColumn.DataPropertyName = "edad";
-            this.edadDataGridViewTextBoxColumn.HeaderText = "Edad";
-            this.edadDataGridViewTextBoxColumn.Name = "edadDataGridViewTextBoxColumn";
-            this.edadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.edadDataGridViewTextBoxColumn.Width = 50;
             // 
             // beneficiarioBindingSource
             // 
@@ -499,6 +415,107 @@
             // 
             this.beneficiarioTableAdapter.ClearBeforeFill = true;
             // 
+            // marillacDataSet5
+            // 
+            this.marillacDataSet5.DataSetName = "MarillacDataSet5";
+            this.marillacDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // vistabeneficiarioBindingSource
+            // 
+            this.vistabeneficiarioBindingSource.DataMember = "vista_beneficiario";
+            this.vistabeneficiarioBindingSource.DataSource = this.marillacDataSet5;
+            // 
+            // vista_beneficiarioTableAdapter
+            // 
+            this.vista_beneficiarioTableAdapter.ClearBeforeFill = true;
+            // 
+            // idBeneficiarioDataGridViewTextBoxColumn
+            // 
+            this.idBeneficiarioDataGridViewTextBoxColumn.DataPropertyName = "idBeneficiario";
+            this.idBeneficiarioDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idBeneficiarioDataGridViewTextBoxColumn.Name = "idBeneficiarioDataGridViewTextBoxColumn";
+            this.idBeneficiarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idBeneficiarioDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // paternoDataGridViewTextBoxColumn
+            // 
+            this.paternoDataGridViewTextBoxColumn.DataPropertyName = "paterno";
+            this.paternoDataGridViewTextBoxColumn.HeaderText = "Apellido paterno";
+            this.paternoDataGridViewTextBoxColumn.Name = "paternoDataGridViewTextBoxColumn";
+            this.paternoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.paternoDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // maternoDataGridViewTextBoxColumn
+            // 
+            this.maternoDataGridViewTextBoxColumn.DataPropertyName = "materno";
+            this.maternoDataGridViewTextBoxColumn.HeaderText = "Apellido materno";
+            this.maternoDataGridViewTextBoxColumn.Name = "maternoDataGridViewTextBoxColumn";
+            this.maternoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maternoDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // psicologoDataGridViewTextBoxColumn
+            // 
+            this.psicologoDataGridViewTextBoxColumn.DataPropertyName = "psicologo";
+            this.psicologoDataGridViewTextBoxColumn.HeaderText = "Psicólogo";
+            this.psicologoDataGridViewTextBoxColumn.Name = "psicologoDataGridViewTextBoxColumn";
+            this.psicologoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.psicologoDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // direccionDataGridViewTextBoxColumn
+            // 
+            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "direccion";
+            this.direccionDataGridViewTextBoxColumn.HeaderText = "Dirección";
+            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
+            this.direccionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.direccionDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // coloniaDataGridViewTextBoxColumn
+            // 
+            this.coloniaDataGridViewTextBoxColumn.DataPropertyName = "colonia";
+            this.coloniaDataGridViewTextBoxColumn.HeaderText = "Colonia";
+            this.coloniaDataGridViewTextBoxColumn.Name = "coloniaDataGridViewTextBoxColumn";
+            this.coloniaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.coloniaDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // telefonoDataGridViewTextBoxColumn
+            // 
+            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono";
+            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Teléfono";
+            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
+            this.telefonoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sexoDataGridViewTextBoxColumn
+            // 
+            this.sexoDataGridViewTextBoxColumn.DataPropertyName = "sexo";
+            this.sexoDataGridViewTextBoxColumn.HeaderText = "Sexo";
+            this.sexoDataGridViewTextBoxColumn.Name = "sexoDataGridViewTextBoxColumn";
+            this.sexoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sexoDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // fechaNacimientoDataGridViewTextBoxColumn
+            // 
+            this.fechaNacimientoDataGridViewTextBoxColumn.DataPropertyName = "fechaNacimiento";
+            this.fechaNacimientoDataGridViewTextBoxColumn.HeaderText = "Fecha de nacimiento";
+            this.fechaNacimientoDataGridViewTextBoxColumn.Name = "fechaNacimientoDataGridViewTextBoxColumn";
+            this.fechaNacimientoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fechaNacimientoDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // edadDataGridViewTextBoxColumn
+            // 
+            this.edadDataGridViewTextBoxColumn.DataPropertyName = "edad";
+            this.edadDataGridViewTextBoxColumn.HeaderText = "Edad";
+            this.edadDataGridViewTextBoxColumn.Name = "edadDataGridViewTextBoxColumn";
+            this.edadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.edadDataGridViewTextBoxColumn.Width = 50;
+            // 
             // F_Beneficiario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -547,6 +564,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.beneficiarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.marillacDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marillacDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vistabeneficiarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -585,17 +604,20 @@
         private System.Windows.Forms.Button botonPagos;
         private System.Windows.Forms.Button botonPsicologo;
         private System.Windows.Forms.Button botonHijos;
+        private System.Windows.Forms.Button botonLimpiar;
+        private MarillacDataSet5 marillacDataSet5;
+        private System.Windows.Forms.BindingSource vistabeneficiarioBindingSource;
+        private MarillacDataSet5TableAdapters.vista_beneficiarioTableAdapter vista_beneficiarioTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idBeneficiarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn paternoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maternoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idPsicologoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn psicologoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn coloniaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaNacimientoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button botonLimpiar;
     }
 }

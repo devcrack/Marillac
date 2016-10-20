@@ -26,7 +26,8 @@ namespace WindowsFormsApplication1
             InitializeComponent();
             //cadenaConexion = @"Data Source=WEBER-PC\SQLEXPRESS;;Initial Catalog=Marillac;Integrated Security=True";
             //cadenaConexion = @"Data Source=DEVCRACK-PC\SQLEXPRESS;Initial Catalog=Marillac;Integrated Security=True";
-            cadenaConexion = @"Data Source=CESARJOSUE_PC\SQLSERVER_V2;;Initial Catalog=Marillac;Integrated Security=True";
+            //cadenaConexion = @"Data Source=CESARJOSUE_PC\SQLSERVER_V2;;Initial Catalog=Marillac;Integrated Security=True";
+            cadenaConexion = @"Data Source=MAUVALDES\SQLEXPRESS;Initial Catalog=Marillac;Integrated Security=True";
         }
 
         private void btt_Beneficiario_Click(object sender, EventArgs e)

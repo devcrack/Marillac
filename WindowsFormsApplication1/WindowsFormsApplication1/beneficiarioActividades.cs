@@ -50,16 +50,20 @@ namespace WindowsFormsApplication1
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            string auxHora;
-            nombre.Text = Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[2].Value);
-            dias.Text = Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[3].Value);
-            profesor.Text = cargarProfesor();
-            auxHora= Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[4].Value);
-            inicio.Text = auxHora[0].ToString() + auxHora[1].ToString() + ":" + auxHora[2].ToString() + auxHora[3].ToString();
-            auxHora= Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[5].Value);
-            final.Text= auxHora[0].ToString() + auxHora[1].ToString() + ":" + auxHora[2].ToString() + auxHora[3].ToString();
-            costo.Text= "$"+Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[7].Value);
-            saldo.Text = "$"+cargarSaldo().ToString();
+            try
+            {
+                string auxHora;
+                nombre.Text = Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[2].Value);
+                dias.Text = Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[3].Value);
+                profesor.Text = cargarProfesor();
+                auxHora = Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[4].Value);
+                inicio.Text = auxHora[0].ToString() + auxHora[1].ToString() + ":" + auxHora[2].ToString() + auxHora[3].ToString();
+                auxHora = Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[5].Value);
+                final.Text = auxHora[0].ToString() + auxHora[1].ToString() + ":" + auxHora[2].ToString() + auxHora[3].ToString();
+                costo.Text = "$" + Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[7].Value);
+                saldo.Text = "$" + cargarSaldo().ToString();
+            }
+            catch { }
         }
 
         private string cargarProfesor()
