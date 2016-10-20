@@ -356,6 +356,11 @@ namespace WindowsFormsApplication1
                 }
             }
     }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         // if (dataGridView1.SelectedRows.Count != 0)
         //    {
         //        Int64 idModificar;
