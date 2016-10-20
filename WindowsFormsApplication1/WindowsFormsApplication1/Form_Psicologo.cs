@@ -251,24 +251,21 @@ namespace WindowsFormsApplication1
         private void darDeAltaPacienteToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             int is_limit = Convert.ToInt32(this.numericUpDown_Pac_Limit.Value);
-            if ((Convert.ToInt32(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[10].Value.ToString()) + 1) < Convert.ToInt32(this.numericUpDown_Pac_Limit.Value))
+           
+            if (dataGridView1.SelectedRows.Count != 0)
             {
-                if (dataGridView1.SelectedRows.Count != 0)
-                {
-                    Int64 idModificar;
+                Int64 idModificar;
 
-                    idModificar = Convert.ToInt64(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value.ToString());
-                    this.form_Pac = new F_Pacientes(this.sql.Conect_String, 1, idModificar);
-                    if (this.form_Pac.ShowDialog() == DialogResult.OK)
-                    {
-                        this.psicologoTableAdapter.Fill(this.marillac_DataSet.Psicologo);
-                    }
+                idModificar = Convert.ToInt64(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value.ToString());
+                this.form_Pac = new F_Pacientes(this.sql.Conect_String, 1, idModificar);
+                if (this.form_Pac.ShowDialog() == DialogResult.OK)
+                {
+                    this.psicologoTableAdapter.Fill(this.marillac_DataSet.Psicologo);
                 }
-                else
-                    MessageBox.Show("Seleccione Primero a un Psicologo");
             }
             else
-                MessageBox.Show("Se ha excedido el Limite de Pacientes");
+                MessageBox.Show("Seleccione Primero a un Psicologo");
+        
         }
 
 

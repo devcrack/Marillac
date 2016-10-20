@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_Box_Nom = new System.Windows.Forms.TextBox();
@@ -232,7 +232,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(161, 23);
             this.label9.TabIndex = 0;
-            this.label9.Text = "Limite de Pacientes:";
+            this.label9.Text = "Límite de Pacientes:";
             // 
             // numericUpDown_Pac_Limit
             // 
@@ -295,6 +295,7 @@
             // 
             // button3
             // 
+            this.button3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(1090, 279);
             this.button3.Name = "button3";
@@ -375,8 +376,8 @@
             // PK_psicologo
             // 
             this.PK_psicologo.DataPropertyName = "idPsicologo";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PK_psicologo.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PK_psicologo.DefaultCellStyle = dataGridViewCellStyle1;
             this.PK_psicologo.HeaderText = "Clave Psicólogo";
             this.PK_psicologo.Name = "PK_psicologo";
             this.PK_psicologo.ReadOnly = true;
@@ -516,7 +517,7 @@
             this.darDeBajaPacienteToolStripMenuItem});
             this.darDeAltaPacienteToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.darDeAltaPacienteToolStripMenuItem.Name = "darDeAltaPacienteToolStripMenuItem";
-            this.darDeAltaPacienteToolStripMenuItem.Size = new System.Drawing.Size(193, 24);
+            this.darDeAltaPacienteToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.darDeAltaPacienteToolStripMenuItem.Text = "Psicologo";
             // 
             // darDeAltaPacienteToolStripMenuItem1
@@ -543,7 +544,7 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(190, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // limpiarCamposToolStripMenuItem
             // 

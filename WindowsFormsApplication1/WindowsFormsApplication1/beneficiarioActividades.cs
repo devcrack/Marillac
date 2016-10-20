@@ -71,7 +71,7 @@ namespace WindowsFormsApplication1
             string profesor = "";
             DataTable dt = new DataTable();
             Int64 idProf;
-            try { idProf = Convert.ToInt64(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value.ToString()); }
+            try { idProf = Convert.ToInt64(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[1].Value.ToString()); }
             catch { idProf = -1; }
             if(idProf>0)
             {
@@ -86,7 +86,7 @@ namespace WindowsFormsApplication1
                 }
                 catch(Exception e)
                 {
-                    MessageBox.Show(e.Message.ToString());
+                    con.Close();
                 }
             }
             return profesor;
@@ -112,7 +112,7 @@ namespace WindowsFormsApplication1
                 }
                 catch(Exception e)
                 {
-                    MessageBox.Show(e.Message.ToString());
+                    con.Close();
                 }
             }
 
