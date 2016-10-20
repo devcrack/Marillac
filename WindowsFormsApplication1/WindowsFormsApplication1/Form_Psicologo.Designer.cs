@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_Box_Nom = new System.Windows.Forms.TextBox();
@@ -81,6 +81,13 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.limpiarCamposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox_Lunes = new System.Windows.Forms.CheckBox();
+            this.checkBox_Martes = new System.Windows.Forms.CheckBox();
+            this.checkBox_Miercoles = new System.Windows.Forms.CheckBox();
+            this.checkBox_Jueves = new System.Windows.Forms.CheckBox();
+            this.checkBox_Viernes = new System.Windows.Forms.CheckBox();
+            this.checkBox_Sabado = new System.Windows.Forms.CheckBox();
+            this.checkBox_Domingo = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_Pac_Limit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.psicologoBindingSource)).BeginInit();
@@ -93,11 +100,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 263);
+            this.label1.Location = new System.Drawing.Point(7, 335);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(206, 26);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Psicologos Registrados";
+            this.label1.Text = "Psicólogos Registrados";
             // 
             // label2
             // 
@@ -112,9 +119,9 @@
             // txt_Box_Nom
             // 
             this.txt_Box_Nom.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Box_Nom.Location = new System.Drawing.Point(185, 33);
+            this.txt_Box_Nom.Location = new System.Drawing.Point(153, 32);
             this.txt_Box_Nom.Name = "txt_Box_Nom";
-            this.txt_Box_Nom.Size = new System.Drawing.Size(281, 27);
+            this.txt_Box_Nom.Size = new System.Drawing.Size(242, 27);
             this.txt_Box_Nom.TabIndex = 0;
             // 
             // label3
@@ -130,9 +137,9 @@
             // txt_Apellido_Pat
             // 
             this.txt_Apellido_Pat.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Apellido_Pat.Location = new System.Drawing.Point(183, 70);
+            this.txt_Apellido_Pat.Location = new System.Drawing.Point(153, 70);
             this.txt_Apellido_Pat.Name = "txt_Apellido_Pat";
-            this.txt_Apellido_Pat.Size = new System.Drawing.Size(281, 27);
+            this.txt_Apellido_Pat.Size = new System.Drawing.Size(242, 27);
             this.txt_Apellido_Pat.TabIndex = 1;
             // 
             // label4
@@ -148,34 +155,34 @@
             // txt_Box_Apelli_Mat
             // 
             this.txt_Box_Apelli_Mat.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Box_Apelli_Mat.Location = new System.Drawing.Point(185, 107);
+            this.txt_Box_Apelli_Mat.Location = new System.Drawing.Point(153, 103);
             this.txt_Box_Apelli_Mat.Name = "txt_Box_Apelli_Mat";
-            this.txt_Box_Apelli_Mat.Size = new System.Drawing.Size(281, 27);
+            this.txt_Box_Apelli_Mat.Size = new System.Drawing.Size(242, 27);
             this.txt_Box_Apelli_Mat.TabIndex = 2;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(504, 74);
+            this.label5.Location = new System.Drawing.Point(401, 36);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(87, 23);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Direccion:";
+            this.label5.Text = "Dirección:";
             // 
             // txt_Box_Dir
             // 
             this.txt_Box_Dir.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Box_Dir.Location = new System.Drawing.Point(597, 74);
+            this.txt_Box_Dir.Location = new System.Drawing.Point(494, 36);
             this.txt_Box_Dir.Name = "txt_Box_Dir";
             this.txt_Box_Dir.Size = new System.Drawing.Size(281, 27);
-            this.txt_Box_Dir.TabIndex = 3;
+            this.txt_Box_Dir.TabIndex = 4;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(502, 107);
+            this.label6.Location = new System.Drawing.Point(399, 69);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 23);
             this.label6.TabIndex = 0;
@@ -184,28 +191,28 @@
             // txt_Box_Col
             // 
             this.txt_Box_Col.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Box_Col.Location = new System.Drawing.Point(595, 107);
+            this.txt_Box_Col.Location = new System.Drawing.Point(492, 69);
             this.txt_Box_Col.Name = "txt_Box_Col";
             this.txt_Box_Col.Size = new System.Drawing.Size(281, 27);
-            this.txt_Box_Col.TabIndex = 4;
+            this.txt_Box_Col.TabIndex = 5;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(879, 29);
+            this.label7.Location = new System.Drawing.Point(891, 40);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 23);
+            this.label7.Size = new System.Drawing.Size(75, 23);
             this.label7.TabIndex = 0;
-            this.label7.Text = "Telefono:";
+            this.label7.Text = "Teléfono";
             // 
             // txt_Box_Tel
             // 
             this.txt_Box_Tel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Box_Tel.Location = new System.Drawing.Point(970, 29);
+            this.txt_Box_Tel.Location = new System.Drawing.Point(972, 36);
             this.txt_Box_Tel.Name = "txt_Box_Tel";
-            this.txt_Box_Tel.Size = new System.Drawing.Size(281, 27);
-            this.txt_Box_Tel.TabIndex = 5;
+            this.txt_Box_Tel.Size = new System.Drawing.Size(254, 27);
+            this.txt_Box_Tel.TabIndex = 6;
             // 
             // label8
             // 
@@ -213,15 +220,15 @@
             this.label8.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(7, 145);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(126, 23);
+            this.label8.Size = new System.Drawing.Size(136, 23);
             this.label8.TabIndex = 0;
-            this.label8.Text = "Dias Laborales:";
+            this.label8.Text = "Días Laborables:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(878, 74);
+            this.label9.Location = new System.Drawing.Point(890, 75);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(161, 23);
             this.label9.TabIndex = 0;
@@ -230,16 +237,16 @@
             // numericUpDown_Pac_Limit
             // 
             this.numericUpDown_Pac_Limit.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown_Pac_Limit.Location = new System.Drawing.Point(1058, 72);
+            this.numericUpDown_Pac_Limit.Location = new System.Drawing.Point(1057, 70);
             this.numericUpDown_Pac_Limit.Name = "numericUpDown_Pac_Limit";
             this.numericUpDown_Pac_Limit.Size = new System.Drawing.Size(38, 31);
-            this.numericUpDown_Pac_Limit.TabIndex = 9;
+            this.numericUpDown_Pac_Limit.TabIndex = 7;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(504, 160);
+            this.label11.Location = new System.Drawing.Point(400, 107);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(174, 23);
             this.label11.TabIndex = 0;
@@ -248,18 +255,18 @@
             // dateTime_Birth_Date
             // 
             this.dateTime_Birth_Date.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTime_Birth_Date.Location = new System.Drawing.Point(684, 154);
+            this.dateTime_Birth_Date.Location = new System.Drawing.Point(580, 101);
             this.dateTime_Birth_Date.Name = "dateTime_Birth_Date";
             this.dateTime_Birth_Date.Size = new System.Drawing.Size(305, 31);
-            this.dateTime_Birth_Date.TabIndex = 11;
+            this.dateTime_Birth_Date.TabIndex = 10;
             // 
             // btt_Alta_Psic
             // 
             this.btt_Alta_Psic.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btt_Alta_Psic.Location = new System.Drawing.Point(41, 207);
+            this.btt_Alta_Psic.Location = new System.Drawing.Point(37, 279);
             this.btt_Alta_Psic.Name = "btt_Alta_Psic";
             this.btt_Alta_Psic.Size = new System.Drawing.Size(138, 35);
-            this.btt_Alta_Psic.TabIndex = 12;
+            this.btt_Alta_Psic.TabIndex = 18;
             this.btt_Alta_Psic.Text = "Alta";
             this.btt_Alta_Psic.UseVisualStyleBackColor = true;
             this.btt_Alta_Psic.Click += new System.EventHandler(this.btt_Alta_Psic_Click);
@@ -267,10 +274,10 @@
             // btt_Bajas
             // 
             this.btt_Bajas.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btt_Bajas.Location = new System.Drawing.Point(392, 207);
+            this.btt_Bajas.Location = new System.Drawing.Point(388, 279);
             this.btt_Bajas.Name = "btt_Bajas";
             this.btt_Bajas.Size = new System.Drawing.Size(138, 35);
-            this.btt_Bajas.TabIndex = 13;
+            this.btt_Bajas.TabIndex = 19;
             this.btt_Bajas.Text = "Baja";
             this.btt_Bajas.UseVisualStyleBackColor = true;
             this.btt_Bajas.Click += new System.EventHandler(this.btt_Bajas_Click);
@@ -278,30 +285,29 @@
             // btt_Modificaciones
             // 
             this.btt_Modificaciones.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btt_Modificaciones.Location = new System.Drawing.Point(743, 207);
+            this.btt_Modificaciones.Location = new System.Drawing.Point(739, 279);
             this.btt_Modificaciones.Name = "btt_Modificaciones";
             this.btt_Modificaciones.Size = new System.Drawing.Size(138, 35);
-            this.btt_Modificaciones.TabIndex = 14;
-            this.btt_Modificaciones.Text = "Modificaciones";
+            this.btt_Modificaciones.TabIndex = 20;
+            this.btt_Modificaciones.Text = "Modificación";
             this.btt_Modificaciones.UseVisualStyleBackColor = true;
             this.btt_Modificaciones.Click += new System.EventHandler(this.btt_Modificaciones_Click);
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(1094, 207);
+            this.button3.Location = new System.Drawing.Point(1090, 279);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(138, 35);
-            this.button3.TabIndex = 15;
+            this.button3.TabIndex = 21;
             this.button3.Text = "Salir";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(878, 111);
+            this.label12.Location = new System.Drawing.Point(891, 107);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(50, 23);
             this.label12.TabIndex = 0;
@@ -311,10 +317,10 @@
             // 
             this.radioButt_Male.AutoSize = true;
             this.radioButt_Male.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButt_Male.Location = new System.Drawing.Point(934, 109);
+            this.radioButt_Male.Location = new System.Drawing.Point(960, 105);
             this.radioButt_Male.Name = "radioButt_Male";
             this.radioButt_Male.Size = new System.Drawing.Size(91, 27);
-            this.radioButt_Male.TabIndex = 7;
+            this.radioButt_Male.TabIndex = 8;
             this.radioButt_Male.TabStop = true;
             this.radioButt_Male.Text = "Hombre";
             this.radioButt_Male.UseVisualStyleBackColor = true;
@@ -323,10 +329,10 @@
             // 
             this.radioButt_Female.AutoSize = true;
             this.radioButt_Female.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButt_Female.Location = new System.Drawing.Point(1058, 107);
+            this.radioButt_Female.Location = new System.Drawing.Point(1090, 105);
             this.radioButt_Female.Name = "radioButt_Female";
             this.radioButt_Female.Size = new System.Drawing.Size(75, 27);
-            this.radioButt_Female.TabIndex = 8;
+            this.radioButt_Female.TabIndex = 9;
             this.radioButt_Female.TabStop = true;
             this.radioButt_Female.Text = "Mujer";
             this.radioButt_Female.UseVisualStyleBackColor = true;
@@ -355,22 +361,22 @@
             this.birth_Day,
             this.edadDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.psicologoBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 292);
+            this.dataGridView1.Location = new System.Drawing.Point(11, 364);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1260, 331);
-            this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.TabIndex = 30;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // PK_psicologo
             // 
             this.PK_psicologo.DataPropertyName = "idPsicologo";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PK_psicologo.DefaultCellStyle = dataGridViewCellStyle1;
-            this.PK_psicologo.HeaderText = "Clave Psicologo";
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PK_psicologo.DefaultCellStyle = dataGridViewCellStyle12;
+            this.PK_psicologo.HeaderText = "Clave Psicólogo";
             this.PK_psicologo.Name = "PK_psicologo";
             this.PK_psicologo.ReadOnly = true;
             this.PK_psicologo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -386,7 +392,7 @@
             // apellido_Pat
             // 
             this.apellido_Pat.DataPropertyName = "paterno";
-            this.apellido_Pat.HeaderText = "Apeellido Paterno";
+            this.apellido_Pat.HeaderText = "Apellido Paterno";
             this.apellido_Pat.Name = "apellido_Pat";
             this.apellido_Pat.ReadOnly = true;
             this.apellido_Pat.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -402,7 +408,7 @@
             // dir
             // 
             this.dir.DataPropertyName = "direccion";
-            this.dir.HeaderText = "Direccion";
+            this.dir.HeaderText = "Dirección";
             this.dir.Name = "dir";
             this.dir.ReadOnly = true;
             this.dir.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -417,7 +423,7 @@
             // tel
             // 
             this.tel.DataPropertyName = "telefono";
-            this.tel.HeaderText = "Telefono";
+            this.tel.HeaderText = "Teléfono";
             this.tel.Name = "tel";
             this.tel.ReadOnly = true;
             this.tel.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -485,10 +491,12 @@
             // txt_Box_Working_Days
             // 
             this.txt_Box_Working_Days.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Box_Working_Days.Location = new System.Drawing.Point(185, 145);
+            this.txt_Box_Working_Days.Location = new System.Drawing.Point(153, 145);
             this.txt_Box_Working_Days.Name = "txt_Box_Working_Days";
-            this.txt_Box_Working_Days.Size = new System.Drawing.Size(281, 27);
-            this.txt_Box_Working_Days.TabIndex = 6;
+            this.txt_Box_Working_Days.ReadOnly = true;
+            this.txt_Box_Working_Days.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.txt_Box_Working_Days.Size = new System.Drawing.Size(318, 27);
+            this.txt_Box_Working_Days.TabIndex = 100;
             // 
             // ctx_Menu_PsicOption
             // 
@@ -546,6 +554,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.checkBox_Jueves);
+            this.groupBox1.Controls.Add(this.checkBox_Domingo);
+            this.groupBox1.Controls.Add(this.checkBox_Miercoles);
+            this.groupBox1.Controls.Add(this.checkBox_Sabado);
+            this.groupBox1.Controls.Add(this.checkBox_Viernes);
+            this.groupBox1.Controls.Add(this.checkBox_Martes);
+            this.groupBox1.Controls.Add(this.checkBox_Lunes);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txt_Box_Nom);
             this.groupBox1.Controls.Add(this.label3);
@@ -574,16 +589,100 @@
             this.groupBox1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1261, 248);
+            this.groupBox1.Size = new System.Drawing.Size(1261, 320);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos de Psicologo";
+            this.groupBox1.Text = "Datos de Psicólogo";
+            // 
+            // checkBox_Lunes
+            // 
+            this.checkBox_Lunes.AutoSize = true;
+            this.checkBox_Lunes.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_Lunes.Location = new System.Drawing.Point(11, 184);
+            this.checkBox_Lunes.Name = "checkBox_Lunes";
+            this.checkBox_Lunes.Size = new System.Drawing.Size(74, 27);
+            this.checkBox_Lunes.TabIndex = 11;
+            this.checkBox_Lunes.Text = "Lunes";
+            this.checkBox_Lunes.UseVisualStyleBackColor = true;
+            this.checkBox_Lunes.CheckedChanged += new System.EventHandler(this.checkBox_Lunes_CheckedChanged);
+            // 
+            // checkBox_Martes
+            // 
+            this.checkBox_Martes.AutoSize = true;
+            this.checkBox_Martes.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_Martes.Location = new System.Drawing.Point(128, 184);
+            this.checkBox_Martes.Name = "checkBox_Martes";
+            this.checkBox_Martes.Size = new System.Drawing.Size(89, 27);
+            this.checkBox_Martes.TabIndex = 12;
+            this.checkBox_Martes.Text = "Martes:";
+            this.checkBox_Martes.UseVisualStyleBackColor = true;
+            this.checkBox_Martes.CheckedChanged += new System.EventHandler(this.checkBox_Martes_CheckedChanged);
+            // 
+            // checkBox_Miercoles
+            // 
+            this.checkBox_Miercoles.AutoSize = true;
+            this.checkBox_Miercoles.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_Miercoles.Location = new System.Drawing.Point(245, 184);
+            this.checkBox_Miercoles.Name = "checkBox_Miercoles";
+            this.checkBox_Miercoles.Size = new System.Drawing.Size(109, 27);
+            this.checkBox_Miercoles.TabIndex = 13;
+            this.checkBox_Miercoles.Text = "Miércoles:";
+            this.checkBox_Miercoles.UseVisualStyleBackColor = true;
+            this.checkBox_Miercoles.CheckedChanged += new System.EventHandler(this.checkBox_Miercoles_CheckedChanged);
+            // 
+            // checkBox_Jueves
+            // 
+            this.checkBox_Jueves.AutoSize = true;
+            this.checkBox_Jueves.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_Jueves.Location = new System.Drawing.Point(362, 184);
+            this.checkBox_Jueves.Name = "checkBox_Jueves";
+            this.checkBox_Jueves.Size = new System.Drawing.Size(85, 27);
+            this.checkBox_Jueves.TabIndex = 14;
+            this.checkBox_Jueves.Text = "Jueves:";
+            this.checkBox_Jueves.UseVisualStyleBackColor = true;
+            this.checkBox_Jueves.CheckedChanged += new System.EventHandler(this.checkBox_Jueves_CheckedChanged);
+            // 
+            // checkBox_Viernes
+            // 
+            this.checkBox_Viernes.AutoSize = true;
+            this.checkBox_Viernes.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_Viernes.Location = new System.Drawing.Point(11, 217);
+            this.checkBox_Viernes.Name = "checkBox_Viernes";
+            this.checkBox_Viernes.Size = new System.Drawing.Size(92, 27);
+            this.checkBox_Viernes.TabIndex = 15;
+            this.checkBox_Viernes.Text = "Viernes:";
+            this.checkBox_Viernes.UseVisualStyleBackColor = true;
+            this.checkBox_Viernes.CheckedChanged += new System.EventHandler(this.checkBox_Viernes_CheckedChanged);
+            // 
+            // checkBox_Sabado
+            // 
+            this.checkBox_Sabado.AutoSize = true;
+            this.checkBox_Sabado.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_Sabado.Location = new System.Drawing.Point(128, 217);
+            this.checkBox_Sabado.Name = "checkBox_Sabado";
+            this.checkBox_Sabado.Size = new System.Drawing.Size(91, 27);
+            this.checkBox_Sabado.TabIndex = 16;
+            this.checkBox_Sabado.Text = "Sábado:";
+            this.checkBox_Sabado.UseVisualStyleBackColor = true;
+            this.checkBox_Sabado.CheckedChanged += new System.EventHandler(this.checkBox_Sabado_CheckedChanged);
+            // 
+            // checkBox_Domingo
+            // 
+            this.checkBox_Domingo.AutoSize = true;
+            this.checkBox_Domingo.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox_Domingo.Location = new System.Drawing.Point(245, 217);
+            this.checkBox_Domingo.Name = "checkBox_Domingo";
+            this.checkBox_Domingo.Size = new System.Drawing.Size(104, 27);
+            this.checkBox_Domingo.TabIndex = 17;
+            this.checkBox_Domingo.Text = "Domingo:";
+            this.checkBox_Domingo.UseVisualStyleBackColor = true;
+            this.checkBox_Domingo.CheckedChanged += new System.EventHandler(this.checkBox_Domingo_CheckedChanged);
             // 
             // Form_Psicologo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1275, 635);
+            this.ClientSize = new System.Drawing.Size(1280, 697);
             this.ContextMenuStrip = this.ctx_Menu_PsicOption;
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
@@ -638,6 +737,14 @@
         private System.Windows.Forms.BindingSource psicologoBindingSource;
         private MarillacDataSetTableAdapters.PsicologoTableAdapter psicologoTableAdapter;
         private System.Windows.Forms.TextBox txt_Box_Working_Days;
+        private System.Windows.Forms.ContextMenuStrip ctx_Menu_PsicOption;
+        private System.Windows.Forms.ToolStripMenuItem limpiarCamposToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ToolStripMenuItem darDeAltaPacienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem darDeBajaPacienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem darDeAltaPacienteToolStripMenuItem1;
         private System.Windows.Forms.DataGridViewTextBoxColumn PK_psicologo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellido_Pat;
@@ -651,13 +758,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sign_Pac;
         private System.Windows.Forms.DataGridViewTextBoxColumn birth_Day;
         private System.Windows.Forms.DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.ContextMenuStrip ctx_Menu_PsicOption;
-        private System.Windows.Forms.ToolStripMenuItem limpiarCamposToolStripMenuItem;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ToolStripMenuItem darDeAltaPacienteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem darDeBajaPacienteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripMenuItem darDeAltaPacienteToolStripMenuItem1;
+        private System.Windows.Forms.CheckBox checkBox_Lunes;
+        private System.Windows.Forms.CheckBox checkBox_Jueves;
+        private System.Windows.Forms.CheckBox checkBox_Domingo;
+        private System.Windows.Forms.CheckBox checkBox_Miercoles;
+        private System.Windows.Forms.CheckBox checkBox_Sabado;
+        private System.Windows.Forms.CheckBox checkBox_Viernes;
+        private System.Windows.Forms.CheckBox checkBox_Martes;
     }
 }

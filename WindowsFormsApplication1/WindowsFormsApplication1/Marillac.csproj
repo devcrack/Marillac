@@ -101,6 +101,31 @@
     <Compile Include="hijosDeBeneficiario.Designer.cs">
       <DependentUpon>hijosDeBeneficiario.cs</DependentUpon>
     </Compile>
+    <Compile Include="MarillacDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MarillacDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MarillacDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MarillacDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MarillacDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MarillacDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MarillacDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MarillacDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MarillacDataSet88.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MarillacDataSet88.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,6 +243,61 @@
     </None>
     <None Include="MarillacDataSet.xss">
       <DependentUpon>MarillacDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MarillacDataSet1.xsc">
+      <DependentUpon>MarillacDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MarillacDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MarillacDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MarillacDataSet1.xss">
+      <DependentUpon>MarillacDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MarillacDataSet2.xsc">
+      <DependentUpon>MarillacDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MarillacDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MarillacDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MarillacDataSet2.xss">
+      <DependentUpon>MarillacDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MarillacDataSet3.xsc">
+      <DependentUpon>MarillacDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MarillacDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MarillacDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MarillacDataSet3.xss">
+      <DependentUpon>MarillacDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MarillacDataSet4.xsc">
+      <DependentUpon>MarillacDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="MarillacDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MarillacDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MarillacDataSet4.xss">
+      <DependentUpon>MarillacDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="MarillacDataSet88.xsc">
+      <DependentUpon>MarillacDataSet88.xsd</DependentUpon>
+    </None>
+    <None Include="MarillacDataSet88.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MarillacDataSet88.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MarillacDataSet88.xss">
+      <DependentUpon>MarillacDataSet88.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

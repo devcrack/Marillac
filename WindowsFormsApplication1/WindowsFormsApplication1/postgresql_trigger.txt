@@ -1,0 +1,13 @@
+CREATE OR REPLACE FUNCTION Calcular_Ganancia() 
+RETURNS TRIGGER AS $Ejemplo_Trigger$
+
+BEGIN
+
+	NEW.Ganancia := New.Precio * New.Cantidad_Vendidas;
+	Return NEW;
+END;
+
+$Ejemplo_Trigger$ LANGUAGE plpgsql;
+
+CREATE TRIGGER Ejemplo_Trigger BEFORE INSERT OR UPDATE ON Cancion.Album
+FOR EACH ROW EXECUTE PROCEDURE Calcular_Ganancia();

@@ -69,7 +69,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(140, 54);
+            this.label2.Location = new System.Drawing.Point(165, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(399, 19);
             this.label2.TabIndex = 5;
@@ -79,7 +79,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(188, 26);
+            this.label1.Location = new System.Drawing.Point(212, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(305, 19);
             this.label1.TabIndex = 4;
@@ -104,6 +104,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 100);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(444, 150);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
@@ -190,6 +191,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(12, 279);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(444, 150);
             this.dataGridView2.TabIndex = 7;
             // 
