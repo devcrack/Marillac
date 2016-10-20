@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
-{    
+{
     public partial class Form_Psicologo : Form
     {
         /// <summary>
@@ -82,14 +82,15 @@ namespace WindowsFormsApplication1
                 }
             }
         }
-        
-        private char get_Sexo() {
+
+        private char get_Sexo()
+        {
             return (this.radioButt_Male.Checked) ? 'M' : 'F';
         }
 
         private void Reset_Controls()
         {
-            foreach(Control c in this.Controls)
+            foreach (Control c in this.Controls)
             {
                 if (c is GroupBox)
                 {
@@ -112,7 +113,7 @@ namespace WindowsFormsApplication1
                 }
             }
         }
-        
+
         private void psicologoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
@@ -138,7 +139,7 @@ namespace WindowsFormsApplication1
         }
 
         private void btt_Modificaciones_Click(object sender, EventArgs e)
-        {            
+        {
             if (dataGridView1.SelectedRows.Count != 0)
             {
                 Int64 idModificar;
@@ -155,50 +156,50 @@ namespace WindowsFormsApplication1
                     +
                     (this.sql.Tables_s[name_Table])[0]
                     + " = " +
-                    "'" + this.txt_Box_Nom.Text + "'," 
+                    "'" + this.txt_Box_Nom.Text + "',"
                     +
                     (this.sql.Tables_s[name_Table])[1]
                     + " = " +
                     "'" + this.txt_Apellido_Pat.Text + "',"
-                    + 
+                    +
                     (this.sql.Tables_s[name_Table])[2]
                     + " = " +
                     "'" + this.txt_Box_Apelli_Mat.Text + "',"
-                    + 
+                    +
                     (this.sql.Tables_s[name_Table])[3]
                     + " = " +
                     "'" + this.txt_Box_Dir.Text + "',"
-                    + 
+                    +
                     (this.sql.Tables_s[name_Table])[4]
                     + " = " +
                     "'" + this.txt_Box_Col.Text + "',"
-                    + 
+                    +
                     (this.sql.Tables_s[name_Table])[5]
                     + " = " +
                     "'" + this.txt_Box_Tel.Text + "',"
-                    + 
+                    +
                     (this.sql.Tables_s[name_Table])[6]
                     + " = " +
                     "'" + this.txt_Box_Working_Days.Text + "',"
-                    + 
+                    +
                     (this.sql.Tables_s[name_Table])[7]
                     + " = " +
                     "'" + this.get_Sexo() + "',"
-                    + 
+                    +
                     (this.sql.Tables_s[name_Table])[8]
                     + " = " +
                     "'" + this.numericUpDown_Pac_Limit.Value + "',"
-                    + 
+                    +
                     (this.sql.Tables_s[name_Table])[9]
                     + " = " +
-                    "'" + this.dateTime_Birth_Date.Value.Year 
+                    "'" + this.dateTime_Birth_Date.Value.Year
                     + "-" +
                     this.dateTime_Birth_Date.Value.Month
                      + "-" +
                      this.dateTime_Birth_Date.Value.Day
-                     + "'" + 
+                     + "'" +
                      this.sql.DML[4]
-                     +(this.sql.Tables_s[name_Table])[10]
+                     + (this.sql.Tables_s[name_Table])[10]
                      + "=" +
                      idModificar
                      ;
@@ -236,11 +237,11 @@ namespace WindowsFormsApplication1
         {
             if (c == 'M')
                 this.radioButt_Male.Checked = true;
-            else 
+            else
                 this.radioButt_Female.Checked = true;
         }
 
-        
+
         private void limpiarCamposToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Reset_Controls();
@@ -250,7 +251,7 @@ namespace WindowsFormsApplication1
         private void darDeAltaPacienteToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             int is_limit = Convert.ToInt32(this.numericUpDown_Pac_Limit.Value);
-            if((Convert.ToInt32(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[10].Value.ToString()) + 1) < Convert.ToInt32(this.numericUpDown_Pac_Limit.Value))
+            if ((Convert.ToInt32(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[10].Value.ToString()) + 1) < Convert.ToInt32(this.numericUpDown_Pac_Limit.Value))
             {
                 if (dataGridView1.SelectedRows.Count != 0)
                 {
@@ -270,7 +271,7 @@ namespace WindowsFormsApplication1
                 MessageBox.Show("Se ha excedido el Limite de Pacientes");
         }
 
-        
+
         private void darDeBajaPacienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Convert.ToInt32(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[10].Value.ToString()) > 0)
@@ -295,7 +296,6 @@ namespace WindowsFormsApplication1
 
         private bool check_Values_Controls()
         {
-            bool days = false;
 
             foreach (Control c in this.Controls)
             {
@@ -317,11 +317,6 @@ namespace WindowsFormsApplication1
                                     return false;
                                 }
                             }
-                            else if (c is CheckBox)
-                            {
-                                if (((CheckBox)c2).Checked)
-                                    days = true;
-                            }
                     }
                 }
             }
@@ -333,11 +328,6 @@ namespace WindowsFormsApplication1
                     return false;
                 }
             }
-            if (!days)
-            {
-                MessageBox.Show("Debe determinar al menos un Dia laborable");
-                return false;
-            }
             return true;
         }
 
@@ -346,7 +336,7 @@ namespace WindowsFormsApplication1
             if (dataGridView1.SelectedRows.Count != 0)
             {
                 string idModificar = dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value.ToString();
-                string name_Table = this.sql.Tables_s.Keys.ElementAt(0);   
+                string name_Table = this.sql.Tables_s.Keys.ElementAt(0);
                 //UPDATE Persona.Beneficiario SET idPsicologo = NULL where idPsicologo = este_ID
                 string tble_Beneficiario = this.sql.Tables_s.Keys.ElementAt(1);
                 string tble_Hijo = this.sql.Tables_s.Keys.ElementAt(2);
@@ -354,28 +344,28 @@ namespace WindowsFormsApplication1
                                tble_Beneficiario + //Persona.Beneficiario
                                this.sql.DML[3] + //SET
                                (this.sql.Tables_s[tble_Beneficiario])[1] + " = " //idPsicologo =
-                               + " NULL"  + this.sql.DML[4] + (this.sql.Tables_s[tble_Beneficiario])[1] + " = " + idModificar;
+                               + " NULL" + this.sql.DML[4] + (this.sql.Tables_s[tble_Beneficiario])[1] + " = " + idModificar;
                 this.sql.execute_Query(query);
                 query = this.sql.DML[2] +//UPDATE
                                tble_Hijo + //Persona.Beneficiario
                                this.sql.DML[3] + //SET
                                (this.sql.Tables_s[tble_Hijo])[2] + " = " //idPsicologo =
-                               + " NULL" + this.sql.DML[4] + (this.sql.Tables_s[tble_Hijo])[2] + " = " + idModificar;;
-                this.sql.execute_Query(query);                
+                               + " NULL" + this.sql.DML[4] + (this.sql.Tables_s[tble_Hijo])[2] + " = " + idModificar; ;
+                this.sql.execute_Query(query);
                 query = this.sql.DML[11] + //DELETE
                                this.sql.DML[6] + //FROM 
                                name_Table + // Persona.Psicologo
                                this.sql.DML[4] + //WHERE
                                (this.sql.Tables_s[name_Table])[10] + " = " +//idPsicologo =
                                idModificar;
-                if(this.sql.execute_Query(query) == true)
+                if (this.sql.execute_Query(query) == true)
                 {
                     this.psicologoTableAdapter.Fill(this.marillac_DataSet.Psicologo);
                     this.dataGridView1.ClearSelection();
                     this.Reset_Controls();
                 }
             }
-    }
+        }
 
         private void checkBox_Lunes_CheckedChanged(object sender, EventArgs e)
         {
@@ -388,7 +378,7 @@ namespace WindowsFormsApplication1
             this.manage_Days(this.checkBox_Martes.Checked, "Martes");
             this.sort_days();
         }
-        
+
         private void manage_Days(bool is_check, string str)
         {
             if (is_check)
@@ -426,7 +416,7 @@ namespace WindowsFormsApplication1
 
         private void checkBox_Sabado_CheckedChanged(object sender, EventArgs e)
         {
-            this.manage_Days(this.checkBox_Sabado.Checked,"Sabado");
+            this.manage_Days(this.checkBox_Sabado.Checked, "Sabado");
             this.sort_days();
         }
 
@@ -435,7 +425,7 @@ namespace WindowsFormsApplication1
             this.manage_Days(this.checkBox_Domingo.Checked, "Domingo");
             this.sort_days();
         }
-        
+
         public void sort_days()
         {
             string main_String = this.txt_Box_Working_Days.Text;
@@ -445,14 +435,14 @@ namespace WindowsFormsApplication1
 
             foreach (string m_day in days)
             {
-                if(main_String.Contains(m_day) == true)
+                if (main_String.Contains(m_day) == true)
                 {
                     days_List.Add(m_day);
-                    main_String = main_String.Replace(m_day, string.Empty);                    
+                    main_String = main_String.Replace(m_day, string.Empty);
                 }
             }
             this.txt_Box_Working_Days.Text = string.Empty;
-            foreach(string str in days_List)
+            foreach (string str in days_List)
             {
                 if (string.Compare(this.txt_Box_Working_Days.Text, string.Empty) == 0)
                     this.txt_Box_Working_Days.Text += str;
@@ -460,16 +450,16 @@ namespace WindowsFormsApplication1
                     this.txt_Box_Working_Days.Text += "-" + str;
             }
         }
-        
+
         private void fill_CheckBoxes()
         {
             string[] days = { "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo" };
 
-            for(int index = 0; index < days.Length; index++)
+            for (int index = 0; index < days.Length; index++)
             {
-                if(this.txt_Box_Working_Days.Text.Contains(days[index])== true)
+                if (this.txt_Box_Working_Days.Text.Contains(days[index]) == true)
                 {
-                    switch(index)
+                    switch (index)
                     {
                         case 0:
                             this.checkBox_Lunes.Checked = true;
@@ -501,6 +491,6 @@ namespace WindowsFormsApplication1
         {
             this.Close();
         }
-    }    
+    }
 }
 

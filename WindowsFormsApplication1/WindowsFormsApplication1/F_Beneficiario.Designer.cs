@@ -47,8 +47,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.beneficiarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.marillacDataSet = new WindowsFormsApplication1.MarillacDataSet();
             this.psicologo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.botonModificar = new System.Windows.Forms.Button();
@@ -60,15 +58,14 @@
             this.botonPsicologo = new System.Windows.Forms.Button();
             this.botonHijos = new System.Windows.Forms.Button();
             this.botonLimpiar = new System.Windows.Forms.Button();
+            this.marillacDataSet = new WindowsFormsApplication1.MarillacDataSet();
+            this.beneficiarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.beneficiarioTableAdapter = new WindowsFormsApplication1.MarillacDataSetTableAdapters.BeneficiarioTableAdapter();
-            this.marillacDataSet5 = new WindowsFormsApplication1.MarillacDataSet5();
-            this.vistabeneficiarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vista_beneficiarioTableAdapter = new WindowsFormsApplication1.MarillacDataSet5TableAdapters.vista_beneficiarioTableAdapter();
             this.idBeneficiarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idPsicologoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.psicologoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.coloniaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,10 +73,8 @@
             this.fechaNacimientoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.edadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.beneficiarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marillacDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.marillacDataSet5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vistabeneficiarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.beneficiarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -265,17 +260,17 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idBeneficiarioDataGridViewTextBoxColumn,
-            this.nombreDataGridViewTextBoxColumn,
+            this.idPsicologoDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn1,
             this.paternoDataGridViewTextBoxColumn,
             this.maternoDataGridViewTextBoxColumn,
-            this.psicologoDataGridViewTextBoxColumn,
             this.direccionDataGridViewTextBoxColumn,
             this.coloniaDataGridViewTextBoxColumn,
             this.telefonoDataGridViewTextBoxColumn,
             this.sexoDataGridViewTextBoxColumn,
             this.fechaNacimientoDataGridViewTextBoxColumn,
             this.edadDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.vistabeneficiarioBindingSource;
+            this.dataGridView1.DataSource = this.beneficiarioBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(482, 100);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.MultiSelect = false;
@@ -285,16 +280,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(728, 454);
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
-            // 
-            // beneficiarioBindingSource
-            // 
-            this.beneficiarioBindingSource.DataMember = "Beneficiario";
-            this.beneficiarioBindingSource.DataSource = this.marillacDataSet;
-            // 
-            // marillacDataSet
-            // 
-            this.marillacDataSet.DataSetName = "MarillacDataSet";
-            this.marillacDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // psicologo
             // 
@@ -411,23 +396,19 @@
             this.botonLimpiar.UseVisualStyleBackColor = true;
             this.botonLimpiar.Click += new System.EventHandler(this.botonLimpiar_Click);
             // 
+            // marillacDataSet
+            // 
+            this.marillacDataSet.DataSetName = "MarillacDataSet";
+            this.marillacDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // beneficiarioBindingSource
+            // 
+            this.beneficiarioBindingSource.DataMember = "Beneficiario";
+            this.beneficiarioBindingSource.DataSource = this.marillacDataSet;
+            // 
             // beneficiarioTableAdapter
             // 
             this.beneficiarioTableAdapter.ClearBeforeFill = true;
-            // 
-            // marillacDataSet5
-            // 
-            this.marillacDataSet5.DataSetName = "MarillacDataSet5";
-            this.marillacDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vistabeneficiarioBindingSource
-            // 
-            this.vistabeneficiarioBindingSource.DataMember = "vista_beneficiario";
-            this.vistabeneficiarioBindingSource.DataSource = this.marillacDataSet5;
-            // 
-            // vista_beneficiarioTableAdapter
-            // 
-            this.vista_beneficiarioTableAdapter.ClearBeforeFill = true;
             // 
             // idBeneficiarioDataGridViewTextBoxColumn
             // 
@@ -437,13 +418,22 @@
             this.idBeneficiarioDataGridViewTextBoxColumn.ReadOnly = true;
             this.idBeneficiarioDataGridViewTextBoxColumn.Width = 50;
             // 
-            // nombreDataGridViewTextBoxColumn
+            // idPsicologoDataGridViewTextBoxColumn
             // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreDataGridViewTextBoxColumn.Width = 150;
+            this.idPsicologoDataGridViewTextBoxColumn.DataPropertyName = "idPsicologo";
+            this.idPsicologoDataGridViewTextBoxColumn.HeaderText = "idPsicologo";
+            this.idPsicologoDataGridViewTextBoxColumn.Name = "idPsicologoDataGridViewTextBoxColumn";
+            this.idPsicologoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idPsicologoDataGridViewTextBoxColumn.Visible = false;
+            this.idPsicologoDataGridViewTextBoxColumn.Width = 5;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "nombre";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 150;
             // 
             // paternoDataGridViewTextBoxColumn
             // 
@@ -461,21 +451,13 @@
             this.maternoDataGridViewTextBoxColumn.ReadOnly = true;
             this.maternoDataGridViewTextBoxColumn.Width = 150;
             // 
-            // psicologoDataGridViewTextBoxColumn
-            // 
-            this.psicologoDataGridViewTextBoxColumn.DataPropertyName = "psicologo";
-            this.psicologoDataGridViewTextBoxColumn.HeaderText = "Psicólogo";
-            this.psicologoDataGridViewTextBoxColumn.Name = "psicologoDataGridViewTextBoxColumn";
-            this.psicologoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.psicologoDataGridViewTextBoxColumn.Width = 200;
-            // 
             // direccionDataGridViewTextBoxColumn
             // 
             this.direccionDataGridViewTextBoxColumn.DataPropertyName = "direccion";
             this.direccionDataGridViewTextBoxColumn.HeaderText = "Dirección";
             this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
             this.direccionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.direccionDataGridViewTextBoxColumn.Width = 250;
+            this.direccionDataGridViewTextBoxColumn.Width = 200;
             // 
             // coloniaDataGridViewTextBoxColumn
             // 
@@ -562,10 +544,8 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.form_is_Closing);
             this.Load += new System.EventHandler(this.F_Beneficiario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.beneficiarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.marillacDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.marillacDataSet5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vistabeneficiarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.beneficiarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -591,9 +571,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private MarillacDataSet marillacDataSet;
-        private System.Windows.Forms.BindingSource beneficiarioBindingSource;
-        private MarillacDataSetTableAdapters.BeneficiarioTableAdapter beneficiarioTableAdapter;
         private System.Windows.Forms.TextBox psicologo;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button botonModificar;
@@ -605,14 +582,15 @@
         private System.Windows.Forms.Button botonPsicologo;
         private System.Windows.Forms.Button botonHijos;
         private System.Windows.Forms.Button botonLimpiar;
-        private MarillacDataSet5 marillacDataSet5;
-        private System.Windows.Forms.BindingSource vistabeneficiarioBindingSource;
-        private MarillacDataSet5TableAdapters.vista_beneficiarioTableAdapter vista_beneficiarioTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idBeneficiarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private MarillacDataSet marillacDataSet;
+        private System.Windows.Forms.BindingSource beneficiarioBindingSource;
+        private MarillacDataSetTableAdapters.BeneficiarioTableAdapter beneficiarioTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idBeneficiarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idPsicologoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn paternoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maternoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn psicologoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn direccionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn coloniaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
