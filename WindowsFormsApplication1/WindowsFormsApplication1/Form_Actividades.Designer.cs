@@ -460,7 +460,7 @@
             this.sexoDataGridViewTextBoxColumn,
             this.edadDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.beneficiarioBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(666, 342);
+            this.dataGridView2.Location = new System.Drawing.Point(666, 352);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -523,7 +523,7 @@
             // claveActividadToolStripLabel
             // 
             this.claveActividadToolStripLabel.Name = "claveActividadToolStripLabel";
-            this.claveActividadToolStripLabel.Size = new System.Drawing.Size(87, 22);
+            this.claveActividadToolStripLabel.Size = new System.Drawing.Size(80, 22);
             this.claveActividadToolStripLabel.Text = "claveActividad:";
             // 
             // claveActividadToolStripTextBox
@@ -535,7 +535,7 @@
             // 
             this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillByToolStripButton.Name = "fillByToolStripButton";
-            this.fillByToolStripButton.Size = new System.Drawing.Size(39, 22);
+            this.fillByToolStripButton.Size = new System.Drawing.Size(35, 22);
             this.fillByToolStripButton.Text = "FillBy";
             this.fillByToolStripButton.Click += new System.EventHandler(this.fillByToolStripButton_Click);
             // 
@@ -562,7 +562,7 @@
             this.sexoDataGridViewTextBoxColumn1,
             this.edadDataGridViewTextBoxColumn1});
             this.dataGridView3.DataSource = this.hijoBindingSource;
-            this.dataGridView3.Location = new System.Drawing.Point(666, 456);
+            this.dataGridView3.Location = new System.Drawing.Point(666, 464);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -630,7 +630,7 @@
             // cveActToolStripLabel
             // 
             this.cveActToolStripLabel.Name = "cveActToolStripLabel";
-            this.cveActToolStripLabel.Size = new System.Drawing.Size(46, 22);
+            this.cveActToolStripLabel.Size = new System.Drawing.Size(44, 22);
             this.cveActToolStripLabel.Text = "cveAct:";
             // 
             // cveActToolStripTextBox
@@ -642,7 +642,7 @@
             // 
             this.fillBy1ToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillBy1ToolStripButton.Name = "fillBy1ToolStripButton";
-            this.fillBy1ToolStripButton.Size = new System.Drawing.Size(45, 22);
+            this.fillBy1ToolStripButton.Size = new System.Drawing.Size(41, 22);
             this.fillBy1ToolStripButton.Text = "FillBy1";
             this.fillBy1ToolStripButton.Click += new System.EventHandler(this.fillBy1ToolStripButton_Click);
             // 
@@ -742,7 +742,7 @@
             // 
             this.fillBy1ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillBy1ToolStripButton1.Name = "fillBy1ToolStripButton1";
-            this.fillBy1ToolStripButton1.Size = new System.Drawing.Size(45, 22);
+            this.fillBy1ToolStripButton1.Size = new System.Drawing.Size(41, 22);
             this.fillBy1ToolStripButton1.Text = "FillBy1";
             this.fillBy1ToolStripButton1.Click += new System.EventHandler(this.fillBy1ToolStripButton1_Click);
             // 
@@ -773,7 +773,7 @@
             // 
             this.base1ToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.base1ToolStripButton.Name = "base1ToolStripButton";
-            this.base1ToolStripButton.Size = new System.Drawing.Size(41, 22);
+            this.base1ToolStripButton.Size = new System.Drawing.Size(40, 22);
             this.base1ToolStripButton.Text = "base1";
             // 
             // actividadBindingSource1
@@ -801,7 +801,7 @@
             // 
             this.fillBy2ToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillBy2ToolStripButton.Name = "fillBy2ToolStripButton";
-            this.fillBy2ToolStripButton.Size = new System.Drawing.Size(45, 22);
+            this.fillBy2ToolStripButton.Size = new System.Drawing.Size(41, 22);
             this.fillBy2ToolStripButton.Text = "FillBy2";
             // 
             // fillBy3ToolStrip
@@ -819,7 +819,7 @@
             // 
             this.fillBy3ToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillBy3ToolStripButton.Name = "fillBy3ToolStripButton";
-            this.fillBy3ToolStripButton.Size = new System.Drawing.Size(45, 22);
+            this.fillBy3ToolStripButton.Size = new System.Drawing.Size(41, 22);
             this.fillBy3ToolStripButton.Text = "FillBy3";
             // 
             // fillBy1ToolStrip2
@@ -837,7 +837,7 @@
             // 
             this.fillBy1ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillBy1ToolStripButton2.Name = "fillBy1ToolStripButton2";
-            this.fillBy1ToolStripButton2.Size = new System.Drawing.Size(45, 22);
+            this.fillBy1ToolStripButton2.Size = new System.Drawing.Size(41, 22);
             this.fillBy1ToolStripButton2.Text = "FillBy1";
             this.fillBy1ToolStripButton2.Click += new System.EventHandler(this.fillBy1ToolStripButton2_Click);
             // 
@@ -856,7 +856,7 @@
             // 
             this.fillToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fillToolStripButton.Name = "fillToolStripButton";
-            this.fillToolStripButton.Size = new System.Drawing.Size(26, 22);
+            this.fillToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.fillToolStripButton.Text = "Fill";
             this.fillToolStripButton.Click += new System.EventHandler(this.fillToolStripButton_Click);
             // 

@@ -22,6 +22,8 @@ namespace WindowsFormsApplication1
         private SqlConnection con;
         private SqlDataAdapter adapter;
         private string connectionString;
+        private string lunes, martes, miercoles, jueves, viernes, sabado, domingo = "";
+        public int trap = 0;
 
         public Form_Actividades(Menu m_Form)
         {
@@ -77,27 +79,63 @@ namespace WindowsFormsApplication1
             this.Close();
         }
 
-        //FUNCI�N PARA AGREGAR REGISTRO A LA BASE DE DATOS
-        private void button1_Click(object sender, EventArgs e)
+        private void disponibilidad_profesor()
         {
+            
+        }
+
+        private bool disponible()
+        {
+            bool var = true;
+            int horaI = Convert.ToInt16(horaInicio.Text);
+            int horaF = Convert.ToInt16(horaFinal.Text);
             try
             {
                 con.Open();
-                diasSemana = verificaDias();
-                string query = "INSERT INTO Administracion.Actividad (idProfesor, nombreActividad, diasImparte, horaInicio, horaFinal, cupo, costo) VALUES (" + idProfesor + ",'" + nombreActividad.Text + "', '" + diasSemana + "', '" + horaInicio.Text + "', '" + horaFinal.Text + "', '" + cupo.Text + "'," + costo.Text + ")";
+                //string query = "SELECT idProfesor FROM Administracion.Actividad WHERE idProfesor = " + idProfesor + " AND (dia like '%" + lunes + "%' OR dia like '%" + martes + "%' OR dia like '%" + miercoles + "%' OR dia like '%" + jueves + "%' OR dia like '%" + viernes + "%' OR dia like '%" + sabado + "%' OR dia like '%" + domingo + "%') and (( horaInicio > " + horaI + " and horaInicio < " + horaF + ") or ( horaInicio <= " + horaI + " and horaFinal >= " + horaF + ") or ( horaFinal > " + horaI + " and horaFinal < " + horaF + "))";
+                string query = "SELECT idProfesor FROM Administracion.Actividad WHERE idProfesor = 999";
                 adapter.InsertCommand = new SqlCommand(query, con);
                 adapter.InsertCommand.ExecuteNonQuery();
-                limpiarTextBox();
                 con.Close();
-
-                //this.actividadTableAdapter.Fill(this.marillacDataSet.Actividad);
-                carga_datos();
             }
-
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 con.Close();
-                MessageBox.Show("Se deben llenar todos los campos para poner agregar una actividad");
+                var = false;
+            }
+
+            con.Close();
+            return var;
+        }
+
+        //FUNCI�N PARA AGREGAR REGISTRO A LA BASE DE DATOS
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (trap % 2 == 0)
+            {
+                try
+                {
+                    con.Open();
+                    diasSemana = verificaDias();
+                    string query = "INSERT INTO Administracion.Actividad (idProfesor, nombreActividad, diasImparte, horaInicio, horaFinal, cupo, costo) VALUES (" + idProfesor + ",'" + nombreActividad.Text + "', '" + diasSemana + "', '" + horaInicio.Text + "', '" + horaFinal.Text + "', '" + cupo.Text + "'," + costo.Text + ")";
+                    adapter.InsertCommand = new SqlCommand(query, con);
+                    adapter.InsertCommand.ExecuteNonQuery();
+                    limpiarTextBox();
+                    con.Close();
+
+                    carga_datos();
+                }
+                catch (Exception ex)
+                {
+                    con.Close();
+                    MessageBox.Show("Se deben llenar todos los campos para poner agregar una actividad");
+                }
+                trap = trap + 1;
+            }
+            else
+            {
+                MessageBox.Show("El profesor ya tiene clase asignada en ese horario");
+                trap = trap + 1;
             }
         }
 
@@ -135,19 +173,40 @@ namespace WindowsFormsApplication1
         {
             string str = "";
             if (checkBox1.Checked == true)
+            {
                 str += "Lunes ";
+                lunes = "Lunes";
+            }
             if (checkBox2.Checked == true)
+            {
                 str += "Martes ";
+                martes = "Martes";
+            }
             if (checkBox3.Checked == true)
+            { 
                 str += "Miercoles ";
+                miercoles = "Miercoles";
+            }
             if (checkBox4.Checked == true)
+            {
                 str += "Jueves ";
+                jueves = "Jueves";
+            }
             if (checkBox5.Checked == true)
+            {
                 str += "Viernes ";
+                viernes = "Viernes";
+            }
             if (checkBox6.Checked == true)
+            {
                 str += "Sabado ";
+                sabado = "Sabado";
+            }
             if (checkBox7.Checked == true)
+            {
                 str += "Domingo ";
+                domingo = "Domingo";
+            }
             return str;
         }
 
@@ -196,6 +255,7 @@ namespace WindowsFormsApplication1
             checkBox5.Checked = false;
             checkBox6.Checked = false;
             checkBox7.Checked = false;
+            lunes = martes = miercoles = jueves = viernes = sabado = domingo = "";
         }
 
         //FUNCI�N QUE LLENA LOS TEXT BOX CUANDO SE SELECCIONA UN CAMPO DEL DATA GRID
