@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.botonLimpiar = new System.Windows.Forms.Button();
             this.botonHijos = new System.Windows.Forms.Button();
-            this.botonPsicologo = new System.Windows.Forms.Button();
             this.botonSalir = new System.Windows.Forms.Button();
             this.botonEliminar = new System.Windows.Forms.Button();
             this.botonAgregar = new System.Windows.Forms.Button();
@@ -53,7 +52,6 @@
             this.hijoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label9 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.sexo = new System.Windows.Forms.TextBox();
             this.paterno = new System.Windows.Forms.TextBox();
             this.materno = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -63,26 +61,53 @@
             this.nombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.hijoTableAdapter = new WindowsFormsApplication1.MarillacDataSetTableAdapters.HijoTableAdapter();
-            this.psicologo = new System.Windows.Forms.TextBox();
-            this.beneficiario = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.pagotxt = new System.Windows.Forms.DateTimePicker();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.nombretxt = new System.Windows.Forms.TextBox();
+            this.actividadtxt = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.saldotxt = new System.Windows.Forms.TextBox();
+            this.montotxt = new System.Windows.Forms.TextBox();
+            this.sexo1 = new System.Windows.Forms.ComboBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.button7 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.nombrebene = new System.Windows.Forms.TextBox();
+            this.nombrepsi = new System.Windows.Forms.TextBox();
+            this.beneficiario = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.psicologo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.beneficiarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marillacDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hijoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // botonLimpiar
             // 
-            this.botonLimpiar.Font = new System.Drawing.Font("Calibri", 11F);
-            this.botonLimpiar.Location = new System.Drawing.Point(74, 494);
+            this.botonLimpiar.Font = new System.Drawing.Font("Calibri", 14F);
+            this.botonLimpiar.Location = new System.Drawing.Point(30, 360);
             this.botonLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.botonLimpiar.Name = "botonLimpiar";
             this.botonLimpiar.Size = new System.Drawing.Size(102, 34);
@@ -94,28 +119,20 @@
             // botonHijos
             // 
             this.botonHijos.Font = new System.Drawing.Font("Calibri", 11F);
-            this.botonHijos.Location = new System.Drawing.Point(180, 494);
+            this.botonHijos.Location = new System.Drawing.Point(413, 264);
             this.botonHijos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.botonHijos.Name = "botonHijos";
-            this.botonHijos.Size = new System.Drawing.Size(102, 34);
+            this.botonHijos.Size = new System.Drawing.Size(25, 26);
             this.botonHijos.TabIndex = 52;
-            this.botonHijos.Text = "Beneficiario";
+            this.botonHijos.Text = "...";
             this.botonHijos.UseVisualStyleBackColor = true;
-            // 
-            // botonPsicologo
-            // 
-            this.botonPsicologo.Location = new System.Drawing.Point(180, 456);
-            this.botonPsicologo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.botonPsicologo.Name = "botonPsicologo";
-            this.botonPsicologo.Size = new System.Drawing.Size(102, 34);
-            this.botonPsicologo.TabIndex = 51;
-            this.botonPsicologo.Text = "Psicólogo";
-            this.botonPsicologo.UseVisualStyleBackColor = true;
+            this.botonHijos.Click += new System.EventHandler(this.botonHijos_Click);
             // 
             // botonSalir
             // 
             this.botonSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.botonSalir.Location = new System.Drawing.Point(132, 532);
+            this.botonSalir.Font = new System.Drawing.Font("Calibri", 14F);
+            this.botonSalir.Location = new System.Drawing.Point(136, 361);
             this.botonSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.botonSalir.Name = "botonSalir";
             this.botonSalir.Size = new System.Drawing.Size(102, 34);
@@ -126,7 +143,8 @@
             // 
             // botonEliminar
             // 
-            this.botonEliminar.Location = new System.Drawing.Point(180, 418);
+            this.botonEliminar.Font = new System.Drawing.Font("Calibri", 14F);
+            this.botonEliminar.Location = new System.Drawing.Point(243, 310);
             this.botonEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.botonEliminar.Name = "botonEliminar";
             this.botonEliminar.Size = new System.Drawing.Size(102, 34);
@@ -137,7 +155,8 @@
             // 
             // botonAgregar
             // 
-            this.botonAgregar.Location = new System.Drawing.Point(74, 418);
+            this.botonAgregar.Font = new System.Drawing.Font("Calibri", 14F);
+            this.botonAgregar.Location = new System.Drawing.Point(30, 310);
             this.botonAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.botonAgregar.Name = "botonAgregar";
             this.botonAgregar.Size = new System.Drawing.Size(102, 34);
@@ -148,7 +167,8 @@
             // 
             // botonModificar
             // 
-            this.botonModificar.Location = new System.Drawing.Point(76, 456);
+            this.botonModificar.Font = new System.Drawing.Font("Calibri", 14F);
+            this.botonModificar.Location = new System.Drawing.Point(136, 310);
             this.botonModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.botonModificar.Name = "botonModificar";
             this.botonModificar.Size = new System.Drawing.Size(102, 34);
@@ -161,7 +181,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 14F);
-            this.label10.Location = new System.Drawing.Point(11, 215);
+            this.label10.Location = new System.Drawing.Point(40, 154);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(99, 23);
@@ -200,8 +220,8 @@
             this.fechaNacimientoDataGridViewTextBoxColumn,
             this.edadDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.hijoBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(424, 141);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(442, 80);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -216,6 +236,7 @@
             this.idHijoDataGridViewTextBoxColumn.HeaderText = "idHijo";
             this.idHijoDataGridViewTextBoxColumn.Name = "idHijoDataGridViewTextBoxColumn";
             this.idHijoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idHijoDataGridViewTextBoxColumn.Visible = false;
             // 
             // idBeneficiarioDataGridViewTextBoxColumn
             // 
@@ -223,6 +244,7 @@
             this.idBeneficiarioDataGridViewTextBoxColumn.HeaderText = "idBeneficiario";
             this.idBeneficiarioDataGridViewTextBoxColumn.Name = "idBeneficiarioDataGridViewTextBoxColumn";
             this.idBeneficiarioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idBeneficiarioDataGridViewTextBoxColumn.Visible = false;
             // 
             // idPsicologoDataGridViewTextBoxColumn
             // 
@@ -230,6 +252,7 @@
             this.idPsicologoDataGridViewTextBoxColumn.HeaderText = "idPsicologo";
             this.idPsicologoDataGridViewTextBoxColumn.Name = "idPsicologoDataGridViewTextBoxColumn";
             this.idPsicologoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idPsicologoDataGridViewTextBoxColumn.Visible = false;
             // 
             // nombreDataGridViewTextBoxColumn
             // 
@@ -282,7 +305,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(429, 51);
+            this.label9.Location = new System.Drawing.Point(445, 8);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(136, 66);
@@ -293,27 +316,18 @@
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Calibri", 14F);
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(181, 285);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePicker1.Location = new System.Drawing.Point(210, 224);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 30);
             this.dateTimePicker1.TabIndex = 36;
             this.dateTimePicker1.Value = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
             // 
-            // sexo
-            // 
-            this.sexo.Font = new System.Drawing.Font("Calibri", 14F);
-            this.sexo.Location = new System.Drawing.Point(181, 258);
-            this.sexo.Margin = new System.Windows.Forms.Padding(2);
-            this.sexo.Name = "sexo";
-            this.sexo.Size = new System.Drawing.Size(200, 30);
-            this.sexo.TabIndex = 35;
-            // 
             // paterno
             // 
             this.paterno.Font = new System.Drawing.Font("Calibri", 14F);
-            this.paterno.Location = new System.Drawing.Point(180, 157);
-            this.paterno.Margin = new System.Windows.Forms.Padding(2);
+            this.paterno.Location = new System.Drawing.Point(209, 96);
+            this.paterno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.paterno.Name = "paterno";
             this.paterno.Size = new System.Drawing.Size(200, 30);
             this.paterno.TabIndex = 27;
@@ -321,8 +335,8 @@
             // materno
             // 
             this.materno.Font = new System.Drawing.Font("Calibri", 14F);
-            this.materno.Location = new System.Drawing.Point(180, 187);
-            this.materno.Margin = new System.Windows.Forms.Padding(2);
+            this.materno.Location = new System.Drawing.Point(209, 126);
+            this.materno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.materno.Name = "materno";
             this.materno.Size = new System.Drawing.Size(200, 30);
             this.materno.TabIndex = 29;
@@ -331,7 +345,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 14F);
-            this.label8.Location = new System.Drawing.Point(11, 287);
+            this.label8.Location = new System.Drawing.Point(40, 226);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(176, 23);
@@ -342,7 +356,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 14F);
-            this.label7.Location = new System.Drawing.Point(11, 257);
+            this.label7.Location = new System.Drawing.Point(40, 196);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(102, 23);
@@ -353,7 +367,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 14F);
-            this.label3.Location = new System.Drawing.Point(11, 186);
+            this.label3.Location = new System.Drawing.Point(40, 125);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(152, 23);
@@ -364,7 +378,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 14F);
-            this.label2.Location = new System.Drawing.Point(11, 156);
+            this.label2.Location = new System.Drawing.Point(40, 95);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(146, 23);
@@ -374,8 +388,8 @@
             // nombre
             // 
             this.nombre.Font = new System.Drawing.Font("Calibri", 14F);
-            this.nombre.Location = new System.Drawing.Point(180, 125);
-            this.nombre.Margin = new System.Windows.Forms.Padding(2);
+            this.nombre.Location = new System.Drawing.Point(209, 64);
+            this.nombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nombre.Name = "nombre";
             this.nombre.Size = new System.Drawing.Size(200, 30);
             this.nombre.TabIndex = 26;
@@ -384,7 +398,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 14F);
-            this.label1.Location = new System.Drawing.Point(11, 125);
+            this.label1.Location = new System.Drawing.Point(40, 64);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 23);
@@ -395,52 +409,37 @@
             // 
             this.hijoTableAdapter.ClearBeforeFill = true;
             // 
-            // psicologo
-            // 
-            this.psicologo.Font = new System.Drawing.Font("Calibri", 14F);
-            this.psicologo.Location = new System.Drawing.Point(180, 218);
-            this.psicologo.Margin = new System.Windows.Forms.Padding(2);
-            this.psicologo.Name = "psicologo";
-            this.psicologo.Size = new System.Drawing.Size(200, 30);
-            this.psicologo.TabIndex = 31;
-            // 
-            // beneficiario
-            // 
-            this.beneficiario.Font = new System.Drawing.Font("Calibri", 14F);
-            this.beneficiario.Location = new System.Drawing.Point(181, 322);
-            this.beneficiario.Margin = new System.Windows.Forms.Padding(2);
-            this.beneficiario.Name = "beneficiario";
-            this.beneficiario.Size = new System.Drawing.Size(200, 30);
-            this.beneficiario.TabIndex = 37;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri", 14F);
-            this.label11.Location = new System.Drawing.Point(14, 319);
+            this.label11.Location = new System.Drawing.Point(43, 258);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(116, 23);
+            this.label11.Size = new System.Drawing.Size(100, 23);
             this.label11.TabIndex = 44;
-            this.label11.Text = "IdBeneficiario";
+            this.label11.Text = "Beneficiario";
             // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(424, 397);
+            this.dataGridView2.Location = new System.Drawing.Point(426, 325);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(562, 94);
             this.dataGridView2.TabIndex = 54;
+            this.dataGridView2.SelectionChanged += new System.EventHandler(this.dataGridView2_SelectionChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 14F);
-            this.label4.Location = new System.Drawing.Point(420, 371);
+            this.label4.Location = new System.Drawing.Point(422, 299);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(169, 23);
@@ -451,50 +450,357 @@
             // 
             this.dataGridView3.AllowUserToAddRows = false;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(424, 567);
+            this.dataGridView3.Location = new System.Drawing.Point(1, 619);
             this.dataGridView3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(562, 128);
+            this.dataGridView3.Size = new System.Drawing.Size(27, 78);
             this.dataGridView3.TabIndex = 54;
+            this.dataGridView3.Visible = false;
             this.dataGridView3.SelectionChanged += new System.EventHandler(this.dataGridView3_SelectionChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(424, 531);
+            this.button1.Location = new System.Drawing.Point(1, 587);
             this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 32);
+            this.button1.Size = new System.Drawing.Size(27, 28);
             this.button1.TabIndex = 55;
             this.button1.Text = "Inscribir Actividad";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(856, 365);
+            this.button2.Location = new System.Drawing.Point(1, 700);
             this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(129, 30);
+            this.button2.Size = new System.Drawing.Size(29, 30);
             this.button2.TabIndex = 55;
             this.button2.Text = "Eliminar Actividad";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // pagotxt
+            // 
+            this.pagotxt.Font = new System.Drawing.Font("Calibri", 14F);
+            this.pagotxt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.pagotxt.Location = new System.Drawing.Point(108, 165);
+            this.pagotxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pagotxt.Name = "pagotxt";
+            this.pagotxt.Size = new System.Drawing.Size(125, 30);
+            this.pagotxt.TabIndex = 36;
+            this.pagotxt.Value = new System.DateTime(2016, 10, 2, 0, 0, 0, 0);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.pagotxt);
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.dataGridView4);
+            this.groupBox1.Controls.Add(this.nombretxt);
+            this.groupBox1.Controls.Add(this.actividadtxt);
+            this.groupBox1.Controls.Add(this.button6);
+            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.saldotxt);
+            this.groupBox1.Controls.Add(this.montotxt);
+            this.groupBox1.Location = new System.Drawing.Point(34, 423);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(638, 253);
+            this.groupBox1.TabIndex = 56;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Registro Pagos";
+            this.groupBox1.Visible = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Calibri", 14F);
+            this.label15.Location = new System.Drawing.Point(32, 124);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(52, 23);
+            this.label15.TabIndex = 44;
+            this.label15.Text = "Saldo";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Calibri", 14F);
+            this.label14.Location = new System.Drawing.Point(32, 212);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(62, 23);
+            this.label14.TabIndex = 44;
+            this.label14.Text = "Monto";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Calibri", 14F);
+            this.label6.Location = new System.Drawing.Point(19, 89);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(82, 23);
+            this.label6.TabIndex = 44;
+            this.label6.Text = "Actividad";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Calibri", 14F);
+            this.label12.Location = new System.Drawing.Point(19, 37);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(73, 23);
+            this.label12.TabIndex = 44;
+            this.label12.Text = "Nombre";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 14F);
+            this.label5.Location = new System.Drawing.Point(8, 165);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(97, 23);
+            this.label5.TabIndex = 44;
+            this.label5.Text = "Fecha pago";
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.AllowUserToAddRows = false;
+            this.dataGridView4.AllowUserToDeleteRows = false;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Location = new System.Drawing.Point(299, 58);
+            this.dataGridView4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.ReadOnly = true;
+            this.dataGridView4.RowTemplate.Height = 24;
+            this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView4.Size = new System.Drawing.Size(278, 122);
+            this.dataGridView4.TabIndex = 54;
+            // 
+            // nombretxt
+            // 
+            this.nombretxt.Enabled = false;
+            this.nombretxt.Font = new System.Drawing.Font("Calibri", 14F);
+            this.nombretxt.Location = new System.Drawing.Point(104, 37);
+            this.nombretxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nombretxt.Name = "nombretxt";
+            this.nombretxt.Size = new System.Drawing.Size(181, 30);
+            this.nombretxt.TabIndex = 31;
+            // 
+            // actividadtxt
+            // 
+            this.actividadtxt.Enabled = false;
+            this.actividadtxt.Font = new System.Drawing.Font("Calibri", 14F);
+            this.actividadtxt.Location = new System.Drawing.Point(104, 83);
+            this.actividadtxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.actividadtxt.Name = "actividadtxt";
+            this.actividadtxt.Size = new System.Drawing.Size(182, 30);
+            this.actividadtxt.TabIndex = 31;
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Calibri", 14F);
+            this.button6.Location = new System.Drawing.Point(428, 212);
+            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(124, 34);
+            this.button6.TabIndex = 46;
+            this.button6.Text = "Eliminar Pago";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Calibri", 14F);
+            this.button4.Location = new System.Drawing.Point(299, 212);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(124, 34);
+            this.button4.TabIndex = 46;
+            this.button4.Text = "Registrar Pago";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Calibri", 14F);
+            this.label13.Location = new System.Drawing.Point(296, 23);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(67, 23);
+            this.label13.TabIndex = 44;
+            this.label13.Text = "Cuotas ";
+            // 
+            // saldotxt
+            // 
+            this.saldotxt.Font = new System.Drawing.Font("Calibri", 14F);
+            this.saldotxt.Location = new System.Drawing.Point(108, 124);
+            this.saldotxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.saldotxt.Name = "saldotxt";
+            this.saldotxt.Size = new System.Drawing.Size(125, 30);
+            this.saldotxt.TabIndex = 29;
+            // 
+            // montotxt
+            // 
+            this.montotxt.Font = new System.Drawing.Font("Calibri", 14F);
+            this.montotxt.Location = new System.Drawing.Point(108, 212);
+            this.montotxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.montotxt.Name = "montotxt";
+            this.montotxt.Size = new System.Drawing.Size(125, 30);
+            this.montotxt.TabIndex = 29;
+            // 
+            // sexo1
+            // 
+            this.sexo1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sexo1.FormattingEnabled = true;
+            this.sexo1.Items.AddRange(new object[] {
+            "M",
+            "F"});
+            this.sexo1.Location = new System.Drawing.Point(209, 190);
+            this.sexo1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sexo1.Name = "sexo1";
+            this.sexo1.Size = new System.Drawing.Size(200, 30);
+            this.sexo1.TabIndex = 57;
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Calibri", 14F);
+            this.button5.Location = new System.Drawing.Point(243, 360);
+            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(102, 34);
+            this.button5.TabIndex = 47;
+            this.button5.Text = "Pagos";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // dataGridView5
+            // 
+            this.dataGridView5.AllowUserToAddRows = false;
+            this.dataGridView5.AllowUserToDeleteRows = false;
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView5.Location = new System.Drawing.Point(4, 24);
+            this.dataGridView5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.ReadOnly = true;
+            this.dataGridView5.RowTemplate.Height = 24;
+            this.dataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView5.Size = new System.Drawing.Size(258, 122);
+            this.dataGridView5.TabIndex = 54;
+            this.dataGridView5.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView5_CellContentClick);
+            // 
+            // button7
+            // 
+            this.button7.Font = new System.Drawing.Font("Calibri", 14F);
+            this.button7.Location = new System.Drawing.Point(12, 179);
+            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(100, 34);
+            this.button7.TabIndex = 58;
+            this.button7.Text = "Aceptar";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dataGridView5);
+            this.groupBox2.Controls.Add(this.button7);
+            this.groupBox2.Location = new System.Drawing.Point(721, 423);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(267, 253);
+            this.groupBox2.TabIndex = 59;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Selecciona Beneficiario";
+            this.groupBox2.Visible = false;
+            // 
+            // nombrebene
+            // 
+            this.nombrebene.Enabled = false;
+            this.nombrebene.Font = new System.Drawing.Font("Calibri", 14F);
+            this.nombrebene.Location = new System.Drawing.Point(207, 258);
+            this.nombrebene.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nombrebene.Name = "nombrebene";
+            this.nombrebene.Size = new System.Drawing.Size(202, 30);
+            this.nombrebene.TabIndex = 37;
+            // 
+            // nombrepsi
+            // 
+            this.nombrepsi.Enabled = false;
+            this.nombrepsi.Font = new System.Drawing.Font("Calibri", 14F);
+            this.nombrepsi.Location = new System.Drawing.Point(209, 158);
+            this.nombrepsi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nombrepsi.Name = "nombrepsi";
+            this.nombrepsi.Size = new System.Drawing.Size(202, 30);
+            this.nombrepsi.TabIndex = 31;
+            // 
+            // beneficiario
+            // 
+            this.beneficiario.Enabled = false;
+            this.beneficiario.Font = new System.Drawing.Font("Calibri", 14F);
+            this.beneficiario.Location = new System.Drawing.Point(34, 461);
+            this.beneficiario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.beneficiario.Name = "beneficiario";
+            this.beneficiario.Size = new System.Drawing.Size(31, 30);
+            this.beneficiario.TabIndex = 37;
+            this.beneficiario.Visible = false;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Calibri", 11F);
+            this.button3.Location = new System.Drawing.Point(69, 465);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(25, 26);
+            this.button3.TabIndex = 52;
+            this.button3.Text = "...";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Visible = false;
+            this.button3.Click += new System.EventHandler(this.botonHijos_Click);
+            // 
+            // psicologo
+            // 
+            this.psicologo.Enabled = false;
+            this.psicologo.Font = new System.Drawing.Font("Calibri", 14F);
+            this.psicologo.Location = new System.Drawing.Point(98, 461);
+            this.psicologo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.psicologo.Name = "psicologo";
+            this.psicologo.Size = new System.Drawing.Size(32, 30);
+            this.psicologo.TabIndex = 31;
+            this.psicologo.Visible = false;
             // 
             // Formulario_Hijo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 706);
+            this.ClientSize = new System.Drawing.Size(1022, 686);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.sexo1);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.botonLimpiar);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.botonHijos);
-            this.Controls.Add(this.botonPsicologo);
             this.Controls.Add(this.botonSalir);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.botonEliminar);
             this.Controls.Add(this.botonAgregar);
             this.Controls.Add(this.botonModificar);
@@ -504,8 +810,9 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.sexo);
+            this.Controls.Add(this.nombrebene);
             this.Controls.Add(this.beneficiario);
+            this.Controls.Add(this.nombrepsi);
             this.Controls.Add(this.psicologo);
             this.Controls.Add(this.paterno);
             this.Controls.Add(this.materno);
@@ -528,6 +835,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.hijoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -537,7 +849,6 @@
 
         private System.Windows.Forms.Button botonLimpiar;
         private System.Windows.Forms.Button botonHijos;
-        private System.Windows.Forms.Button botonPsicologo;
         private System.Windows.Forms.Button botonSalir;
         private System.Windows.Forms.Button botonEliminar;
         private System.Windows.Forms.Button botonAgregar;
@@ -549,7 +860,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox sexo;
         private System.Windows.Forms.TextBox paterno;
         private System.Windows.Forms.TextBox materno;
         private System.Windows.Forms.Label label8;
@@ -560,6 +870,37 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource hijoBindingSource;
         private MarillacDataSetTableAdapters.HijoTableAdapter hijoTableAdapter;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DateTimePicker pagotxt;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox nombretxt;
+        private System.Windows.Forms.TextBox actividadtxt;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox sexo1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox montotxt;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox saldotxt;
+        private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox nombrebene;
+        private System.Windows.Forms.TextBox nombrepsi;
+        private System.Windows.Forms.TextBox beneficiario;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox psicologo;
         private System.Windows.Forms.DataGridViewTextBoxColumn idHijoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idBeneficiarioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idPsicologoDataGridViewTextBoxColumn;
@@ -569,13 +910,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaNacimientoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn edadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox psicologo;
-        private System.Windows.Forms.TextBox beneficiario;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
     }
 }

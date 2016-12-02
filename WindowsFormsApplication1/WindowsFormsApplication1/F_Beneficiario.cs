@@ -138,9 +138,9 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                nombre.Text = Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[1].Value);
-                paterno.Text = Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[2].Value);
-                materno.Text = Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[3].Value);
+                nombre.Text = Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[2].Value);
+                paterno.Text = Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[3].Value);
+                materno.Text = Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[4].Value);
                 psicologo.Text=cargarPsicologo();
                 direccion.Text = Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[5].Value);
                 colonia.Text = Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[6].Value);
@@ -155,7 +155,7 @@ namespace WindowsFormsApplication1
         {
             DataTable dt = new DataTable();
             Int64 idPsicologo;
-            try { idPsicologo = Convert.ToInt64(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[4].Value.ToString()); }
+            try { idPsicologo = Convert.ToInt64(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[1].Value.ToString()); }
             catch { idPsicologo = -1; }
             if(idPsicologo>0)
             {
@@ -217,7 +217,7 @@ namespace WindowsFormsApplication1
             if(dataGridView1.SelectedRows.Count!=0)
             {
                 Int64 idPsi;
-                try { idPsi = Convert.ToInt64(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[4].Value.ToString()); }
+                try { idPsi = Convert.ToInt64(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[1].Value.ToString()); }
                 catch { idPsi = -1; }
                 this.beneficiarioPsicologo = new beneficiarioPsicologo(this, connectionString, idPsi);
                 this.beneficiarioPsicologo.ShowDialog();

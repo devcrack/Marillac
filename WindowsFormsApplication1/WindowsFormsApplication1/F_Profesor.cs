@@ -168,7 +168,7 @@ namespace WindowsFormsApplication1
                 colonia.Text = dataGridView1.SelectedCells[5].Value.ToString();
                 telefono.Text = dataGridView1.SelectedCells[6].Value.ToString();
                 dias.Text = dataGridView1.SelectedCells[7].Value.ToString();
-                sexo.Text = dataGridView1.SelectedCells[8].Value.ToString();
+                sexo1.Text = dataGridView1.SelectedCells[8].Value.ToString();
                 dateTimePicker1.Text = dataGridView1.SelectedCells[9].Value.ToString();
                 checkBox1.Checked = (bool)dataGridView1.SelectedCells[11].Value;
                 checkBox2.Checked = (bool)dataGridView1.SelectedCells[12].Value;
@@ -187,19 +187,21 @@ namespace WindowsFormsApplication1
         {
             dias.Text = "";
             if ((bool)dataGridView1.SelectedCells[11].Value == true)
-                dias.Text = dias.Text + "lunes";
+                dias.Text = dias.Text + "lunes,";
             if ((bool)dataGridView1.SelectedCells[12].Value == true)
-                dias.Text = dias.Text + "martes";
+                dias.Text = dias.Text + "martes,";
             if ((bool)dataGridView1.SelectedCells[13].Value == true)
-                dias.Text = dias.Text + "miercoles";
+                dias.Text = dias.Text + "miercoles,";
             if ((bool)dataGridView1.SelectedCells[14].Value == true)
-                dias.Text = dias.Text + "jueves";
+                dias.Text = dias.Text + "jueves,";
             if ((bool)dataGridView1.SelectedCells[15].Value == true)
-                dias.Text = dias.Text + "viernes";
+                dias.Text = dias.Text + "viernes,";
             if ((bool)dataGridView1.SelectedCells[16].Value == true)
-                dias.Text = dias.Text + "sabado";
+                dias.Text = dias.Text + "sabado,";
             if ((bool)dataGridView1.SelectedCells[17].Value == true)
-                dias.Text = dias.Text + "domingo";
+                dias.Text = dias.Text + "domingo,";
+            if(dias.Text.Length>0)
+                dias.Text = dias.Text.Remove(dias.TextLength - 1,1);
             
 
 
@@ -215,7 +217,7 @@ namespace WindowsFormsApplication1
             colonia.Clear();
             telefono.Clear();
             dias.Clear();
-            sexo.Clear();
+            sexo1.Text = "";
             dateTimePicker1.Text = "";
 
             dataGridView2.ClearSelection();
@@ -229,7 +231,7 @@ namespace WindowsFormsApplication1
 
             if (nombre.Text != "" && paterno.Text != "" && materno.Text != ""
             && direccion.Text != "" && colonia.Text != "" && telefono.Text != ""
-            && dias.Text != "" && sexo.Text != "" && dateTimePicker1.Text != "")
+            && dias.Text != "" && sexo1.Text != "" && dateTimePicker1.Text != "")
                 return true;
             return false;
         }
@@ -248,7 +250,7 @@ namespace WindowsFormsApplication1
             string cad;
             cad = "INSERT INTO Persona.Profesor(nombre,paterno,materno,direccion,colonia,telefono,diasLaborales,sexo,fechaNacimiento,lunes,martes,miercoles,jueves,viernes,sabado,domingo)"
             + "VALUES('"  +  nombre.Text  + "','" + paterno.Text + "','" + materno.Text + "','" + direccion.Text + "','" + colonia.Text +
-            "','" +telefono.Text + "','" + dias.Text + "','" + sexo.Text + "','" + dateTimePicker1.Text +"','"+checkBox1.Checked.ToString() + "','" + checkBox2.Checked.ToString()+"','" + checkBox3.Checked.ToString() +
+            "','" +telefono.Text + "','" + dias.Text + "','" + sexo1.Text + "','" + dateTimePicker1.Text +"','"+checkBox1.Checked.ToString() + "','" + checkBox2.Checked.ToString()+"','" + checkBox3.Checked.ToString() +
             "','"+checkBox4.Checked.ToString()+ "','" + checkBox5.Checked.ToString() +"','"+ checkBox6.Checked.ToString()+"','"+ checkBox7.Checked.ToString() +"')";
             conDatos(cad);
             act_datos();
@@ -263,7 +265,7 @@ namespace WindowsFormsApplication1
             {
                 cad = "UPDATE Persona.Profesor SET nombre='" + nombre.Text + "',paterno='" + paterno.Text + "',materno='" + materno.Text
                 + "',direccion='" + direccion.Text + "',colonia='" + colonia.Text + "',telefono='" + telefono.Text
-                + "',diasLaborales='" + dias.Text + "',sexo='" + sexo.Text + "',fechaNacimiento='" + dateTimePicker1.Text+
+                + "',diasLaborales='" + dias.Text + "',sexo='" + sexo1.Text + "',fechaNacimiento='" + dateTimePicker1.Text+
                 "',lunes='"+checkBox1.Checked+ "',martes='" + checkBox2.Checked+ "',miercoles='" + checkBox3.Checked+
                 "',jueves='" + checkBox4.Checked+ "',viernes='" + checkBox5.Checked+ "',sabado='" + checkBox6.Checked
                 + "',domingo='" + checkBox7.Checked+ "' WHERE IdProfesor =" + dataGridView1.SelectedCells[0].Value.ToString();
@@ -319,6 +321,7 @@ namespace WindowsFormsApplication1
 
             if(dataGridView2.SelectedCells.Count>0)
                 actividaddata();
+            
             
         }
 

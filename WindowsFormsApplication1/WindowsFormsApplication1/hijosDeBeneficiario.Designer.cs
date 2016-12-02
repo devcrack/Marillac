@@ -31,14 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idHijoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idPsicologoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sexoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaNacimientoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.edadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hijoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.marillacDataSet = new WindowsFormsApplication1.MarillacDataSet();
             this.label10 = new System.Windows.Forms.Label();
@@ -57,6 +49,14 @@
             this.edad = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.hijoTableAdapter = new WindowsFormsApplication1.MarillacDataSetTableAdapters.HijoTableAdapter();
+            this.idHijoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maternoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idPsicologoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaNacimientoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hijoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marillacDataSet)).BeginInit();
@@ -96,70 +96,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(498, 279);
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
-            // 
-            // idHijoDataGridViewTextBoxColumn
-            // 
-            this.idHijoDataGridViewTextBoxColumn.DataPropertyName = "idHijo";
-            this.idHijoDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idHijoDataGridViewTextBoxColumn.Name = "idHijoDataGridViewTextBoxColumn";
-            this.idHijoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idHijoDataGridViewTextBoxColumn.Width = 50;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nombreDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // paternoDataGridViewTextBoxColumn
-            // 
-            this.paternoDataGridViewTextBoxColumn.DataPropertyName = "paterno";
-            this.paternoDataGridViewTextBoxColumn.HeaderText = "Apellido paterno";
-            this.paternoDataGridViewTextBoxColumn.Name = "paternoDataGridViewTextBoxColumn";
-            this.paternoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.paternoDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // maternoDataGridViewTextBoxColumn
-            // 
-            this.maternoDataGridViewTextBoxColumn.DataPropertyName = "materno";
-            this.maternoDataGridViewTextBoxColumn.HeaderText = "Apellido materno";
-            this.maternoDataGridViewTextBoxColumn.Name = "maternoDataGridViewTextBoxColumn";
-            this.maternoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.maternoDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // idPsicologoDataGridViewTextBoxColumn
-            // 
-            this.idPsicologoDataGridViewTextBoxColumn.DataPropertyName = "idPsicologo";
-            this.idPsicologoDataGridViewTextBoxColumn.HeaderText = "Psicólogo";
-            this.idPsicologoDataGridViewTextBoxColumn.Name = "idPsicologoDataGridViewTextBoxColumn";
-            this.idPsicologoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idPsicologoDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // sexoDataGridViewTextBoxColumn
-            // 
-            this.sexoDataGridViewTextBoxColumn.DataPropertyName = "sexo";
-            this.sexoDataGridViewTextBoxColumn.HeaderText = "Sexo";
-            this.sexoDataGridViewTextBoxColumn.Name = "sexoDataGridViewTextBoxColumn";
-            this.sexoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sexoDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // fechaNacimientoDataGridViewTextBoxColumn
-            // 
-            this.fechaNacimientoDataGridViewTextBoxColumn.DataPropertyName = "fechaNacimiento";
-            this.fechaNacimientoDataGridViewTextBoxColumn.HeaderText = "Fecha de nacimiento";
-            this.fechaNacimientoDataGridViewTextBoxColumn.Name = "fechaNacimientoDataGridViewTextBoxColumn";
-            this.fechaNacimientoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fechaNacimientoDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // edadDataGridViewTextBoxColumn
-            // 
-            this.edadDataGridViewTextBoxColumn.DataPropertyName = "edad";
-            this.edadDataGridViewTextBoxColumn.HeaderText = "Edad";
-            this.edadDataGridViewTextBoxColumn.Name = "edadDataGridViewTextBoxColumn";
-            this.edadDataGridViewTextBoxColumn.ReadOnly = true;
-            this.edadDataGridViewTextBoxColumn.Width = 70;
             // 
             // hijoBindingSource
             // 
@@ -334,6 +270,71 @@
             // hijoTableAdapter
             // 
             this.hijoTableAdapter.ClearBeforeFill = true;
+            // 
+            // idHijoDataGridViewTextBoxColumn
+            // 
+            this.idHijoDataGridViewTextBoxColumn.DataPropertyName = "idHijo";
+            this.idHijoDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idHijoDataGridViewTextBoxColumn.Name = "idHijoDataGridViewTextBoxColumn";
+            this.idHijoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idHijoDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // paternoDataGridViewTextBoxColumn
+            // 
+            this.paternoDataGridViewTextBoxColumn.DataPropertyName = "paterno";
+            this.paternoDataGridViewTextBoxColumn.HeaderText = "Apellido paterno";
+            this.paternoDataGridViewTextBoxColumn.Name = "paternoDataGridViewTextBoxColumn";
+            this.paternoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.paternoDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // maternoDataGridViewTextBoxColumn
+            // 
+            this.maternoDataGridViewTextBoxColumn.DataPropertyName = "materno";
+            this.maternoDataGridViewTextBoxColumn.HeaderText = "Apellido materno";
+            this.maternoDataGridViewTextBoxColumn.Name = "maternoDataGridViewTextBoxColumn";
+            this.maternoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maternoDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // idPsicologoDataGridViewTextBoxColumn
+            // 
+            this.idPsicologoDataGridViewTextBoxColumn.DataPropertyName = "idPsicologo";
+            this.idPsicologoDataGridViewTextBoxColumn.HeaderText = "Psicólogo";
+            this.idPsicologoDataGridViewTextBoxColumn.Name = "idPsicologoDataGridViewTextBoxColumn";
+            this.idPsicologoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idPsicologoDataGridViewTextBoxColumn.Visible = false;
+            this.idPsicologoDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // sexoDataGridViewTextBoxColumn
+            // 
+            this.sexoDataGridViewTextBoxColumn.DataPropertyName = "sexo";
+            this.sexoDataGridViewTextBoxColumn.HeaderText = "Sexo";
+            this.sexoDataGridViewTextBoxColumn.Name = "sexoDataGridViewTextBoxColumn";
+            this.sexoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sexoDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // fechaNacimientoDataGridViewTextBoxColumn
+            // 
+            this.fechaNacimientoDataGridViewTextBoxColumn.DataPropertyName = "fechaNacimiento";
+            this.fechaNacimientoDataGridViewTextBoxColumn.HeaderText = "Fecha de nacimiento";
+            this.fechaNacimientoDataGridViewTextBoxColumn.Name = "fechaNacimientoDataGridViewTextBoxColumn";
+            this.fechaNacimientoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fechaNacimientoDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // edadDataGridViewTextBoxColumn
+            // 
+            this.edadDataGridViewTextBoxColumn.DataPropertyName = "edad";
+            this.edadDataGridViewTextBoxColumn.HeaderText = "Edad";
+            this.edadDataGridViewTextBoxColumn.Name = "edadDataGridViewTextBoxColumn";
+            this.edadDataGridViewTextBoxColumn.ReadOnly = true;
+            this.edadDataGridViewTextBoxColumn.Width = 70;
             // 
             // hijosDeBeneficiario
             // 

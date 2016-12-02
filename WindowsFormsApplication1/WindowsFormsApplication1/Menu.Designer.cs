@@ -86,7 +86,7 @@
             this.btt_Hijos.Name = "btt_Hijos";
             this.btt_Hijos.Size = new System.Drawing.Size(125, 64);
             this.btt_Hijos.TabIndex = 6;
-            this.btt_Hijos.Text = "Niños";
+            this.btt_Hijos.Text = "Hijos";
             this.btt_Hijos.UseVisualStyleBackColor = true;
             this.btt_Hijos.Click += new System.EventHandler(this.btt_Hijos_Click);
             // 

@@ -37,27 +37,27 @@ namespace WindowsFormsApplication1
 
         private void cuotaBeneficiario_Load(object sender, EventArgs e)
         {
-            this.cuotaBeneficiarioTableAdapter.Fill(this.marillacDataSet1.CuotaBeneficiario);
             this.actividadTableAdapter.comboBoxCuotaBen(this.marillacDataSet.Actividad, idBen);
-            
-            limpiarDatos();
+            comboBox1.SelectedIndex = -1;
             dataGridView1.ClearSelection();
-            comboBox1.SelectedItem = -1;
+            limpiarDatos();
         }
 
         private void limpiarDatos()
         {
+            this.cuotaBeneficiarioTableAdapter.Fill(this.marillacDataSet1.CuotaBeneficiario);
+            comboBox1.SelectedIndex = -1;
+            dataGridView1.ClearSelection();
             monto.Text = "";
             saldo.Text = "";
             costo.Text = "";
+            dateTimePicker1.Value = new DateTime(1990, 01, 01);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             idAct = -1;
             limpiarDatos();
-            dataGridView1.ClearSelection();
-            comboBox1.SelectedItem = -1;
 
         }
 
@@ -68,17 +68,14 @@ namespace WindowsFormsApplication1
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (idAct == -1)
-            {
-                this.cuotaBeneficiarioTableAdapter.Fill(this.marillacDataSet1.CuotaBeneficiario);
-            }
-            else
+            try
             {
                 idAct = Int64.Parse(comboBox1.SelectedValue.ToString());
                 this.cuotaBeneficiarioTableAdapter.FillBy(this.marillacDataSet1.CuotaBeneficiario, idAct);
                 saldo.Text = cargarSaldo().ToString();
                 costo.Text = cargarCosto().ToString();
             }
+            catch { }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -91,12 +88,10 @@ namespace WindowsFormsApplication1
                     string query = "INSERT INTO Administracion.CuotaBeneficiario (idBeneficiario, idActividad, monto, fechaPago) VALUES (" + idBen + ", " + idAct + ", " + monto.Text.ToString() + ", '" + dateTimePicker1.Value.Year + "-" + dateTimePicker1.Value.Month + "-" + dateTimePicker1.Value.Day + "')";
                     adapter.InsertCommand= new SqlCommand(query, con);
                     adapter.InsertCommand.ExecuteNonQuery();
-
                     con.Close();
-                    comboBox1.SelectedIndex = -1;
-                    dataGridView1.ClearSelection();
-                    monto.Text = "";
-                    dateTimePicker1.Value = new DateTime(1990, 01, 01);
+
+                    this.cuotaBeneficiarioTableAdapter.Fill(this.marillacDataSet1.CuotaBeneficiario);
+                    limpiarDatos();
                 }
                 catch(Exception ex)
                 {
@@ -107,28 +102,23 @@ namespace WindowsFormsApplication1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if(comboBox1.SelectedIndex!=-1)
+            if(dataGridView1.SelectedRows.Count!=0)
             {
-                if(dataGridView1.SelectedRows.Count!=0)
+                Int64 idPago = Convert.ToInt64(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value.ToString());
+                try
                 {
-                    Int64 idPago = Convert.ToInt64(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[0].Value.ToString());
-                    try
-                    {
-                        con.Open();
-                        string query = "DELETE FROM Administracion.CuotaBeneficiario WHERE idCuota="+idPago;
-                        adapter.InsertCommand = new SqlCommand(query, con);
-                        adapter.InsertCommand.ExecuteNonQuery();
-                        con.Close();
+                    con.Open();
+                    string query = "DELETE FROM Administracion.CuotaBeneficiario WHERE idCuota="+idPago;
+                    adapter.InsertCommand = new SqlCommand(query, con);
+                    adapter.InsertCommand.ExecuteNonQuery();
+                    con.Close();
 
-                        comboBox1.SelectedIndex = -1;
-                        dataGridView1.ClearSelection();
-                        monto.Text = " ";
-                        dateTimePicker1.Value = new DateTime(1990, 01, 01);
-                    }
-                    catch(Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString());
-                    }
+                    this.cuotaBeneficiarioTableAdapter.Fill(this.marillacDataSet1.CuotaBeneficiario);
+                    limpiarDatos();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
                 }
             }
         }
@@ -142,7 +132,6 @@ namespace WindowsFormsApplication1
                 saldo.Text = cargarSaldo().ToString();
                 costo.Text = cargarCosto().ToString();
                 dateTimePicker1.Value = DateTime.Parse(Convert.ToString(dataGridView1.Rows[dataGridView1.CurrentCell.RowIndex].Cells[4].Value));
-                comboBox1.SelectedValue = idAct.ToString();
             }
         }
 
